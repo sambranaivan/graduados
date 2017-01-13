@@ -1,0 +1,25 @@
+Todas  las anotaciones sobre las tablas de la base de dato:
+
+- Los Modelos se encuentran en ingles por convención de laravel para que al crear el archivo de migración cree el nombre correcto de la tabla en la base.
+
+1-Section          -Seccion
+2-Gallery          -Galeria
+3-Video            -Video
+4-Photo            -Foto
+5-TypeNew          -TipoNoticia
+6-User             -Usuario
+7-TypeLog          -TipoLog
+8-Log              -Log
+9-New              -Noticia                
+10-Faculty         -Facultad 
+11-Career          -Carrera
+12-Country         -Pais
+13-Province        -Provincia
+14-City            -Localidad  
+15-MaritalStatus   -EstadoCivil
+16-Graduate        -Graduado
+
+
+Para crear modelos y archivo de migración en Laravel5.2
+
+- php artisan make:model Models/User -m
