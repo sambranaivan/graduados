@@ -2,24 +2,40 @@ Todas  las anotaciones sobre las tablas de la base de dato:
 
 - Los Modelos se encuentran en ingles por convención de laravel para que al crear el archivo de migración cree el nombre correcto de la tabla en la base.
 
-1-Section          -Seccion
-2-Gallery          -Galeria
-3-Video            -Video
-4-Photo            -Foto
-5-TypeNew          -TipoNoticia
-6-User             -Usuario
-7-TypeLog          -TipoLog
-8-Log              -Log
-9-New              -Noticia                
-10-Faculty         -Facultad 
-11-Career          -Carrera
-12-Country         -Pais
-13-Province        -Provincia
-14-City            -Localidad  
-15-MaritalStatus   -EstadoCivil
-16-Graduate        -Graduado
+1-Section          -Seccion    		-OK
+2-Gallery          -Galeria    		-OK
+3-Video            -Video      		-OK
+4-Photo            -Foto       		-OK
+5-Rol              -Rol             -OK
+6-User             -Usuario    		-OK
+7-Category         -Categoria  		-OK
+8-TypeLog          -TipoLog    		-OK
+9-Log              -Log        		-OK
+10-TypeNew         -TipoNoticia		-OK
+11-New             -Noticia    		-OK              
+12-Country         -Pais       		-OK
+13-Province        -Provincia  		-OK
+14-City            -Localidad  		-OK
+15-Faculty         -Facultad   		-OK
+16-Career          -Carrera    		-OK
+17-MaritalStatus   -EstadoCivil     -OK
+18-Graduate        -Graduado        -OK
+19-GraduateCareer  -GraduadoCarrera -OK
+
+COMANDOS Y SENTENCIAS UTILES PARA EJECUTAR EN LARAVEL 5.2.*
+
+--Models y Migrations Laravel 5.2.* 
+
+Comando a ejecutar en consola: php artisan make:model Models/User -m
+
+--Para que admita nulo un campo 
+  
+agregar al campo indicado en el archivo migrations:  ->nullable()
+
+--dump-autoload
+
+El comando dump-autoload actualiza la información del cargador automático de clases. Este comando es útil cuando añades nuevas clases y no quieres ejecutar el comando install o update.
+
+Comando a ejecutar en consola: composer dump-autoload
 
 
-Para crear modelos y archivo de migración en Laravel5.2
-
-- php artisan make:model Models/User -m
