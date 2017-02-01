@@ -41,12 +41,13 @@ Comando a ejecutar en consola: composer dump-autoload
 
 
 
-Anotaciones dia 30-01-2017
+Anotaciones dia 01-02-2017
 
-Creación de login
+Creación de Login
 
-Se creo una carpeta back y auth en view y dentro de back va a contener todas las vistas y carpetas del BackEnd y en auth lo referente al logeo y recuperación de contraseña.
-Se modifico el route y el BackController.
+Se creo la carpeta auth y las vistas para el login y recuperación de contraseña, tambien se modifico el BackController y el Routes, tadavia se encuentra sin funcionalidad de logeo.
+
+
 
 
 
