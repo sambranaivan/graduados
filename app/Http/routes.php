@@ -10,8 +10,15 @@
 | and give it the controller to call when that URI is requested.
 |
  */
-Route::get('panel_principal', 'BackController@index');
-
-Route::get('/', function () {
-	return view('welcome');
+Route::group(['prefix' => 'panel'], function () {
+	Route::get('/', 'BackController@index');
+	Route::get('general', 'BackController@general');
 });
+
+/*Route::get('/', function () {
+return view('welcome');
+});
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');*/
