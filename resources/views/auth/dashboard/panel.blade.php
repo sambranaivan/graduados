@@ -1,4 +1,4 @@
-@extends('layouts.principal')
+@extends('layouts.dashboard')
 
 @section('content')
  <p>probando datos</p>

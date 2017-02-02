@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  @include('partials._head')
+  @include('partials.dashboard._head')
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
-   @include('partials._header')
+   @include('partials.dashboard._header')
   </div>
   <aside class="main-sidebar">
     <section class="sidebar">
-      @include('partials._menu')
+      @include('partials.dashboard._menu')
     </section>
   </aside>
   <div class="content-wrapper">
@@ -23,10 +23,10 @@
       </ol>
     </section>
     <section class="content">
-      @include('partials._resume')
+      @include('partials.dashboard._resume')
       @yield('content')
     </section>
   </div>
-  @include('partials._footer')
+  @include('partials.dashboard._footer')
 </body>
 </html>
