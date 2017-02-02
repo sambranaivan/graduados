@@ -12,6 +12,8 @@
  */
 Route::group(['middleware' => ['web'], 'prefix' => 'panel'], function () {
 	Route::get('/', 'Auth\BackController@index');
+	Route::post('/', 'Auth\AuthController@login');
+	Route::get('logout', 'Auth\AuthController@logout');
 	Route::group(['middleware' => ['auth']], function () {
 		Route::get('general', 'Auth\BackController@general');
 	});
@@ -22,4 +24,3 @@ Route::group(['prefix' => '/'], function () {
 });
 
 
-//Route::auth();
