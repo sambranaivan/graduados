@@ -1,0 +1,23 @@
+#welcome {
+	.welcome-message {
+		h3 {
+			text-transform: uppercase;
+			color: #454545;
+			font-style: italic;
+			font-weight: 700;
+		}
+		span {
+			color: #606060;
+		}
+		.view-more {
+			color: #fdfdfd;
+			text-transform: uppercase;
+			background: #454545;
+			padding: 10px 25px;
+			display: inline-block;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}

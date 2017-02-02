@@ -1,5 +1,16 @@
 #header {
-	#contact {
-		font-family: 'Arial';
+	.contact {
+		color: #b2b2b2;
+		background-color: #454545;
+		height: 40px;
+		padding-top: 10px;
+
+		.social a {
+			color: #8f8f8f;
+			margin-right: 10px;
+		}
+	}
+	#menu .nav li a {
+		text-transform: uppercase;
 	}
 }

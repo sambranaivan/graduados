@@ -10,7 +10,7 @@
     {!! Html::style('assets/css/bootstrap.min.css') !!}
     {!! Html::style('assets/css/bootstrap-material-design.min.css') !!}
     {!! Html::style('assets/css/font-awesome.min.css') !!}
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    {!! Html::style('css/app.css') !!}
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 </head>
@@ -91,7 +91,7 @@
             </div>
         </div>
     </section>
-    <section id="news-institutionals">
+    <section id="news-institutionals" class="news">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 title">
@@ -141,7 +141,7 @@
             </div>
         </div>
     </section>
-    <section id="news">
+    <section id="news-interests" class="news">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 title">

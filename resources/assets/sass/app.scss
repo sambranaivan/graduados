@@ -1,3 +1,10 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
+@import "partials/bootstrap";
+@import "partials/featured";
+@import "partials/footer";
+@import "partials/global";
 @import "partials/header";
+@import "partials/news";
+@import "partials/welcome";

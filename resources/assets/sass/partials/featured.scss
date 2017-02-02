@@ -1,0 +1,28 @@
+#featured {
+	.featured-title {
+		padding: 15px 0;
+	}
+	.featured-title h2 {
+		background: #ededed;
+		color: #454545;
+		text-transform: uppercase;
+		display: inline;
+		padding: 5px 10px;
+	}
+	.featured-wrapper {
+		height: 380px;
+		background-color: #000;
+		padding-top: 115px;
+	}
+	.featured-text {
+		font-size: 20px;
+		color: #ededed;
+	}
+	.featured-link a {
+		color: #ededed;
+		border: 1px solid #ededed;
+		padding: 5px 10px;
+		margin-top: 10px;
+		text-decoration: none;
+	}
+}
