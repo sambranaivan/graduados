@@ -1,0 +1,2639 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"text",
+				"text-right"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"fo",
+				"font-weight"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"fot",
+				"font-size"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"margi",
+				"margin-bottom"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"crer",
+				"currentDate"
+			],
+			[
+				"pro",
+				"productToSearch"
+			],
+			[
+				"new",
+				"newUser"
+			],
+			[
+				"Cate",
+				"Category"
+			],
+			[
+				"pass",
+				"passportLocalMongoose"
+			],
+			[
+				"regi",
+				"registerController"
+			],
+			[
+				"home",
+				"homeController"
+			],
+			[
+				"get",
+				"getCurrentLanguage"
+			],
+			[
+				"html",
+				"htmlMinify"
+			],
+			[
+				"exp",
+				"exphbs"
+			],
+			[
+				"JS",
+				"JsonHttpGateway\talias"
+			],
+			[
+				"templa",
+				"templateUrl\tproperty"
+			],
+			[
+				"Loca",
+				"LocalStorage\talias"
+			],
+			[
+				"Auth",
+				"AuthService\talias"
+			],
+			[
+				"Aut",
+				"AuthHttp\talias"
+			],
+			[
+				"Exce",
+				"Exception"
+			],
+			[
+				"ite",
+				"itemUpdated"
+			],
+			[
+				"succ",
+				"successResponse"
+			],
+			[
+				"broad",
+				"broadcastOn"
+			],
+			[
+				"select",
+				"selectedFirst"
+			],
+			[
+				"item",
+				"itemId"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"me",
+				"medium-and-down"
+			],
+			[
+				"des",
+				"descriptionBox"
+			],
+			[
+				"he",
+				"heightNextUpBox"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "wireframe/index.html",
+			"settings":
+			{
+				"buffer_size": 10943,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/routes.php",
+			"settings":
+			{
+				"buffer_size": 749,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Kernel.php",
+			"settings":
+			{
+				"buffer_size": 1537,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 42 files for \"graduado\"\n\n/home/anrr/Code/Gitlab/graduados-unne/app/Jobs/Job.php:\n    1  <?php\n    2  \n    3: namespace graduados\\Jobs;\n    4  \n    5  use Illuminate\\Bus\\Queueable;\n\n1 match in 1 file\n",
+			"settings":
+			{
+				"buffer_size": 209,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "app/Jobs/Job.php",
+			"settings":
+			{
+				"buffer_size": 535,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Requests/Request.php",
+			"settings":
+			{
+				"buffer_size": 136,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Middleware/Authenticate.php",
+			"settings":
+			{
+				"buffer_size": 677,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Middleware/EncryptCookies.php",
+			"settings":
+			{
+				"buffer_size": 300,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Middleware/RedirectIfAuthenticated.php",
+			"settings":
+			{
+				"buffer_size": 519,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Middleware/VerifyCsrfToken.php",
+			"settings":
+			{
+				"buffer_size": 311,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/HomeController.php",
+			"settings":
+			{
+				"buffer_size": 298,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/layouts/dashboard.blade.php",
+			"settings":
+			{
+				"buffer_size": 815,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/auth/dashboard/panel.blade.php",
+			"settings":
+			{
+				"buffer_size": 88,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/Controller.php",
+			"settings":
+			{
+				"buffer_size": 441,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Exceptions/Handler.php",
+			"settings":
+			{
+				"buffer_size": 1232,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Events/Event.php",
+			"settings":
+			{
+				"buffer_size": 62,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Console/Kernel.php",
+			"settings":
+			{
+				"buffer_size": 641,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Console/Commands/Inspire.php",
+			"settings":
+			{
+				"buffer_size": 602,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Models/Career.php",
+			"settings":
+			{
+				"buffer_size": 425,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Models/Category.php",
+			"settings":
+			{
+				"buffer_size": 320,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Models/City.php",
+			"settings":
+			{
+				"buffer_size": 492,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Models/Country.php",
+			"settings":
+			{
+				"buffer_size": 320,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Models/Faculty.php",
+			"settings":
+			{
+				"buffer_size": 432,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Models/Gallery.php",
+			"settings":
+			{
+				"buffer_size": 358,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Models/Graduate.php",
+			"settings":
+			{
+				"buffer_size": 772,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Models/GraduateCareer.php",
+			"settings":
+			{
+				"buffer_size": 482,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Models/Log.php",
+			"settings":
+			{
+				"buffer_size": 509,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Models/MaritalStatus.php",
+			"settings":
+			{
+				"buffer_size": 339,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Models/New.php",
+			"settings":
+			{
+				"buffer_size": 362,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Providers/AppServiceProvider.php",
+			"settings":
+			{
+				"buffer_size": 403,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Providers/AuthServiceProvider.php",
+			"settings":
+			{
+				"buffer_size": 693,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Providers/EventServiceProvider.php",
+			"settings":
+			{
+				"buffer_size": 731,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Providers/RouteServiceProvider.php",
+			"settings":
+			{
+				"buffer_size": 1404,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "bootstrap/app.php",
+			"settings":
+			{
+				"buffer_size": 1602,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "composer.json",
+			"settings":
+			{
+				"buffer_size": 1345,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "bootstrap/cache/services.php",
+			"settings":
+			{
+				"buffer_size": 11113,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/app.php",
+			"settings":
+			{
+				"buffer_size": 8219,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/auth.php",
+			"settings":
+			{
+				"buffer_size": 3537,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "database/factories/ModelFactory.php",
+			"settings":
+			{
+				"buffer_size": 657,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Models/Photo.php",
+			"settings":
+			{
+				"buffer_size": 320,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Models/Province.php",
+			"settings":
+			{
+				"buffer_size": 411,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Models/Section.php",
+			"settings":
+			{
+				"buffer_size": 251,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Models/TypeLog.php",
+			"settings":
+			{
+				"buffer_size": 319,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Models/Video.php",
+			"settings":
+			{
+				"buffer_size": 350,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/Auth/PasswordController.php",
+			"settings":
+			{
+				"buffer_size": 813,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/Auth/BackController.php",
+			"settings":
+			{
+				"buffer_size": 263,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/Auth/AuthController.php",
+			"settings":
+			{
+				"buffer_size": 1926,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/Auth/HomeController.php",
+			"settings":
+			{
+				"buffer_size": 517,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wireframe/css/style.css",
+			"settings":
+			{
+				"buffer_size": 3723,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"han",
+				"Set Syntax: Handlebars"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"ssyt",
+				"Set Syntax: TypeScript"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 382.0
+	},
+	"console":
+	{
+		"height": 132.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/anrr/Code/Gitlab/graduados-unne",
+		"/home/anrr/Code/Gitlab/graduados-unne/app",
+		"/home/anrr/Code/Gitlab/graduados-unne/app/Http",
+		"/home/anrr/Code/Gitlab/graduados-unne/app/Http/Controllers",
+		"/home/anrr/Code/Gitlab/graduados-unne/resources",
+		"/home/anrr/Code/Gitlab/graduados-unne/resources/views",
+		"/home/anrr/Code/Gitlab/graduados-unne/resources/views/web"
+	],
+	"file_history":
+	[
+		"/home/anrr/Code/Gitlab/graduados-unne/app/Models/TypeNew.php",
+		"/home/anrr/Code/Gitlab/graduados-unne/app/Models/User.php",
+		"/home/anrr/Code/Gitlab/graduados-unne/resources/assets/sass/partials/header.scss",
+		"/home/anrr/Code/Gitlab/graduados-unne/resources/assets/sass/app.scss",
+		"/home/anrr/Code/Gitlab/airbits/frontend/server.js",
+		"/home/anrr/Code/Github/controlARC/pm2.json",
+		"/home/anrr/Code/Github/controlARC/src/app.js",
+		"/home/anrr/Code/Github/controlARC/src/views/partials/site/footer.hbs",
+		"/home/anrr/Code/Github/controlARC/src/views/pages/product/search.hbs",
+		"/home/anrr/Code/Github/controlARC/src/views/pages/stock/index.hbs",
+		"/home/anrr/Code/Github/controlARC/src/controllers/stock.js",
+		"/home/anrr/Code/Github/controlARC/src/controllers/login.js",
+		"/home/anrr/Code/Github/controlARC/src/controllers/register.js",
+		"/home/anrr/Code/Github/controlARC/src/views/pages/register/index.hbs",
+		"/home/anrr/Code/Github/controlARC/src/views/pages/category/new.hbs",
+		"/home/anrr/Code/Github/controlARC/src/views/pages/supplier/new.hbs",
+		"/home/anrr/Code/Github/controlARC/src/views/pages/category/index.hbs",
+		"/home/anrr/Code/Github/controlARC/src/views/pages/category/show.hbs",
+		"/home/anrr/Code/Github/controlARC/src/views/pages/category/edit.hbs",
+		"/home/anrr/Code/Github/controlARC/src/controllers/lockscreen.js",
+		"/home/anrr/Code/Github/controlARC/src/controllers/dashboard.js",
+		"/home/anrr/Code/Github/controlARC/src/views/pages/lockscreen/index.hbs",
+		"/home/anrr/Code/Github/controlARC/src/views/partials/site/header.hbs",
+		"/home/anrr/Code/Github/controlARC/src/controllers/logout.js",
+		"/home/anrr/Code/Github/controlARC/src/views/partials/site/sidebar.hbs",
+		"/home/anrr/Code/Github/controlARC/src/views/pages/product/new.hbs",
+		"/home/anrr/Code/Github/controlARC/src/views/pages/supplier/index.hbs",
+		"/home/anrr/Code/Github/controlARC/src/controllers/product.js",
+		"/home/anrr/Code/Github/controlARC/src/views/pages/404.hbs",
+		"/home/anrr/Code/Github/controlARC/src/views/pages/500.hbs",
+		"/home/anrr/Code/Github/controlARC/src/controllers/category.js",
+		"/home/anrr/Code/Github/controlARC/src/controllers/supplier.js",
+		"/home/anrr/Code/Github/controlARC/src/lib/config.js",
+		"/home/anrr/Code/Github/controlARC/src/models/product.js",
+		"/home/anrr/Code/Github/controlARC/src/models/index.js",
+		"/home/anrr/Code/Github/controlARC/src/models/supplier.js",
+		"/home/anrr/Code/Github/controlARC/src/models/user.js",
+		"/home/anrr/Code/Github/controlARC/src/models/productCategory.js",
+		"/home/anrr/Code/Github/controlARC/src/views/pages/index.hbs",
+		"/home/anrr/Code/Github/controlARC/src/views/pages/login/index.hbs",
+		"/home/anrr/Code/Github/controlARC/src/views/layouts/page-blank.hbs",
+		"/home/anrr/Code/Github/controlARC/src/models/commerce.js",
+		"/home/anrr/Code/Github/controlARC/src/models/account.js",
+		"/home/anrr/Code/Github/controlARC/src/controllers/index.js",
+		"/home/anrr/Code/Github/controlARC/src/views/partials/site/content.hbs",
+		"/home/anrr/Code/Github/controlARC/src/middlewares/authentication.js",
+		"/home/anrr/Code/Github/controlARC/src/public/javascripts/adminLTE.js",
+		"/home/anrr/Code/Github/controlARC/src/locales/i18n/es.json",
+		"/home/anrr/Code/Github/controlARC/src/views/layouts/main.hbs",
+		"/home/anrr/Code/Github/controlARC/src/config/config.yml",
+		"/home/anrr/Code/Github/controlARC/src/controllers/register/register.controller.js",
+		"/home/anrr/Code/Github/controlARC/src/controllers/dashboard/dashboard.controller.js",
+		"/home/anrr/Code/Github/controlARC/src/models/suppliers.js",
+		"/home/anrr/Code/Github/controlARC/src/models/productCategories.js",
+		"/home/anrr/Code/Github/controlARC/src/models/accounts.js",
+		"/home/anrr/Code/Github/controlARC/src/controllers/lockscreen/lockscreen.controller.js",
+		"/home/anrr/Code/Github/controlARC/src/lib/i18n.js",
+		"/home/anrr/Code/Github/controlARC/src/models/users.js",
+		"/home/anrr/Code/Github/controlARC/src/models/products.js",
+		"/home/anrr/Code/Github/controlARC/src/controllers/home/home.controller.js",
+		"/home/anrr/Code/Github/controlARC/src/models/db.js",
+		"/home/anrr/Code/Github/controlARC/src/lib/utils/url.js",
+		"/home/anrr/Code/Github/controlARC/gulpfile.babel.js",
+		"/home/anrr/Code/Github/controlARC/test/globalTest.js",
+		"/home/anrr/Code/Github/controlARC/test/lib/envTest.js",
+		"/home/anrr/Code/Github/controlARC/test/lib/utilsTest.js",
+		"/home/anrr/Code/Github/controlARC/src/server.js",
+		"/home/anrr/Code/Github/controlARC/src/lib/env.js",
+		"/home/anrr/Code/Github/controlARC/src/lib/handlebars.js",
+		"/home/anrr/Code/Github/controlARC/src/stylus/style.styl",
+		"/home/anrr/Code/Github/controlARC/src/lib/session.js",
+		"/home/anrr/Code/Github/controlARC/src/lib/utils/date.js",
+		"/home/anrr/Code/Github/controlARC/src/lib/utils/device.js",
+		"/home/anrr/Code/Github/controlARC/src/lib/utils/files.js",
+		"/home/anrr/Code/Github/controlARC/src/lib/utils/is.js",
+		"/home/anrr/Code/Github/controlARC/src/lib/utils/object.js",
+		"/home/anrr/Code/Github/controlARC/src/lib/utils/security.js",
+		"/home/anrr/Code/Github/controlARC/src/lib/utils/string.js",
+		"/home/anrr/Code/Github/controlARC/src/router.js",
+		"/home/anrr/Code/Github/controlARC/package.json",
+		"/home/anrr/Code/Github/controlARC/src/content/i18n/.gitkeep",
+		"/home/anrr/Code/Github/controlARC/src/public/css/AdminLTE.min.css",
+		"/home/anrr/Code/Github/controlARC/src/lib/security.js",
+		"/home/anrr/Code/Github/controlARC/src/app/dashboard/dashboard.controller.js",
+		"/home/anrr/Code/Github/controlARC/src/app/home/home.controller.js",
+		"/home/anrr/Code/Github/controlARC/src/content/i18n/es.json",
+		"/home/anrr/Code/Github/controlARC/.eslintrc",
+		"/home/anrr/Code/Github/controlARC/src/app/users.js",
+		"/home/anrr/Code/Github/controlARC/src/lib/utils.js",
+		"/home/anrr/Code/Github/controlARC/.babelrc",
+		"/home/anrr/Code/Github/controlARC/src/views/partials/site/metas.hbs",
+		"/home/anrr/Code/Github/controlARC/src/views/index.hbs",
+		"/home/anrr/Code/Github/controlARC/gulp/eslint.js",
+		"/home/anrr/Code/Github/controlARC/src/content/i18n/en.json",
+		"/home/anrr/Code/Github/controlARC/src/views/partials/development/livereload.hbs",
+		"/home/anrr/Code/Github/controlARC/src/views/partials/error.hbs",
+		"/home/anrr/Code/Github/controlARC/src/routes/index.js",
+		"/home/anrr/Code/Github/controlARC/src/routes/users.js",
+		"/home/anrr/Code/Github/controlARC/.editorconfig",
+		"/home/anrr/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/anrr/Code/Github/amuleto/app/services/json-http-service.ts",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/resources/views/layouts/partials/_header-connect.blade.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/resources/views/layouts/partials/_navigation.blade.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/resources/views/layouts/partials/_footer.blade.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/template/jonaki-job-board-template/index.html",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/resources/views/pages/contacto.blade.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/app/Http/Controllers/ContactoController.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/resources/views/pages/index.blade.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/app/Http/Controllers/IndexController.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/app/Http/Controllers/Auth/AuthController.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/config/app.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/resources/views/pages/nosotros.blade.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/app/Models/Demanda.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/app/Http/Controllers/NosotrosController.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/database/seeds/EstadosDemandaTableSeeder.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/database/migrations/2016_08_18_163029_create_unidad_academica_table.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/database/migrations/2016_08_18_044005_create_estados_demanda_table.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/database/migrations/2016_08_18_163345_create_demandas_table.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/database/migrations/2016_08_11_221212_create_convocatorias_table.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/database/migrations/2016_08_18_163159_create_ofertas_table.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/database/migrations/2016_08_18_155437_create_noticias_table.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/app/Models/Noticia.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/app/Models/Convocatoria.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/app/Models/UnidadAcademica.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/app/Models/Oferta.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/app/Models/User.php",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/public/.htaccess",
+		"/home/anrr/Code/Gitlab/pvt-unne/web/app/Http/routes.php"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+			"/home/anrr/Code/Gitlab/graduados-unne/app",
+			"/home/anrr/Code/Github/controlARC/src",
+			"/home/anrr/Code/Bitbucket/credentials-api/app/Http",
+			"/home/anrr/Code/Bitbucket/credentials-api/app",
+			"/home/anrr/Code/Bitbucket/credentials-api"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"partials",
+			"graduado",
+			"graduados",
+			"center",
+			"right",
+			"white",
+			"self",
+			"this",
+			"update_at",
+			"updated_at",
+			"price",
+			"description",
+			"Categorias",
+			"controller",
+			"login",
+			"session",
+			"req.query",
+			"config",
+			"app",
+			"register",
+			"utils",
+			"h1",
+			"= require(",
+			"= require('",
+			"var",
+			"cmsnode.cms",
+			"name",
+			"estados",
+			"estados_demanda_id",
+			"estados_demanda",
+			"estados",
+			"estadosDemanda",
+			"pusher",
+			"client",
+			"account",
+			"selectedFirst",
+			"itemFirst",
+			"App\\Events\\Teams\\EventNewInvitation",
+			"selected",
+			"ID: ",
+			"Log::",
+			"entinel::check()",
+			"entinel::check()->hasAccessToItem(",
+			"Sentinel::check",
+			"AddUserIdToItemsTable",
+			"Adviso",
+			"<!"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"from ",
+			"from",
+			"import"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 12,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "wireframe/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10943,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10560,
+								10560
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4809.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 47,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/Http/routes.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 749,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								722,
+								722
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/Http/Kernel.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1537,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1180,
+								1180
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 630.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 209,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										129,
+										137
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								135,
+								135
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/home/anrr/Code/Gitlab/graduados-unne",
+							"detect_indentation": false,
+							"incomplete_sync": null,
+							"line_numbers": false,
+							"output_tag": 1,
+							"remote_loading": false,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"synced": false,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/Jobs/Job.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 535,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/Http/Requests/Request.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 136,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 46,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/Http/Middleware/Authenticate.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 677,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								608,
+								608
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 189.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/Http/Middleware/EncryptCookies.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 300,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 45,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/Http/Middleware/RedirectIfAuthenticated.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 519,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 44,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/Http/Middleware/VerifyCsrfToken.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 311,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 43,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "app/Http/Controllers/HomeController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 298,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								282,
+								282
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "resources/views/layouts/dashboard.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 815,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								367,
+								367
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "resources/views/auth/dashboard/panel.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 88,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								27,
+								27
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "app/Http/Controllers/Controller.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 441,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "app/Exceptions/Handler.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1232,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 42,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "app/Events/Event.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 62,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 41,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "app/Console/Kernel.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 641,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 40,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "app/Console/Commands/Inspire.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 602,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 39,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "app/Models/Career.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 425,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								144,
+								144
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "app/Models/Category.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 320,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 38,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "app/Models/City.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 492,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 37,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "app/Models/Country.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 320,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 36,
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "app/Models/Faculty.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 432,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 35,
+					"type": "text"
+				},
+				{
+					"buffer": 23,
+					"file": "app/Models/Gallery.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 358,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 34,
+					"type": "text"
+				},
+				{
+					"buffer": 24,
+					"file": "app/Models/Graduate.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 772,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 33,
+					"type": "text"
+				},
+				{
+					"buffer": 25,
+					"file": "app/Models/GraduateCareer.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 482,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 32,
+					"type": "text"
+				},
+				{
+					"buffer": 26,
+					"file": "app/Models/Log.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 509,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 31,
+					"type": "text"
+				},
+				{
+					"buffer": 27,
+					"file": "app/Models/MaritalStatus.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 339,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 30,
+					"type": "text"
+				},
+				{
+					"buffer": 28,
+					"file": "app/Models/New.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 362,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 25,
+					"type": "text"
+				},
+				{
+					"buffer": 29,
+					"file": "app/Providers/AppServiceProvider.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 403,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 24,
+					"type": "text"
+				},
+				{
+					"buffer": 30,
+					"file": "app/Providers/AuthServiceProvider.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 693,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								373,
+								373
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 252.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 23,
+					"type": "text"
+				},
+				{
+					"buffer": 31,
+					"file": "app/Providers/EventServiceProvider.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 731,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							],
+							[
+								373,
+								373
+							],
+							[
+								413,
+								413
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 315.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 22,
+					"type": "text"
+				},
+				{
+					"buffer": 32,
+					"file": "app/Providers/RouteServiceProvider.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1404,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							],
+							[
+								412,
+								412
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 945.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 21,
+					"type": "text"
+				},
+				{
+					"buffer": 33,
+					"file": "bootstrap/app.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1602,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1027,
+								1027
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 34,
+					"file": "composer.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1345,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								661,
+								661
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 567.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 35,
+					"file": "bootstrap/cache/services.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11113,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1690,
+								1690
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 36,
+					"file": "config/app.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8219,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5672,
+								5672
+							],
+							[
+								5715,
+								5715
+							],
+							[
+								5759,
+								5759
+							],
+							[
+								5804,
+								5804
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3024.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 37,
+					"file": "config/auth.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3537,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2274,
+								2274
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1827.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				},
+				{
+					"buffer": 38,
+					"file": "database/factories/ModelFactory.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 657,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								423,
+								423
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 39,
+					"file": "app/Models/Photo.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 320,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 26,
+					"type": "text"
+				},
+				{
+					"buffer": 40,
+					"file": "app/Models/Province.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 411,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 29,
+					"type": "text"
+				},
+				{
+					"buffer": 41,
+					"file": "app/Models/Section.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 251,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 27,
+					"type": "text"
+				},
+				{
+					"buffer": 42,
+					"file": "app/Models/TypeLog.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 319,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
+					"type": "text"
+				},
+				{
+					"buffer": 43,
+					"file": "app/Models/Video.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 350,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 28,
+					"type": "text"
+				},
+				{
+					"buffer": 44,
+					"file": "app/Http/Controllers/Auth/PasswordController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 813,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								52,
+								52
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 45,
+					"file": "app/Http/Controllers/Auth/BackController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 263,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								217,
+								217
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 46,
+					"file": "app/Http/Controllers/Auth/AuthController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1926,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								110,
+								110
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 47,
+					"file": "app/Http/Controllers/Auth/HomeController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 517,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								288,
+								288
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 126.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 48,
+					"file": "wireframe/css/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3723,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3328,
+								3328
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4095.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 48,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 67.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 162.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 150.0
+	},
+	"output.xdebug":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "graduados.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Code/Gitlab/pvt-unne/pvt-unne.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 408.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

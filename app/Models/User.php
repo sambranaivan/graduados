@@ -1,6 +1,6 @@
 <?php
 
-namespace graduados\Models;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Bican\Roles\Traits\HasRoleAndPermission;

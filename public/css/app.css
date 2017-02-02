@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+/*
+	Styles for bootstrap
+ */
+.navbar {
+  margin-bottom: 0; }
+
+.navbar, .navbar.navbar-default {
+  background-color: #eaeaea; }
+
+.navbar .navbar-nav > li > a {
+  color: #0a0a0a; }
+
+.navbar .navbar-nav > .active > a, .navbar .navbar-nav > .active > a:focus, .navbar .navbar-nav > .active > a:hover {
+  color: #8f8e8e;
+  text-transform: uppercase; }
+
+#featured .featured-title {
+  padding: 15px 0; }
+
+#featured .featured-title h2 {
+  background: #ededed;
+  color: #454545;
+  text-transform: uppercase;
+  display: inline;
+  padding: 5px 10px; }
+
+#featured .featured-wrapper {
+  height: 380px;
+  background-color: #000;
+  padding-top: 115px; }
+
+#featured .featured-text {
+  font-size: 20px;
+  color: #ededed; }
+
+#featured .featured-link a {
+  color: #ededed;
+  border: 1px solid #ededed;
+  padding: 5px 10px;
+  margin-top: 10px;
+  text-decoration: none; }
+
+#footer {
+  margin: 20px 0; }
+  #footer .container .row:first-child {
+    padding: 20px 0;
+    background: #eaeaea;
+    margin-bottom: 20px; }
+  #footer .footer-copyright {
+    display: block;
+    width: 100%;
+    clear: both; }
+
+.h1, .h2, .h3, .h4, body, h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Montserrat', sans-serif; }
+
+body {
+  background-color: #fff; }
+
+#header .contact {
+  color: #b2b2b2;
+  background-color: #454545;
+  height: 40px;
+  padding-top: 10px; }
+  #header .contact .social a {
+    color: #8f8f8f;
+    margin-right: 10px; }
+
+#header #menu .nav li a {
+  text-transform: uppercase; }
+
+.news .title {
+  margin-bottom: 10px; }
+  .news .title h2 {
+    color: #989898;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700; }
+    .news .title h2:before, .news .title h2:after {
+      content: "";
+      position: absolute;
+      height: 5px;
+      border-top: 1px solid #979797;
+      top: 30px;
+      left: -380px;
+      width: 100%; }
+    .news .title h2:after {
+      left: 380px; }
+
+.news .new {
+  height: 200px;
+  overflow: hidden;
+  position: relative; }
+
+.news .new-content {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 92%; }
+
+.news .new-title h3 {
+  margin-top: 0;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  color: #fff; }
+
+.news .new-description {
+  margin-top: 35px;
+  padding: 0 5px; }
+  .news .new-description p {
+    text-transform: uppercase;
+    color: #454545; }
+
+.news .new-button a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+  display: inline-block; }
+
+.news .eventos .new-title h3 {
+  background: #82d8bf; }
+
+.news .eventos .new-button a {
+  background: #82d8bf; }
+
+.news .ofertas-laborales .new-title h3 {
+  background: #4789e2; }
+
+.news .ofertas-laborales .new-button a {
+  background: #4789e2; }
+
+.news .cursos .new-title h3 {
+  background: #6735da; }
+
+.news .cursos .new-button a {
+  background: #6735da; }
+
+.news#news-institutionals .new-content {
+  top: 100px;
+  left: 25px;
+  width: 85%; }
+
+.news#news-institutionals .new-title h3 {
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 3px 5px #000;
+  font-size: 18px;
+  padding-bottom: 0; }
+
+.news#news-institutionals .new-description {
+  color: #fff;
+  font-size: 12px;
+  margin-top: 0; }
+
+#welcome .welcome-message h3 {
+  text-transform: uppercase;
+  color: #454545;
+  font-style: italic;
+  font-weight: 700; }
+
+#welcome .welcome-message span {
+  color: #606060; }
+
+#welcome .welcome-message .view-more {
+  color: #fdfdfd;
+  text-transform: uppercase;
+  background: #454545;
+  padding: 10px 25px;
+  display: inline-block; }
+  #welcome .welcome-message .view-more:hover {
+    text-decoration: none; }
+
+/*# sourceMappingURL=app.css.map */

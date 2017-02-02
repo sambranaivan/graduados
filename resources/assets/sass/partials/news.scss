@@ -1,0 +1,99 @@
+.news {
+	.title {
+		margin-bottom: 10px;
+		h2 {
+			color: #989898;
+			text-transform: uppercase;
+			font-size: 22px;
+			font-weight: 700;
+			&:before,
+			&:after {
+				content: "";
+				position: absolute;
+				height: 5px;
+				border-top: 1px solid #979797;
+				top: 30px;
+				left: -380px;
+				width: 100%;
+			}
+			&:after {
+				left: 380px;
+			}
+		}
+	}
+	.new {
+		height: 200px;
+		overflow: hidden;
+		position: relative;
+	}
+	.new-content {
+		position: absolute;
+		top: 0;
+		left: 15px;
+		width: 92%;
+	}
+	.new-title h3 {
+		margin-top: 0;
+		padding-top: 20px;
+		padding-bottom: 10px;
+		color: #fff;
+	}
+	.new-description {
+		margin-top: 35px;
+		padding: 0 5px;
+		p {
+			text-transform: uppercase;
+			color: #454545;
+		}
+	}
+	.new-button a {
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #fff;
+		padding: 10px 15px;
+		display: inline-block;
+	}
+	.eventos {
+		.new-title h3 {
+			background: #82d8bf;
+		}
+		.new-button a {
+			background: #82d8bf;
+		}
+	}
+	.ofertas-laborales {
+		.new-title h3 {
+			background: #4789e2;
+		}
+		.new-button a {
+			background: #4789e2;
+		}
+	}
+	.cursos {
+		.new-title h3 {
+			background: #6735da;
+		}
+		.new-button a {
+			background: #6735da;
+		}
+	}
+	&#news-institutionals {
+		.new-content {
+			top: 100px;
+			left: 25px;
+			width: 85%;
+		}
+		.new-title h3 {
+			text-transform: uppercase;
+			color: #fff;
+			text-shadow: 0 3px 5px #000;
+			font-size: 18px;
+			padding-bottom: 0;
+		}
+		.new-description {
+			color: #fff;
+			font-size: 12px;
+			margin-top: 0;
+		}
+	}
+}

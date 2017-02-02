@@ -10,15 +10,16 @@
 | and give it the controller to call when that URI is requested.
 |
  */
-Route::group(['prefix' => 'panel'], function () {
-	Route::get('/', 'BackController@index');
-	Route::get('general', 'BackController@general');
+Route::group(['middleware' => ['web'], 'prefix' => 'panel'], function () {
+	Route::get('/', 'Auth\BackController@index');
+	Route::group(['middleware' => ['auth']], function () {
+		Route::get('general', 'Auth\BackController@general');
+	});
 });
 
-/*Route::get('/', function () {
-return view('welcome');
+Route::group(['prefix' => '/'], function () {
+	Route::get('/', 'HomeController@index');
 });
 
-Route::auth();
 
-Route::get('/home', 'HomeController@index');*/
+//Route::auth();
