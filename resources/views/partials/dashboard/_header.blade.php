@@ -82,11 +82,12 @@
         <li class="dropdown user user-menu">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             {{ HTML::image('dist/img/user2-160x160.jpg', 'imagen usuario', array('class' => 'user-image')) }}
-            <span class="hidden-xs">Alexander Pierce</span>
+
+            <span class="hidden-xs">{{Auth::user()->name}}</span>
           </a>
         </li>
         <li>
-          <a href="#"><i class="fa fa-sign-out"></i></a>
+           <li><a href="{{ url('panel/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Cerrar Sesión</a></li>
         </li>
       </ul>
     </div>

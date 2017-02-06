@@ -10,6 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
  */
+
 Route::group(['middleware' => ['web'], 'prefix' => 'panel'], function () {
 	Route::get('/', 'Auth\BackController@index');
 	Route::post('/', 'Auth\AuthController@login');
@@ -22,5 +23,3 @@ Route::group(['middleware' => ['web'], 'prefix' => 'panel'], function () {
 Route::group(['prefix' => '/'], function () {
 	Route::get('/', 'HomeController@index');
 });
-
-
