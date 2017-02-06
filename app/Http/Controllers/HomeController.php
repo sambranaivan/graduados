@@ -17,4 +17,9 @@ class HomeController extends Controller
     {
         return view('web.home');
     }
+
+    public function news()
+    {
+    	return view('web.news');
+    }
 }
