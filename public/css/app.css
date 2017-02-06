@@ -15,31 +15,37 @@
   color: #8f8e8e;
   text-transform: uppercase; }
 
-#featured .featured-title {
-  padding: 15px 0; }
-
-#featured .featured-title h2 {
-  background: #ededed;
-  color: #454545;
-  text-transform: uppercase;
-  display: inline;
-  padding: 5px 10px; }
-
-#featured .featured-wrapper {
+#featured {
   height: 380px;
-  background-color: #000;
-  padding-top: 115px; }
-
-#featured .featured-text {
-  font-size: 20px;
-  color: #ededed; }
-
-#featured .featured-link a {
-  color: #ededed;
-  border: 1px solid #ededed;
-  padding: 5px 10px;
-  margin-top: 10px;
-  text-decoration: none; }
+  overflow: hidden; }
+  #featured .row {
+    position: relative; }
+  #featured .featured-title {
+    padding: 15px 0; }
+  #featured .featured-title h2 {
+    font-size: 24px;
+    background: #ededed;
+    color: #454545;
+    text-transform: uppercase;
+    display: inline;
+    padding: 5px 10px; }
+  #featured .featured-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-top: 115px; }
+  #featured .featured-text {
+    font-size: 20px;
+    color: #ededed; }
+  #featured .featured-link a {
+    color: #ededed;
+    border: 1px solid #ededed;
+    padding: 5px 10px;
+    margin-top: 10px;
+    text-decoration: none; }
 
 #footer {
   margin: 20px 0; }
@@ -47,6 +53,16 @@
     padding: 20px 0;
     background: #eaeaea;
     margin-bottom: 20px; }
+  #footer .footer-menu a {
+    display: inline-block;
+    width: 100%;
+    color: #000; }
+  #footer .footer-menu p {
+    margin: 0; }
+  #footer .footer-social a {
+    font-size: 2em;
+    color: #000;
+    margin-left: 15px; }
   #footer .footer-copyright {
     display: block;
     width: 100%;
@@ -58,16 +74,19 @@
 body {
   background-color: #fff; }
 
-#header .contact {
+#header .header-contact {
   color: #b2b2b2;
   background-color: #454545;
   height: 40px;
   padding-top: 10px; }
-  #header .contact .social a {
-    color: #8f8f8f;
-    margin-right: 10px; }
+  #header .header-contact .header-social {
+    margin-top: -10px; }
+    #header .header-contact .header-social a {
+      color: #8f8f8f;
+      font-size: 2em;
+      margin-right: 15px; }
 
-#header #menu .nav li a {
+#header #header-menu .nav li a {
   text-transform: uppercase; }
 
 .news .title {
@@ -152,24 +171,29 @@ body {
 .news#news-institutionals .new-description {
   color: #fff;
   font-size: 12px;
-  margin-top: 0; }
+  margin-top: 0;
+  padding: 0; }
+  .news#news-institutionals .new-description p {
+    text-transform: none;
+    color: #fff; }
 
-#welcome .welcome-message h3 {
-  text-transform: uppercase;
-  color: #454545;
-  font-style: italic;
-  font-weight: 700; }
-
-#welcome .welcome-message span {
-  color: #606060; }
-
-#welcome .welcome-message .view-more {
-  color: #fdfdfd;
-  text-transform: uppercase;
-  background: #454545;
-  padding: 10px 25px;
-  display: inline-block; }
-  #welcome .welcome-message .view-more:hover {
-    text-decoration: none; }
+#welcome {
+  padding-top: 20px; }
+  #welcome .welcome-message h3 {
+    margin-top: 0;
+    text-transform: uppercase;
+    color: #454545;
+    font-style: italic;
+    font-weight: 700; }
+  #welcome .welcome-message span {
+    color: #606060; }
+  #welcome .welcome-message .view-more {
+    color: #fdfdfd;
+    text-transform: uppercase;
+    background: #454545;
+    padding: 10px 25px;
+    display: inline-block; }
+    #welcome .welcome-message .view-more:hover {
+      text-decoration: none; }
 
 /*# sourceMappingURL=app.css.map */
