@@ -22,4 +22,5 @@ Route::group(['middleware' => ['web'], 'prefix' => 'panel'], function () {
 
 Route::group(['prefix' => '/'], function () {
 	Route::get('/', 'HomeController@index');
+	Route::get('/noticias', 'HomeController@news');
 });

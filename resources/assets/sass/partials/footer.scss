@@ -5,6 +5,23 @@
 		background: #eaeaea;
 		margin-bottom: 20px;
 	}
+	.footer-menu {
+		a {
+			display: inline-block;
+			width: 100%;
+			color: #000;
+		}
+		p {
+			margin: 0;
+		}
+	}
+	.footer-social {
+		a {
+			font-size: 2em;
+			color: #000;
+			margin-left: 15px;
+		}
+	}
 	.footer-copyright {
 		display: block;
 		width: 100%;

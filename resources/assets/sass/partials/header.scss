@@ -1,16 +1,20 @@
 #header {
-	.contact {
+	.header-contact {
 		color: #b2b2b2;
 		background-color: #454545;
 		height: 40px;
 		padding-top: 10px;
 
-		.social a {
-			color: #8f8f8f;
-			margin-right: 10px;
+		.header-social {
+			margin-top: -10px;
+			a {
+				color: #8f8f8f;
+				font-size: 2em;
+				margin-right: 15px;
+			}
 		}
 	}
-	#menu .nav li a {
+	#header-menu .nav li a {
 		text-transform: uppercase;
 	}
 }
