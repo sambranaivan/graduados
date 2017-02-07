@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="featured-image">
-                <img src="img/Sonar-que-soy-profesora.jpg" alt="" class="img-responsive">
+                <img src="assets/img/Sonar-que-soy-profesora.jpg" alt="" class="img-responsive">
             </div>
             <div class="featured-wrapper text-center">
                 <div class="col-md-12 featured-title">
@@ -31,7 +31,7 @@
                 <a href="" class="view-more">Leer mas</a>
             </div>
             <div class="col-md-4 welcome-image">
-                <img src="img/estudiantes.png" alt="" class="img-responsive">
+                <img src="assets/img/estudiantes.png" alt="" class="img-responsive">
             </div>
         </div>
     </div>
@@ -45,7 +45,7 @@
             <div class="col-md-12">
                 <div class="col-md-4 new">
                     <div class="new-image">
-                        <img src="img/grado.jpg" alt="" class="img-responsive">
+                        <img src="assets/img/grado.jpg" alt="" class="img-responsive">
                     </div>
                     <div class="new-content">
                         <div class="new-title">
@@ -58,7 +58,7 @@
                 </div>
                 <div class="col-md-4 new">
                     <div class="new-image">
-                        <img src="img/grado.jpg" alt="" class="img-responsive">
+                        <img src="assets/img/grado.jpg" alt="" class="img-responsive">
                     </div>
                     <div class="new-content">
                         <div class="new-title">
@@ -71,7 +71,7 @@
                 </div>
                 <div class="col-md-4 new">
                     <div class="new-image">
-                        <img src="img/grado.jpg" alt="" class="img-responsive">
+                        <img src="assets/img/grado.jpg" alt="" class="img-responsive">
                     </div>
                     <div class="new-content">
                         <div class="new-title">
@@ -95,7 +95,7 @@
             <div class="col-md-12">
                 <div class="col-md-4 new cursos">
                     <div class="new-image">
-                        <img src="img/curso-gratuito-tecnico-marketing.jpg" alt="" class="img-responsive">
+                        <img src="assets/img/curso-gratuito-tecnico-marketing.jpg" alt="" class="img-responsive">
                     </div>
                     <div class="new-content">
                         <div class="new-title">
@@ -110,8 +110,8 @@
                     </div>
                 </div>
                 <div class="col-md-4 new ofertas-laborales">
-                    <div class="newimage">
-                        <img src="img/contador.jpg" alt="" class="img-responsive">
+                    <div class="new-image">
+                        <img src="assets/img/contador.jpg" alt="" class="img-responsive">
                     </div>
                     <div class="new-content">
                         <div class="new-title">
@@ -126,8 +126,8 @@
                     </div>
                 </div>
                 <div class="col-md-4 new eventos">
-                    <div class="image">
-                        <img src="img/almeria-Feria-de-las-Ideas-II.jpg" alt="" class="img-responsive">
+                    <div class="new-image">
+                        <img src="assets/img/almeria-Feria-de-las-Ideas-II.jpg" alt="" class="img-responsive">
                     </div>
                     <div class="new-content">
                         <div class="new-title">

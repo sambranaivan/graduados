@@ -18,8 +18,33 @@ class HomeController extends Controller
         return view('web.home');
     }
 
-    public function news()
+    /**
+     * Show the New page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function new()
     {
-    	return view('web.news');
+    	return view('web.new');
+    }
+
+    /**
+     * Show the FAQ page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function faq()
+    {
+        return view('web.faq');
+    }
+
+    /**
+     * Show the Courses page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function courses()
+    {
+        return view('web.courses');
     }
 }

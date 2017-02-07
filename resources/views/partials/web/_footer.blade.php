@@ -1,8 +1,8 @@
 <footer id="footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
-                <img src="" alt="" class="img-responsive footer-logo">
+            <div class="col-md-3 footer-logo">
+                <img src="assets/img/unne-logo.png" alt="" class="img-responsive footer-logo">
             </div>
             <div class="col-md-2 footer-menu">
                 <a href="">Acerca de</a>

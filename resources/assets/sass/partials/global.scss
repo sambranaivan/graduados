@@ -5,3 +5,28 @@
 body {
 	background-color: #fff;
 }
+
+.title-section {
+	margin-bottom: 10px;
+	text-align: center;
+	position: relative;
+	h2 {
+		color: #989898;
+		text-transform: uppercase;
+		font-size: 22px;
+		font-weight: 700;
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			height: 5px;
+			border-top: 1px solid #979797;
+			top: 10px;
+			left: -0;
+			width: 35%;
+		}
+		&:after {
+			left: 65%;
+		}
+	}
+}

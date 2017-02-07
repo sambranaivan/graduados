@@ -27,7 +27,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <img src="" alt="">
+                            <img src="assets/img/unne.png" alt="" class="img-responsive header-logo">
                         </div>
                         <div class="navbar-collapse collapse navbar-responsive-collapse">
                             <ul class="nav navbar-nav">

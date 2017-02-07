@@ -15,6 +15,65 @@
   color: #8f8e8e;
   text-transform: uppercase; }
 
+.panel-group .panel {
+  margin-bottom: 20px; }
+
+.content {
+  padding: 20px 0; }
+
+.courses {
+  margin-top: -20px; }
+  .courses .courses-header {
+    padding: 45px 20px;
+    background-color: #6735da;
+    color: #fff;
+    text-align: center; }
+  .courses .courses-title {
+    font-size: 35px;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 700; }
+  .courses .course-filter {
+    margin-top: 20px;
+    background-color: #131313;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 10px;
+    text-transform: uppercase; }
+  .courses .courses-content {
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden; }
+  .courses .course {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px; }
+  .courses .course-content {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 92%; }
+  .courses .course-title h3 {
+    margin-top: 0;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    color: #fff; }
+  .courses .course-description {
+    margin-top: 45px;
+    padding: 0 5px; }
+    .courses .course-description p {
+      text-transform: uppercase;
+      color: #454545; }
+  .courses .course-button a {
+    text-decoration: none;
+    color: #454545;
+    padding: 10px 15px;
+    display: inline-block;
+    border: 1px solid #454545; }
+
 #featured {
   height: 380px;
   overflow: hidden; }
@@ -53,6 +112,8 @@
     padding: 20px 0;
     background: #eaeaea;
     margin-bottom: 20px; }
+  #footer .footer-logo img {
+    width: 85px; }
   #footer .footer-menu a {
     display: inline-block;
     width: 100%;
@@ -68,12 +129,6 @@
     width: 100%;
     clear: both; }
 
-.h1, .h2, .h3, .h4, body, h1, h2, h3, h4, h5, h6, p {
-  font-family: 'Montserrat', sans-serif; }
-
-body {
-  background-color: #fff; }
-
 #header .header-contact {
   color: #b2b2b2;
   background-color: #454545;
@@ -86,8 +141,31 @@ body {
       font-size: 2em;
       margin-right: 15px; }
 
+#header .header-logo {
+  width: 72px; }
+
+#header #header-menu ul.nav {
+  margin-top: 15px; }
+
 #header #header-menu .nav li a {
   text-transform: uppercase; }
+
+.row.new .new-image {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 350px;
+  width: auto; }
+
+.row.new .new-title {
+  position: relative;
+  left: 10px;
+  bottom: 60px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 3px 5px #000;
+  margin: 0;
+  font-size: 32px; }
 
 .news .title {
   margin-bottom: 10px; }
@@ -195,5 +273,31 @@ body {
     display: inline-block; }
     #welcome .welcome-message .view-more:hover {
       text-decoration: none; }
+
+.h1, .h2, .h3, .h4, body, h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Montserrat', sans-serif; }
+
+body {
+  background-color: #fff; }
+
+.title-section {
+  margin-bottom: 10px;
+  text-align: center;
+  position: relative; }
+  .title-section h2 {
+    color: #989898;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700; }
+    .title-section h2:before, .title-section h2:after {
+      content: "";
+      position: absolute;
+      height: 5px;
+      border-top: 1px solid #979797;
+      top: 10px;
+      left: -0;
+      width: 35%; }
+    .title-section h2:after {
+      left: 65%; }
 
 /*# sourceMappingURL=app.css.map */

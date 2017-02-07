@@ -14,7 +14,15 @@
 			}
 		}
 	}
-	#header-menu .nav li a {
-		text-transform: uppercase;
+	.header-logo {
+		width: 72px;
+	}
+	#header-menu {
+		ul.nav {
+			margin-top: 15px;
+		}
+		.nav li a {
+			text-transform: uppercase;
+		}
 	}
 }
