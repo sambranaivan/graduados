@@ -23,7 +23,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function new()
+    public function news()
     {
     	return view('web.new');
     }
