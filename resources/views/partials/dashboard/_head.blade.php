@@ -11,3 +11,4 @@
 {!! Html::style('plugins/datepicker/datepicker3.css') !!}
 {!! Html::style('plugins/daterangepicker/daterangepicker.css') !!}
 {!! Html::style('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') !!}
+{!! Html::style('plugins/datatables/jquery.dataTables.min.css') !!}

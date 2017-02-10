@@ -28,5 +28,6 @@
     </section>
   </div>
   @include('partials.dashboard._footer')
+  @yield('script')
 </body>
 </html>

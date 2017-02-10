@@ -1,7 +1,7 @@
 <header class="main-header">
   <a href="index2.html" class="logo">
     <span class="logo-mini"><b>A</b>LT</span>
-    <span class="logo-lg"><b>Graduados</span>
+    <span class="logo-lg"><b>Graduados</b></span>
   </a>
   <nav class="navbar navbar-static-top">
     <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
@@ -87,8 +87,9 @@
           </a>
         </li>
         <li>
-           <li><a href="{{ url('panel/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Cerrar Sesión</a></li>
+          <a href="{{ url('panel/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Cerrar Sesión</a>
         </li>
+        
       </ul>
     </div>
   </nav>

@@ -17,6 +17,9 @@ Route::group(['middleware' => ['web'], 'prefix' => 'panel'], function () {
 	Route::get('logout', 'Auth\AuthController@logout');
 	Route::group(['middleware' => ['auth']], function () {
 		Route::get('general', 'Auth\BackController@general');
+		Route::resource('type_new', 'Auth\TypeNewsController');
+		Route::get('type_news', 'Auth\TypeNewsController@listing');
+
 	});
 });
 

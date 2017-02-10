@@ -6,6 +6,7 @@
     reserved.
 </footer>
 {!! Html::script('plugins/jQuery/jquery-2.2.3.min.js') !!}
+{!! Html::script('plugins/datatables/jquery.dataTables.min.js') !!}
 {!! Html::script('assets/js/jquery-ui.min.js') !!}
 <script>
 	$.widget.bridge('uibutton', $.ui.button);

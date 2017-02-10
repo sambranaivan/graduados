@@ -38,13 +38,18 @@ El comando dump-autoload actualiza la información del cargador automático de c
 
 Comando a ejecutar en consola: composer dump-autoload
 
+Para crear un controlador: php artisan make:controller PhotoController --resource
+
 Clave Admin del portal:4dM1NUNNE
 
 
-Anotaciones dia 01-02-2017
+Anotaciones dia 10-02-2017
 
-Creación de Login Back
+Creación de vistas
 
-Se creo la carpeta auth y las vistas para el login y recuperación de contraseña, tambien se modifico el BackController y el Routes, tadavia se encuentra sin funcionalidad de logeo.
-
+- view/auth/dashboard las carpetas type_news y news.
+- Modifico menu
+- Agrego rutas para type_new.
+- Creo controller TypeNewsController
+- Creo vista principal con listado de TypeNews
 
