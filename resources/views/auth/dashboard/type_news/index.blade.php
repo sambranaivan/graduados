@@ -1,6 +1,8 @@
 @extends('layouts.dashboard')
 
 @section('content')
+@include('auth.dashboard.type_news.modal')
+<button type="button" class="btn btn-success pull-left"  data-toggle="modal" data-target="#myModal">Agregar tipo de noticias</button><br><br>
 <table class="table table-bordered" id="type">
 	<thead>
 		<tr>
@@ -41,6 +43,11 @@
         	]
         });
     }
+
+    $('#agregar_type').on("click", function(){
+    	var nombre = $('#tipo_noticia').val();
+    	alert(nombre);
+    })
 
  </script>
 @endsection
