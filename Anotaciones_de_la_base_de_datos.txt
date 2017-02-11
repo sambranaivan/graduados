@@ -43,13 +43,12 @@ Para crear un controlador: php artisan make:controller PhotoController --resourc
 Clave Admin del portal:4dM1NUNNE
 
 
-Anotaciones dia 10-02-2017
+Anotaciones dia 11-02-2017
 
-Crea vistas type_news
+Crea modal y form en views/auth/type_news
 
-- view/auth/dashboard las carpetas type_news.
-- Modifico menu
-- Agrego rutas para type_new.
-- Creo controller TypeNewsController
-- Creo vista principal con listado de TypeNews
+- Creo index dde type_news
+- Modal para agregar, modificar y ver los datos del tipo de noticias.
+- Agrego Form en view de type_news que va incluido en el modal anterior.
+- Alta de Type News anda correctamente.
 

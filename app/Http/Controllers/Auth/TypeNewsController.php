@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\TypeNew;
-
+use DB;
 
 
 class TypeNewsController extends Controller
@@ -58,7 +58,14 @@ class TypeNewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if ($request->ajax()) {
+           TypeNew::create([
+             'description'=>$request['description'],
+           ]);
+        }
+        return response()->json([
+           "mensaje"=>"Registro Agregado"
+        ]);
     }
 
     /**

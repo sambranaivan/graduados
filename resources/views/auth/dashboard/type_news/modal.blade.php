@@ -6,18 +6,13 @@
         <h4 class="modal-title">Tipo de noticia</h4>
       </div>
       <div class="modal-body">
-       <form>
-        <div class="form-group">
-        <label for="email">Tipo de noticia:</label>
-          <input type="email" class="form-control" id="tipo_noticia" placeholder="Ingrese nombre para el tipo de noticia">
-        </div>
-        
-      </form>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-      <button type="button" class="btn btn-primary" id="agregar_type">Registrar</button>
-    </div>
+        @include('auth.dashboard.type_news.form')
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" id="agregar_type">Registrar</button>
+      </div>
   </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->

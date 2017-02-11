@@ -45,8 +45,20 @@
     }
 
     $('#agregar_type').on("click", function(){
-    	var nombre = $('#tipo_noticia').val();
-    	alert(nombre);
+    	var description = $('#description').val();
+    	var token = $('#token').val();
+    	var datas = "description="+description;
+    	$.ajax({
+            url: "{{url('panel/type_new')}}",
+            headers:{'X-CSRF-TOKEN':token},
+            type: "POST",
+            dataType: 'json',
+            data:datas,
+            success: function(){
+            	load_type_news();
+            }
+    	});
+    	//alert(token);
     })
 
  </script>
