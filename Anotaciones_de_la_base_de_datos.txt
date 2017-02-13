@@ -40,15 +40,13 @@ Comando a ejecutar en consola: composer dump-autoload
 
 Para crear un controlador: php artisan make:controller PhotoController --resource
 
+Usuario: admin@admin.com
 Clave Admin del portal:4dM1NUNNE
 
 
-Anotaciones dia 11-02-2017
+Anotaciones dia 13-02-2017
 
-Crea modal y form en views/auth/type_news
+Crea update y view 
 
-- Creo index dde type_news
-- Modal para agregar, modificar y ver los datos del tipo de noticias.
-- Agrego Form en view de type_news que va incluido en el modal anterior.
-- Alta de Type News anda correctamente.
-
+- Creo modal para modificación con su formulario.
+- Anda correctamente el alta y la modificación, todo realizado con DataTables y AJAX.

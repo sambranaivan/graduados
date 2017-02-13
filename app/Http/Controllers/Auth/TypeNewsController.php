@@ -87,7 +87,10 @@ class TypeNewsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $type_new =TypeNew::findOrFail($id);
+        return response()->json(
+          $type_new->toArray()
+        );
     }
 
     /**
@@ -99,7 +102,14 @@ class TypeNewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $type_new =TypeNew::findOrFail($id);
+        $type_new->fill([
+               'description'=>$request['description'],
+        ]);
+        $type_new->save();
+        return response()->json([
+            "mensaje"=>"modificación exitosa"
+        ]);
     }
 
     /**
