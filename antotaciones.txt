@@ -1,0 +1,102 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Goutte;
+use GuzzleHttp\Exception\GuzzleException;
+use GuzzleHttp\Client;
+use Symfony\Component\DomCrawler\Crawler;
+
+
+class HomeController extends Controller
+{
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    
+    public function __construct()
+    {
+        $this->middleware('guest');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        return view('web.home');
+    }
+
+    public function scrapping()
+    {
+        
+        
+       $client = new Client();
+       
+       $form_params = [
+           'precio_desde' => 'NaN',
+           'precio_hasta' => 'NaN',
+           'string' => '',
+           'orden' => 1,
+           'offset' => 0,
+           'limit' => 10,
+           'latitude' => false,
+           'longitude' => false,
+           'categorias[]' => array(1,1,1,1,1,1),
+           'servicios[A]' => 1,
+           'servicios[B]' => 1,
+           'servicios[C]' => 1,
+           'servicios[D]' => 1,
+           'servicios[E]' => 1,
+           'score_minimo' => 'NaN',
+           'score_maximo' => 'NaN'
+       ];
+       $uri = 'https://www.chasmatours.com/reservas/resultados/busqueda_ajax3?busqueda=_Canc%FAn_28-02-2017_02-03-2017__1__1.0.0...0';
+       $request = $client->request('POST', $uri, [
+               'Content-Type' => 'application/x-www-form-urlencoded',
+               'form_params' => $form_params
+           ]
+       );
+       $body = $request->getBody()->getContents();
+       //dump($body);
+       $crawler = new Crawler();
+       $crawler->addHtmlContent($body);
+       $rows = array(); 
+        $crawler->filter('.active')->each(function ($node) {
+            //$tds = array();
+            //Nombre de hotel
+            $nombre = $node->filter('h2 > a')->text();
+            dump($nombre);
+            //$tds []= "'nombre_hotel'=>$nombre";
+                        
+             //Segundo nombre
+            $s_nombre = $node->filter('.small-h3')->text();
+            dump($s_nombre);
+            //$tds []="'segundo_nombre'=>$s_nombre";
+
+            //Estrellas
+            $img = $node->filter('img[src*="/images/rating/star.png"] ')->count();
+            dump($img);
+            //$tds = ['cantidad_estrella'=>$img];
+
+            //Precio
+            $precio = $node->filter('.nprice')->text();
+            dump($precio);
+            //$tds[] = ['precio_desde'=>$precio];
+            //Imagenes de hoteles
+            $img_hot = $node->filter('.img-hotel > img')->attr('src');
+            dump($img_hot);
+            
+            //$tds[] = ['img_hotel'=>$img_hot];
+            //dump($tds);
+           
+        }); 
+
+  }
+    
+}
