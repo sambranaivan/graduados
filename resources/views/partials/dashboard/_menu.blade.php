@@ -9,8 +9,8 @@
       </span>
     </a>
     <ul class="treeview-menu">
-      <li class="active"><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Noticias</a></li>
-      <li><a href="{{url('panel/type_new')}}"><i class="fa fa-circle-o"></i> Tipo de noticias</a></li>
+      <li class="active"><a href="{{url('panel/noticias')}}"><i class="fa fa-circle-o"></i> Noticias</a></li>
+      <li><a href="{{url('panel/tipo_noticias')}}"><i class="fa fa-circle-o"></i> Tipo de noticias</a></li>
     </ul>
   </li>
   <li class="treeview">

@@ -44,9 +44,14 @@ Usuario: admin@admin.com
 Clave Admin del portal:4dM1NUNNE
 
 
-Anotaciones dia 13-02-2017
+Anotaciones dia 16-02-2017
 
-Crea update y view 
+Crea crud noticias
 
-- Creo modal para modificación con su formulario.
-- Anda correctamente el alta y la modificación, todo realizado con DataTables y AJAX.
+- Listado de noticias.
+- ABM de noticias.
+- Cambio de nombre del modelo new a news
+
+
+---
+Clave sql soloyo.2016

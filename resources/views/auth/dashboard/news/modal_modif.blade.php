@@ -3,7 +3,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="titulo">Modificar tipo de noticia</h4>
+        <h4 class="modal-title">Modificar datos de la noticia</h4>
       </div>
       <div class="modal-body">
         {!! Form::open(['id'=>'form_type_modif']) !!}
@@ -12,14 +12,6 @@
         <div class="form-group">
           {!! Form::label('description', 'Tipo de noticia:') !!}
           {!! Form::text('description',null,['id'=>'description','class'=>'form-control', 'placeholder'=>'Ingrese nombre para el tipo de noticia']) !!}
-        </div>
-        <div class="form-group">
-          {!! Form::label('created_at', 'Fecha de creación:',['id'=>'created_at1']) !!}
-          {!! Form::text('created_at',null,['id'=>'created_at','class'=>'form-control','readonly'=>'readonly']) !!}
-        </div>
-        <div class="form-group">
-          {!! Form::label('updated_at', 'Fecha ultima modificación:',['id'=>'updated_at1']) !!}
-          {!! Form::text('updated_at',null,['id'=>'updated_at','class'=>'form-control','readonly'=>'readonly']) !!}
         </div>
         {!! Form::close() !!}
 

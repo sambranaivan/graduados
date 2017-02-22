@@ -6,27 +6,34 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\News;
 use App\Models\TypeNew;
 use DB;
 
-
-class TypeNewsController extends Controller
+class NewsController extends Controller
 {
+    public function getType(Request $request){
+        if ($request->ajax()) {
+            $type = TypeNew::tip_zon();
+            return response()->json($type);
+        }
+
+    }
     /**
      * Display a listing type newsS.
      *
      * @return \Illuminate\Http\Response
      */
     public function listing(){
-        $type_news = TypeNew::all();
-        foreach ($type_news as $key => $value) {
+        $news = DB::table('news')
+            ->join('type_news', 'news.typenew_id', '=', 'type_news.typenew_id')
+            ->select('news.*', 'type_news.description AS tipo_noticia')
+            ->get();
+        foreach ($news as $key => $value) {
             $resources['data'][]=$value;
         }
         return response()->json($resources);
     }
-
-
-
     /**
      * Display a listing of the resource.
      *
@@ -34,9 +41,8 @@ class TypeNewsController extends Controller
      */
     public function index()
     {
-        return view('auth.dashboard.type_news.index');
+        return view('auth.dashboard.news.index');
     }
-    
 
     /**
      * Show the form for creating a new resource.
@@ -56,14 +62,7 @@ class TypeNewsController extends Controller
      */
     public function store(Request $request)
     {
-        if ($request->ajax()) {
-           TypeNew::create([
-             'description'=>$request['description'],
-           ]);
-        }
-        return response()->json([
-           "mensaje"=>"Registro Agregado"
-        ]);
+        //
     }
 
     /**
@@ -72,14 +71,9 @@ class TypeNewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)  
+    public function show($id)
     {
-     $type_new = DB::table('type_news')->select('typenew_id','description', 'created_at','updated_at')->where('typenew_id', $id)->get();
-     foreach ($type_new as $key => $value) {
-            $resources[]=$value;
-     }
-     return response()->json($resources);
-
+        //
     }
 
     /**
@@ -90,10 +84,7 @@ class TypeNewsController extends Controller
      */
     public function edit($id)
     {
-        $type_new =TypeNew::findOrFail($id);
-        return response()->json(
-          $type_new->toArray()
-        );
+        //
     }
 
     /**
@@ -105,14 +96,7 @@ class TypeNewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $type_new =TypeNew::findOrFail($id);
-        $type_new->fill([
-               'description'=>$request['description'],
-        ]);
-        $type_new->save();
-        return response()->json([
-            "mensaje"=>"modificación exitosa"
-        ]);
+        //
     }
 
     /**
