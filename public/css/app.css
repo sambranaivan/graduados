@@ -18,6 +18,59 @@
 .panel-group .panel {
   margin-bottom: 20px; }
 
+.business {
+  margin-top: -20px; }
+  .business .business-header {
+    padding: 45px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    text-align: center; }
+  .business .business-title {
+    font-size: 35px;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 700; }
+  .business .business-filter {
+    margin-top: 20px;
+    background-color: #131313;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 10px;
+    text-transform: uppercase; }
+  .business .business-content {
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden; }
+  .business .business-list {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px; }
+  .business .business-list-content {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 92%; }
+  .business .business-list-title h3 {
+    margin-top: 0;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    color: #fff; }
+  .business .business-list-description {
+    margin-top: 45px;
+    padding: 0 5px; }
+    .business .business-list-description p {
+      text-transform: uppercase;
+      color: #454545; }
+  .business .business-list-button a {
+    text-decoration: none;
+    color: #454545;
+    padding: 10px 15px;
+    display: inline-block;
+    border: 1px solid #454545; }
+
 .content {
   padding: 20px 0; }
 
