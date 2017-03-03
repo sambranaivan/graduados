@@ -49,4 +49,14 @@ class HomeController extends Controller
     {
         return view('web.courses');
     }
+
+    /**
+     * Show the Business page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function business()
+    {
+        return view('web.business');
+    }
 }
