@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use DB;
 class TypeNew extends Model {
 	protected $table = 'type_news';
 	protected $primaryKey = 'typenew_id';
@@ -12,10 +11,8 @@ class TypeNew extends Model {
 	public $timestamps = true;
 
 	public function news() {
-		return $this->hasMany('App\Models\News');
+		return $this->hasMany(News::class,'typenew_id','typenew_id');
 	}
 
-	public static function tip_zon(){
-		return DB::table('type_news')->select('typenew_id', 'description')->get();
-	}	
+	
 }
