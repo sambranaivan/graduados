@@ -1,4 +1,4 @@
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Graduados-UNNE</title>
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -12,3 +12,4 @@
 {!! Html::style('plugins/daterangepicker/daterangepicker.css') !!}
 {!! Html::style('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') !!}
 {!! Html::style('plugins/datatables/jquery.dataTables.min.css') !!}
+{!! Html::style('assets/css/css.css') !!}

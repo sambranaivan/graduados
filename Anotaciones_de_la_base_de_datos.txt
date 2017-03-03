@@ -44,14 +44,19 @@ Usuario: admin@admin.com
 Clave Admin del portal:4dM1NUNNE
 
 
-Anotaciones dia 16-02-2017
+Anotaciones dia 25-02-2017
 
-Crea crud noticias
+Correcciónes en TypeNews y Crea crud noticias
 
+- Correción consultas de type new, todo ORM.
+- Correción en los modelos TypeNew y News de los parametros de las funciones que crea la relación.
 - Listado de noticias.
 - ABM de noticias.
-- Cambio de nombre del modelo new a news
+- Cambio de nombre del modelo new a news.
+- Creo la carpeta photo_news para subir la foto de cada noticia cargada.
 
 
----
-Clave sql soloyo.2016
+
+
+
+

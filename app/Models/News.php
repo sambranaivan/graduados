@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class News extends Model
 {
@@ -12,7 +13,9 @@ class News extends Model
     
     public $timestamps = true;
 
-    public function type_new() {
-		return $this->belongsTo('App\Models\TypeNew');
+    public function type() {
+		return $this->belongsTo(TypeNew::class,'new_id','typenew_id');
 	}
+
+	
 }

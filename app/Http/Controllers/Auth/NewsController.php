@@ -8,37 +8,42 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\News;
 use App\Models\TypeNew;
-use DB;
+
 
 class NewsController extends Controller
 {
-    public function getType(Request $request){
-        if ($request->ajax()) {
-            $type = TypeNew::tip_zon();
-            return response()->json($type);
-        }
+    /*
+    * Get registered news type
+    *
+    * @return array Json
+    */
 
+    public function getType(){
+        $type = TypeNew::get(['typenew_id', 'description']);
+        return response()->json($type);
     }
+
     /**
-     * Display a listing type newsS.
+     * Display a listing type news.
      *
      * @return \Illuminate\Http\Response
      */
+
     public function listing(){
-        $news = DB::table('news')
-            ->join('type_news', 'news.typenew_id', '=', 'type_news.typenew_id')
-            ->select('news.*', 'type_news.description AS tipo_noticia')
-            ->get();
+        $news =  News::with('type')->get();
+        $resources["data"] = [];
         foreach ($news as $key => $value) {
             $resources['data'][]=$value;
         }
-        return response()->json($resources);
+        return response()->json($resources);        
     }
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         return view('auth.dashboard.news.index');
@@ -49,6 +54,7 @@ class NewsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function create()
     {
         //
@@ -60,9 +66,27 @@ class NewsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request)
     {
-        //
+        
+        $photo = time().'.'.$request->photo->getClientOriginalExtension();
+        $request->photo->move(storage_path('app/public/photo_news'), $photo);
+
+        if ($request->ajax()) {
+           News::create([
+             'title'=>$request['title'],
+             'pompadour'=>$request['pompadour'],
+             'body'=>$request['body'],
+             'photo'=>$photo,
+             'typenew_id'=>$request['type_id'],
+             'great'=>'0',
+
+           ]);
+        }
+        return response()->json([
+           "mensaje"=>"Registro Agregado"
+        ]);
     }
 
     /**

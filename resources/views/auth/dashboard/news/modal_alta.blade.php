@@ -6,7 +6,7 @@
         <h4 class="modal-title">Registra nueva noticia</h4>
       </div>
       <div class="modal-body">
-        {!! Form::open(['id'=>'form_new']) !!}
+        {!! Form::open(['id'=>'form_new', 'files' => true]) !!}
         <input type="hidden" name="_token" value="{{csrf_token()}}" id="token">
         <div class="form-group">
           {!! Form::label('title', 'Titulo de la noticia:') !!}
@@ -21,16 +21,14 @@
           {!! Form::textarea('body', null, ['id'=>'body','class'=>'form-control', 'placeholder'=>'Ingrese contenido principal de la noticia']) !!}
         </div>
         <div class="form-group">
-          {!! Form::label('type_id', 'Tipo de noticia:') !!}
-          {!! Form::select('type',['placeholder'=>'Seleccione tipo de noticia'],null, [ 'class'=>'form-control','id'=>'type'])!!}          
+          {!! Form::label('photo', 'Imagen de la noticia:') !!}
+          {!! Form::file('photo',null,['id'=>'photo','name'=>'photo','class'=>'form-control', 'placeholder'=>'Imagen de la noticia']) !!}
         </div>
         <div class="form-group">
-          {!! Form::label('photo', 'Imagen de la noticia:') !!}
-          {!! Form::file('photo',null,['id'=>'photo','class'=>'form-control', 'placeholder'=>'Imagen de la noticia']) !!}
+          {!! Form::label('type_id', 'Tipo de noticia:') !!}
+          {!! Form::select('type_id',['placeholder'=>'Seleccione tipo de noticia'],null, [ 'class'=>'form-control','id'=>'type'])!!}          
         </div>
-        
         {!! Form::close() !!}
-
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>

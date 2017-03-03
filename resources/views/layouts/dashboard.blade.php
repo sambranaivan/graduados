@@ -6,6 +6,7 @@
 <body class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
    @include('partials.dashboard._header')
+   
   </div>
   <aside class="main-sidebar">
     <section class="sidebar">

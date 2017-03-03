@@ -7,8 +7,6 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\TypeNew;
-use DB;
-
 
 class TypeNewsController extends Controller
 {
@@ -17,21 +15,22 @@ class TypeNewsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function listing(){
         $type_news = TypeNew::all();
+        $resources["data"] = [];
         foreach ($type_news as $key => $value) {
             $resources['data'][]=$value;
         }
         return response()->json($resources);
     }
 
-
-
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         return view('auth.dashboard.type_news.index');
@@ -43,6 +42,7 @@ class TypeNewsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function create()
     {
         //
@@ -54,6 +54,7 @@ class TypeNewsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request)
     {
         if ($request->ajax()) {
@@ -72,13 +73,14 @@ class TypeNewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function show($id)  
     {
-     $type_new = DB::table('type_news')->select('typenew_id','description', 'created_at','updated_at')->where('typenew_id', $id)->get();
-     foreach ($type_new as $key => $value) {
+      $type_new = TypeNew::select('typenew_id','description', 'created_at','updated_at')->find($id)->get();
+      foreach ($type_new as $key => $value) {
             $resources[]=$value;
-     }
-     return response()->json($resources);
+      }
+      return response()->json($resources);
 
     }
 
@@ -88,6 +90,7 @@ class TypeNewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function edit($id)
     {
         $type_new =TypeNew::findOrFail($id);
@@ -103,6 +106,7 @@ class TypeNewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function update(Request $request, $id)
     {
         $type_new =TypeNew::findOrFail($id);
@@ -121,6 +125,7 @@ class TypeNewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    
     public function destroy($id)
     {
         //
