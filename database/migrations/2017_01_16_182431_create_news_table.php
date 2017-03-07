@@ -19,6 +19,8 @@ class CreateNewsTable extends Migration {
 			$table->integer('typenew_id')->unsigned();
 			$table->foreign('typenew_id')->references('typenew_id')->on('type_news');
 			$table->boolean('great');
+			$table->dateTime('publication_date');
+			$table->dateTime('end_publication');
 			$table->timestamps();
 		});
 	}

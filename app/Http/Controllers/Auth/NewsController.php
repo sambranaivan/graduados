@@ -81,6 +81,8 @@ class NewsController extends Controller
              'photo'=>$photo,
              'typenew_id'=>$request['type_id'],
              'great'=>'0',
+             'publication_date'=>$request['publication_date'],
+             'end_publication'=>$request['end_publication'],
 
            ]);
         }

@@ -11,7 +11,7 @@ class TypeNew extends Model {
 	public $timestamps = true;
 
 	public function news() {
-		return $this->hasMany(News::class,'typenew_id','typenew_id');
+		return $this->hasMany(News::class,'typenew_id');
 	}
 
 	

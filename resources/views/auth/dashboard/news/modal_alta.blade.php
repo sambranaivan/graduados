@@ -8,26 +8,49 @@
       <div class="modal-body">
         {!! Form::open(['id'=>'form_new', 'files' => true]) !!}
         <input type="hidden" name="_token" value="{{csrf_token()}}" id="token">
-        <div class="form-group">
-          {!! Form::label('title', 'Titulo de la noticia:') !!}
-          {!! Form::text('title',null,['id'=>'title','class'=>'form-control', 'placeholder'=>'Ingrese titulo de la noticia']) !!}
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="form-group">
+              {!! Form::label('title', 'Titulo de la noticia:') !!}
+              {!! Form::text('title',null,['id'=>'title','class'=>'form-control', 'placeholder'=>'Ingrese titulo de la noticia']) !!}
+            </div>
+          </div> 
+          <div class="col-xs-6">
+            <div class="form-group">
+              {!! Form::label('pompadour', 'Subtitulo de la noticia:') !!}
+              {!! Form::text('pompadour', null, ['id'=>'pompadour','class'=>'form-control', 'placeholder'=>'Ingrese subtitulo de la noticia']) !!}
+            </div>
+          </div>   
         </div>
-        <div class="form-group">
-          {!! Form::label('pompadour', 'Subtitulo de la noticia:') !!}
-          {!! Form::text('pompadour', null, ['id'=>'pompadour','class'=>'form-control', 'placeholder'=>'Ingrese subtitulo de la noticia']) !!}
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="form-group">
+              {!! Form::label('body', 'Contenido de la noticia:') !!}
+              {!! Form::textarea('body', null, ['id'=>'body','class'=>'form-control', 'placeholder'=>'Ingrese contenido principal de la noticia']) !!}
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <div class="form-group">
+              {!! Form::label('photo', 'Imagen de la noticia:') !!}
+              {!! Form::file('photo',null,['id'=>'photo','name'=>'photo','class'=>'form-control', 'placeholder'=>'Imagen de la noticia']) !!}
+            </div>
+            <div class="form-group">
+              {!! Form::label('type_id', 'Tipo de noticia:') !!}
+              {!! Form::select('type_id',['placeholder'=>'Seleccione tipo de noticia'],null, [ 'class'=>'form-control','id'=>'type'])!!}          
+            </div>
+            <div class="form-group col-xs-6">
+              {!! Form::label('publication_date', 'Inicio de publicación:') !!}
+              {!! Form::text('publication_date', null, ['id'=>'publication_date','class'=>'form-control', 'placeholder'=>'____/__/__', 'data-provide'=>'datepicker']) !!}          
+            </div>
+            <div class="form-group col-xs-6">
+              {!! Form::label('end_publication', 'Fin de publicación:') !!}
+              {!! Form::text('end_publication', null, ['id'=>'end_publication','class'=>'form-control', 'placeholder'=>'____/__/__', 'data-provide'=>'datepicker']) !!}             
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          {!! Form::label('body', 'Contenido de la noticia:') !!}
-          {!! Form::textarea('body', null, ['id'=>'body','class'=>'form-control', 'placeholder'=>'Ingrese contenido principal de la noticia']) !!}
-        </div>
-        <div class="form-group">
-          {!! Form::label('photo', 'Imagen de la noticia:') !!}
-          {!! Form::file('photo',null,['id'=>'photo','name'=>'photo','class'=>'form-control', 'placeholder'=>'Imagen de la noticia']) !!}
-        </div>
-        <div class="form-group">
-          {!! Form::label('type_id', 'Tipo de noticia:') !!}
-          {!! Form::select('type_id',['placeholder'=>'Seleccione tipo de noticia'],null, [ 'class'=>'form-control','id'=>'type'])!!}          
-        </div>
+        
+        
+        
         {!! Form::close() !!}
       </div>
       <div class="modal-footer">

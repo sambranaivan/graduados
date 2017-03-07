@@ -18,7 +18,7 @@ Route::group(['middleware' => ['web'], 'prefix' => 'panel'], function () {
 	Route::group(['middleware' => ['auth']], function () {
 		Route::get('general', 'Auth\BackController@general');
 		Route::resource('tipo_noticias', 'Auth\TypeNewsController');
-		Route::get('type_ne/{id}', 'Auth\TypeNewsController@show');
+		Route::get('type_news/{id}', 'Auth\TypeNewsController@show');
 		Route::get('type_news', 'Auth\TypeNewsController@listing');
 		Route::resource('noticias', 'Auth\NewsController');
         Route::get('news', 'Auth\NewsController@listing');
