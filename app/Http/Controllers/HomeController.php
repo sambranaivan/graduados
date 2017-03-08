@@ -17,7 +17,7 @@ class HomeController extends Controller
     public function index()
     {
         $news = News::all()->sortByDesc('publication_date')->take(3);
-        return view('web.home', compact($news));
+        return view('web.home', compact('news'));
     }
 
     /**

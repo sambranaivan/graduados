@@ -43,47 +43,23 @@
                 <h2 class="text-center">Noticias Institucionales</h2>
             </div>
             <div class="col-md-12">
-                <a href="" class="new-link">
-                    <div class="col-xs-12 col-sm-4 col-md-4 new">
-                        <div class="new-image">
-                            <img src="assets/img/grado.jpg" alt="" class="img-responsive">
-                        </div>
-                        <div class="new-content">
-                            <div class="new-title">
-                                <h3>Noticia</h3>
+                @foreach($news as $item)
+                    <a href="/noticia/{{ $item->new_id }}" class="new-link">
+                        <div class="col-xs-12 col-sm-4 col-md-4 new">
+                            <div class="new-image">
+                                <img src="{{ $item->photo }}" alt="" class="img-responsive">
                             </div>
-                            <div class="new-description">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <div class="new-content">
+                                <div class="new-title">
+                                    <h3>{{ $item->title }}</h3>
+                                </div>
+                                <div class="new-description">
+                                    <p>{{ $item->body }}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-                <div class="col-xs-12 col-sm-4 col-md-4 new">
-                    <div class="new-image">
-                        <img src="assets/img/grado.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="new-content">
-                        <div class="new-title">
-                            <h3>Noticia</h3>
-                        </div>
-                        <div class="new-description">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-4 new">
-                    <div class="new-image">
-                        <img src="assets/img/grado.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="new-content">
-                        <div class="new-title">
-                            <h3>Noticia</h3>
-                        </div>
-                        <div class="new-description">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                </div>
+                    </a>
+                @endforeach
             </div>
         </div>
     </div>

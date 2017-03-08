@@ -71,14 +71,15 @@ class NewsController extends Controller
     {
         
         $photo = time().'.'.$request->photo->getClientOriginalExtension();
-        $request->photo->move(storage_path('app/public/photo_news'), $photo);
+        $request->photo->move(public_path('assets/img/photo_news'), $photo);
+        $path_image = "assets/img/photo_news/" . $photo;
 
         if ($request->ajax()) {
            News::create([
              'title'=>$request['title'],
              'pompadour'=>$request['pompadour'],
              'body'=>$request['body'],
-             'photo'=>$photo,
+             'photo'=>$path_image,
              'typenew_id'=>$request['type_id'],
              'great'=>'0',
              'publication_date'=>$request['publication_date'],
