@@ -21,9 +21,11 @@ Route::group(['middleware' => ['web'], 'prefix' => 'panel'], function () {
 		Route::get('type_news/{id}', 'Auth\TypeNewsController@show');
 		Route::get('type_news', 'Auth\TypeNewsController@listing');
 		Route::resource('noticias', 'Auth\NewsController');
+		Route::get('news/{id}', 'Auth\NewsController@show');
         Route::get('news', 'Auth\NewsController@listing');
+
         //Devuelve los tipos de noticias
-        Route::get('tipo_noti', 'Auth\NewsController@getType');
+        Route::get('tipo_noticia', 'Auth\NewsController@getType');
 	});
 });
 

@@ -76,11 +76,12 @@ class TypeNewsController extends Controller
 
     public function show($id)  
     {
-      $type_new = TypeNew::select('typenew_id','description', 'created_at','updated_at')->find($id)->get();
+      $type_new = TypeNew::where('typenew_id',$id)->get();
+     /* $resources["data"] = [];
       foreach ($type_new as $key => $value) {
             $resources[]=$value;
       }
-      return response()->json($resources);
+      return response()->json($resources);*/
 
     }
 

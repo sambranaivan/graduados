@@ -74,9 +74,9 @@
         	]
         });
         // Add event listener for opening and closing details
-        $('#type tbody').on('click', 'td.details-control', function () {
-            var tr = $(this).closest('tr');
-            var row = table.row( tr );
+        $('#type tbody').on('click', 'tr td.details-control', function () {
+            var tr = $(this).closest("tr");
+            var row = table.row(tr);
             if ( row.child.isShown() ) {
                 // This row is already open - close it
                 row.child.hide();

@@ -21,7 +21,7 @@
  <script>
     /* Selects de tipo de noticias*/
     $("#type").click(function(){
-      $.get("{{url('panel/tipo_noti')}}", function(response){
+      $.get("{{url('panel/tipo_noticia')}}", function(response){
            $("#type").empty();
            for (var i = 0; i < response.length; i++) {
              $("#type").append("<option value='"+response[i].typenew_id+"'>"+response[i].description+"</option>");             

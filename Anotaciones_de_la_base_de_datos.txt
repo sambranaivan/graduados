@@ -52,22 +52,8 @@ Usuario: admin@admin.com
 Clave Admin del portal:4dM1NUNNE
 
 
-Anotaciones dia 25-02-2017
+Anotaciones dia 07-03-2017
 
-Correcciónes en TypeNews y Alta crud noticias
-
-- Correción consultas de type new, todo ORM.
-- Correción en los modelos TypeNew y News de los parametros de las funciones que crea la relación.
-- Listado de noticias.
-- Alta de noticias.
-- Cambio de nombre del modelo new a news.
-- Creo la carpeta storage/photo_news para subir la foto de cada noticia cargada.
-
-Anotaciones día 07-03-2017
-
--Agrego los campo publication_date(fecha publicación) y end_publication(Fin fecha de publicación) de una noticia.
--Modificación del modelo News agregando los campos antes mencionado y el archivo de migración.
--Las tres ultimas noticias para mostrar en el home ordenado por publication_date en DESC.
 
 
 
