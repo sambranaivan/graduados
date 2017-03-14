@@ -22,6 +22,7 @@
 {!! Html::script('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js') !!}
 {!! Html::script('plugins/slimScroll/jquery.slimscroll.min.js') !!}
 {!! Html::script('plugins/fastclick/fastclick.js') !!}
+{!! Html::script('plugins/select2/select2.js') !!}
 {!! Html::script('assets/js/app.min.js') !!}
 {!! Html::script('assets/js/pages/dashboard.js') !!}
 {!! Html::script('assets/js/demo.js') !!}

@@ -48,13 +48,23 @@ Comando a ejecutar en consola: composer dump-autoload
 
 Para crear un controlador: php artisan make:controller PhotoController --resource
 
+Para cargar el usuario por defecto ejecutar:
+
+php artisan db:seed --class=UsersTableSeeder
+php artisan db:seed(toda la base de datos)
+
 Usuario: admin@admin.com
 Clave Admin del portal:4dM1NUNNE
 
 
-Anotaciones dia 07-03-2017
+Anotaciones dia 09-03-2017
 
 
+Cambios en Noticias
 
-
+-Adaptación de Select2 al tipo de noticias en noticias.
+-Filtrado de las tres noticias general mas recientes que esten habilitadas por publication_date.
+-Corrección tipo de dato del campo (publication_date y end_publication) y de del campo body para cargar textos extensos.
+-Visualización de la noticia en detalle.
+-Creo ruta Route::get('/noticia/{id}', 'HomeController@showNews'); para ver el detalle de la noticia seleccionada.
 

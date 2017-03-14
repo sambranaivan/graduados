@@ -12,17 +12,7 @@ use App\Models\TypeNew;
 
 class NewsController extends Controller
 {
-    /*
-    * Get registered news type
-    *
-    * @return array Json
-    */
-
-    public function getType(){
-        $type = TypeNew::get(['typenew_id', 'description']);
-        return response()->json($type);
-    }
-
+    
     /**
      * Display a listing type news.
      *
@@ -46,7 +36,8 @@ class NewsController extends Controller
 
     public function index()
     {
-        return view('auth.dashboard.news.index');
+        $type = TypeNew::pluck('description','typenew_id');
+        return view('auth.dashboard.news.index', compact('type'));
     }
 
     /**
@@ -69,7 +60,6 @@ class NewsController extends Controller
 
     public function store(Request $request)
     {
-        
         $photo = time().'.'.$request->photo->getClientOriginalExtension();
         $request->photo->move(public_path('assets/img/photo_news'), $photo);
         $path_image = "assets/img/photo_news/" . $photo;
@@ -80,7 +70,7 @@ class NewsController extends Controller
              'pompadour'=>$request['pompadour'],
              'body'=>$request['body'],
              'photo'=>$path_image,
-             'typenew_id'=>$request['type_id'],
+             'typenew_id'=>$request['type'],
              'great'=>'0',
              'publication_date'=>$request['publication_date'],
              'end_publication'=>$request['end_publication'],
@@ -98,13 +88,8 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        $news = News::where('new_id',$id)->get();
-        return view('web.new', compact($news));
-
-    }
-
+    public function show($id){}
+    
     /**
      * Show the form for editing the specified resource.
      *
@@ -113,7 +98,10 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $new =News::findOrFail($id);
+        return response()->json(
+          $new->toArray()
+        );
     }
 
     /**

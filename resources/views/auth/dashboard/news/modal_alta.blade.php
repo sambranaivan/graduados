@@ -35,8 +35,8 @@
               {!! Form::file('photo',null,['id'=>'photo','name'=>'photo','class'=>'form-control', 'placeholder'=>'Imagen de la noticia']) !!}
             </div>
             <div class="form-group">
-              {!! Form::label('type_id', 'Tipo de noticia:') !!}
-              {!! Form::select('type_id',['placeholder'=>'Seleccione tipo de noticia'],null, [ 'class'=>'form-control','id'=>'type'])!!}          
+              {!! Form::label('type', 'Tipo de noticia:') !!}
+              {!! Form::select('type', $type , null, ['placeholder'=>'Seleccione tipo de noticia',  'class'=>'form-control','style'=>'width:100%','id'=>'type'])!!}          
             </div>
             <div class="form-group col-xs-6">
               {!! Form::label('publication_date', 'Inicio de publicación:') !!}
@@ -47,15 +47,12 @@
               {!! Form::text('end_publication', null, ['id'=>'end_publication','class'=>'form-control', 'placeholder'=>'____/__/__', 'data-provide'=>'datepicker']) !!}             
             </div>
           </div>
-        </div>
-        
-        
-        
+        </div>       
         {!! Form::close() !!}
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-success" id="agregar_type" data-dismiss="modal">Registrar</button>
+        <button type="button" class="btn btn-success" id="agregar_new" data-dismiss="modal">Registrar</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->

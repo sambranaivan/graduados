@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Models\News;
+use App\Models\TypeNew;
 
 class HomeController extends Controller
 {
@@ -16,8 +17,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $news = News::all()->sortByDesc('publication_date')->take(3);
-        return view('web.home', compact('news'));
+       $type_new = TypeNew::where('description', 'General')->first()->typenew_id;  
+       $news = News::all()->where('great',1)->where('typenew_id',$type_new)->sortBy('publication_date')->take(3);
+       return view('web.home', compact('news'));
+       
     }
 
     /**
@@ -58,5 +61,10 @@ class HomeController extends Controller
     public function business()
     {
         return view('web.business');
+    }
+
+    public function showNews($id){
+        $news = News::where('new_id',$id)->get();
+        return view('web.new', compact($news));          
     }
 }

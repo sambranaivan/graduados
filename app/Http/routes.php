@@ -24,9 +24,7 @@ Route::group(['middleware' => ['web'], 'prefix' => 'panel'], function () {
 		Route::get('news/{id}', 'Auth\NewsController@show');
         Route::get('news', 'Auth\NewsController@listing');
 
-        //Devuelve los tipos de noticias
-        Route::get('tipo_noticia', 'Auth\NewsController@getType');
-	});
+    });
 });
 
 Route::group(['prefix' => '/'], function () {
@@ -35,4 +33,6 @@ Route::group(['prefix' => '/'], function () {
 	Route::get('/faq', 'HomeController@faq');
 	Route::get('/cursos', 'HomeController@courses');
 	Route::get('/empresas', 'HomeController@business');
+	Route::get('/noticia/{id}', 'HomeController@showNews');
+
 });

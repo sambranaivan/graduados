@@ -12,14 +12,6 @@
 @include('auth.dashboard.type_news.modal_modif')
 
 <table class="table table-bordered" id="type">
-	<thead>
-		<tr>
-			<th>#</th>
-			<th>Tipos de Noticias</th>
-			<th> Editar <i class='fa fa-pencil-square-o' aria-hidden='true'></i></th>
-            <th> Ver <i class="fa fa-eye" aria-hidden="true"></i></th>
-		</tr>
-	</thead>
 	
 </table>
 
@@ -46,6 +38,7 @@
     })
 
     var load_type_news = function (){
+        $('#type').empty();
         var table = $('#type').DataTable({
         	"destroy":true,
         	"order":[[0,"asc"]],
@@ -59,15 +52,15 @@
         		"dataType":"JSON"
         	},
         	"columns":[
-               {"data":'typenew_id'},
-               {"data":'description'},
-               {"data":null,
+               {"data":'typenew_id',"title":"#"},
+               {"data":'description',"title":"Tipo de Noticias"},
+               {"data":null,"title":"Editar <i class='fa fa-pencil-square-o' aria-hidden='true'></i>",
                 "defaultContent":"<button type='button' class='editar btn btn-danger' data-toggle='modal' data-target='#myModal_modif'><i class='fa fa-pencil-square-o' aria-hidden='true'></i> Editar</button>" 
                },
                {
                 "className":      'details-control',
                 "orderable":      false,
-                "data":           null,
+                "data":           null,"title":"Ver <i class='fa fa-eye' aria-hidden='true'></i>",
                 "defaultContent": ''
                }
 
