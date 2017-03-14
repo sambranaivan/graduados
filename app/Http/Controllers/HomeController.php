@@ -30,7 +30,9 @@ class HomeController extends Controller
      */
     public function news()
     {
-    	return view('web.new');
+        $type_new = TypeNew::where('description', 'General')->first()->typenew_id;  
+        $news = News::all()->where('great',1)->where('typenew_id',$type_new)->sortBy('publication_date');
+    	return view('web.new', compact('news'));
     }
 
     /**
@@ -50,7 +52,9 @@ class HomeController extends Controller
      */
     public function courses()
     {
-        return view('web.courses');
+        $type_new = TypeNew::where('description', 'Cursos')->first()->typenew_id;  
+        $courses = News::all()->where('great',1)->where('typenew_id',$type_new)->sortBy('publication_date');
+        return view('web.courses', compact('courses'));
     }
 
     /**
@@ -67,4 +71,5 @@ class HomeController extends Controller
         $news = News::where('new_id',$id)->get();
         return view('web.new', compact($news));          
     }
+
 }

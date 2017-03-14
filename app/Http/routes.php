@@ -34,5 +34,6 @@ Route::group(['prefix' => '/'], function () {
 	Route::get('/cursos', 'HomeController@courses');
 	Route::get('/empresas', 'HomeController@business');
 	Route::get('/noticia/{id}', 'HomeController@showNews');
+	Route::get('/prueba', 'HomeController@prueba');
 
 });

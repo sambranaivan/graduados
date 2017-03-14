@@ -57,14 +57,12 @@ Usuario: admin@admin.com
 Clave Admin del portal:4dM1NUNNE
 
 
-Anotaciones dia 09-03-2017
+Anotaciones dia 14-03-2017
 
 
-Cambios en Noticias
+Listados en HomeController
 
--Adaptación de Select2 al tipo de noticias en noticias.
--Filtrado de las tres noticias general mas recientes que esten habilitadas por publication_date.
--Corrección tipo de dato del campo (publication_date y end_publication) y de del campo body para cargar textos extensos.
--Visualización de la noticia en detalle.
--Creo ruta Route::get('/noticia/{id}', 'HomeController@showNews'); para ver el detalle de la noticia seleccionada.
-
+- Listado de cursos.
+- Listado noticias general.
+- Show noticias general con un id de referencia.
+- Faltaria agregar un campo en noticias que determine a que carrera es la noticia para sacar las estadisticas solicitadas porque si no tenemos manera.
