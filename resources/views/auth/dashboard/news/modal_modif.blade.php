@@ -8,6 +8,7 @@
       <div class="modal-body">
         {!! Form::open(['id'=>'form_new_modif', 'files' => true]) !!}
         <input type="hidden" name="_token" value="{{csrf_token()}}" id="token">
+        <input type="hidden" name="_method" id="_method" value="PUT">
         <input type="hidden" id="id">
         <div class="row">
           <div class="col-xs-6">
@@ -33,7 +34,12 @@
           <div class="col-xs-6">
             <div class="form-group">
               {!! Form::label('photo_m', 'Imagen de la noticia:') !!}
-              {!! Form::file('photo_m',null,['id'=>'photo_m','name'=>'photo','class'=>'form-control', 'placeholder'=>'Imagen de la noticia']) !!}
+              {!! Form::image('','success',['id'=>'photo_mm','class'=>'img-responsive', 'width' => 150, 'height' => 150 ] )  !!}
+              {!! Form::file('photo_m',null,['id'=>'photo_m','name'=>'photo_m','class'=>'form-control', 'placeholder'=>'Imagen de la noticia']) !!}
+            </div>
+            <div class="form-group">
+              {!! Form::label('carrera_m', 'Carrera:') !!}
+              {!! Form::select('carrera_m', $carrera , null, ['placeholder'=>'Seleccione carrera',  'class'=>'form-control','style'=>'width:100%','id'=>'carrera_m'])!!}          
             </div>
             <div class="form-group">
               {!! Form::label('type_m', 'Tipo de noticia:') !!}

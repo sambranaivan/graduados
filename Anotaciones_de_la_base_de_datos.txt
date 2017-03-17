@@ -57,12 +57,12 @@ Usuario: admin@admin.com
 Clave Admin del portal:4dM1NUNNE
 
 
-Anotaciones dia 14-03-2017
+Anotaciones dia 16-03-2017
 
 
-Listados en HomeController
+Modificación Noticias
 
-- Listado de cursos.
-- Listado noticias general.
-- Show noticias general con un id de referencia.
-- Faltaria agregar un campo en noticias que determine a que carrera es la noticia para sacar las estadisticas solicitadas porque si no tenemos manera.
+- Funciona correctaente la modificación.
+- Se agrega el campo career_id en el modelo News y en la migración para poder relacionar con que carrera esta relacionada la noticia.
+- Se agrega las relaciones correspondientes entre News y Career.
+- No olvidar verificar cuando no existen datos para mostrar en la vista que no genere error...

@@ -17,10 +17,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-       $type_new = TypeNew::where('description', 'General')->first()->typenew_id;  
-       $news = News::all()->where('great',1)->where('typenew_id',$type_new)->sortBy('publication_date')->take(3);
-       return view('web.home', compact('news'));
-       
+     $type_new = TypeNew::where('description', 'General')->first()->typenew_id;  
+     $news = News::all()->where('great',1)->where('typenew_id',$type_new)->sortBy('publication_date')->take(3);       
+     return view('web.home', compact('news'));
     }
 
     /**

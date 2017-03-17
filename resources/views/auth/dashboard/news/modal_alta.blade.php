@@ -35,6 +35,10 @@
               {!! Form::file('photo',null,['id'=>'photo','name'=>'photo','class'=>'form-control', 'placeholder'=>'Imagen de la noticia']) !!}
             </div>
             <div class="form-group">
+              {!! Form::label('carrera', 'Carrera:') !!}
+              {!! Form::select('carrera', $carrera , null, ['placeholder'=>'Seleccione carrera',  'class'=>'form-control','style'=>'width:100%','id'=>'carrera'])!!}          
+            </div>
+            <div class="form-group">
               {!! Form::label('type', 'Tipo de noticia:') !!}
               {!! Form::select('type', $type , null, ['placeholder'=>'Seleccione tipo de noticia',  'class'=>'form-control','style'=>'width:100%','id'=>'type'])!!}          
             </div>
@@ -47,6 +51,7 @@
               {!! Form::text('end_publication', null, ['id'=>'end_publication','class'=>'form-control', 'placeholder'=>'____/__/__', 'data-provide'=>'datepicker']) !!}             
             </div>
           </div>
+
         </div>       
         {!! Form::close() !!}
       </div>

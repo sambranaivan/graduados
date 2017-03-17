@@ -18,4 +18,8 @@ class Career extends Model {
 	public function graduate_careers() {
 		return $this->hasMany('App\Models\GraduateCareer');
 	}
+
+	public function news() {
+		return $this->hasMany(News::class,'career_id');
+	}
 }

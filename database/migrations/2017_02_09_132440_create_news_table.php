@@ -15,12 +15,14 @@ class CreateNewsTable extends Migration {
 			$table->string('title', 100);
 			$table->string('pompadour', 250);
 			$table->longtext('body');
-			$table->string('photo', 250);
+			$table->string('photo', 250)->nullable();
 			$table->integer('typenew_id')->unsigned();
 			$table->foreign('typenew_id')->references('typenew_id')->on('type_news');
 			$table->boolean('great');
 			$table->date('publication_date');
 			$table->date('end_publication');
+			$table->integer('career_id')->unsigned();
+			$table->foreign('career_id')->references('career_id')->on('careers');
 			$table->timestamps();
 		});
 	}
