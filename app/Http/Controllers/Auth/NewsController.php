@@ -8,7 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\News;
 use App\Models\TypeNew;
-
+use App\Models\Career;
 
 class NewsController extends Controller
 {
@@ -36,8 +36,9 @@ class NewsController extends Controller
 
     public function index()
     {
+        $carrera = Career::pluck('name','career_id');
         $type = TypeNew::pluck('description','typenew_id');
-        return view('auth.dashboard.news.index', compact('type'));
+        return view('auth.dashboard.news.index', compact('type','carrera'));
     }
 
     /**
@@ -71,6 +72,7 @@ class NewsController extends Controller
              'body'=>$request['body'],
              'photo'=>$path_image,
              'typenew_id'=>$request['type'],
+             'career_id'=>$request['carrera'],
              'great'=>'0',
              'publication_date'=>$request['publication_date'],
              'end_publication'=>$request['end_publication'],
@@ -112,8 +114,40 @@ class NewsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        //
+    {//assets/img/photo_news/1489237566.png
+        $news =News::findOrFail($id);
+        if ($request->ajax()) {
+           if ($request->hasFile('photo_m')) {
+                $photo = time().'.'.$request->photo_m->getClientOriginalExtension();
+                $request->photo_m->move(public_path('assets/img/photo_news'), $photo);
+                $path_image = "assets/img/photo_news/" . $photo;
+                $news->fill([
+                    'title'=>$request['title_m'],
+                    'pompadour'=>$request['pompadour_m'],
+                    'body'=>$request['body_m'],
+                    'photo'=>$path_image,
+                    'typenew_id'=>$request['type_m'],
+                    'career_id'=>$request['carrera_m'],
+                    'great'=>'0',
+                    'publication_date'=>$request['publication_date_m'],
+                    'end_publication'=>$request['end_publication_m'],
+                ]);
+                $news->save();
+           }else{
+                $news->fill([
+                    'title'=>$request['title_m'],
+                    'pompadour'=>$request['pompadour_m'],
+                    'body'=>$request['body_m'],
+                    'typenew_id'=>$request['type_m'],
+                    'career_id'=>$request['carrera_m'],
+                    'great'=>'0',
+                    'publication_date'=>$request['publication_date_m'],
+                    'end_publication'=>$request['end_publication_m'],
+                ]);
+                $news->save();
+           } 
+
+        }
     }
 
     /**
