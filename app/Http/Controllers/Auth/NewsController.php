@@ -19,7 +19,8 @@ class NewsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function listing(){
+    public function listing()
+    {
         $news =  News::with('type')->get();
         $resources["data"] = [];
         foreach ($news as $key => $value) {

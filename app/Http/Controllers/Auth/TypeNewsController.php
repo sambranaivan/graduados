@@ -16,7 +16,8 @@ class TypeNewsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function listing(){
+    public function listing()
+    {
         $type_news = TypeNew::all();
         $resources["data"] = [];
         foreach ($type_news as $key => $value) {
@@ -59,7 +60,7 @@ class TypeNewsController extends Controller
     {
         if ($request->ajax()) {
            TypeNew::create([
-             'description'=>$request['description'],
+             'description' => $request['description'],
            ]);
         }
         return response()->json([
@@ -76,8 +77,8 @@ class TypeNewsController extends Controller
 
     public function show($id)  
     {
-      $type_new = TypeNew::where('typenew_id',$id)->get();
-     
+        $type_new = TypeNew::where('typenew_id',$id)->get();
+        
     }
 
     /**

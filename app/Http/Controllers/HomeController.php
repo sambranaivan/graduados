@@ -6,6 +6,7 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Models\News;
 use App\Models\TypeNew;
+use Exception;
 
 class HomeController extends Controller
 {
@@ -17,9 +18,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-     $type_new = TypeNew::where('description', 'General')->first()->typenew_id;  
-     $news = News::all()->where('great',1)->where('typenew_id',$type_new)->sortBy('publication_date')->take(3);       
-     return view('web.home', compact('news'));
+        try {
+            $type_new = TypeNew::where('description', 'General')->first()->typenew_id;  
+            $news = News::all()->where('great',1)->where('typenew_id', $type_new)->sortBy('publication_date')->take(3);
+        }
+        catch (Exception $e) {
+            $news = [];
+        }
+
+        return view('web.home', compact('news'));
     }
 
     /**
@@ -29,8 +36,13 @@ class HomeController extends Controller
      */
     public function news()
     {
-        $type_new = TypeNew::where('description', 'General')->first()->typenew_id;  
-        $news = News::all()->where('great', 1)->where('typenew_id', $type_new)->sortBy('publication_date');
+        try {
+            $type_new = TypeNew::where('description', 'General')->first()->typenew_id;
+            $news = News::all()->where('great', 1)->where('typenew_id', $type_new)->sortBy('publication_date');
+        }
+        catch (Exception $e) {
+            $news = [];
+        }
 
     	return view('web.news', compact('news'));
     }
@@ -52,8 +64,14 @@ class HomeController extends Controller
      */
     public function courses()
     {
-        $type_new = TypeNew::where('description', 'Cursos')->first()->typenew_id;  
-        $courses = News::all()->where('great',1)->where('typenew_id',$type_new)->sortBy('publication_date');
+        try {
+            $type_new = TypeNew::where('description', 'Cursos')->first()->typenew_id;
+            $courses = News::all()->where('great',1)->where('typenew_id',$type_new)->sortBy('publication_date');
+        }
+        catch (Exception $e) {
+            $courses = [];
+        }
+
         return view('web.courses', compact('courses'));
     }
 

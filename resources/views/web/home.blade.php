@@ -83,7 +83,7 @@
                             <p>SEGUI CAPACITANDOTE CON NUESTROS CURSOS</p>
                         </div>
                         <div class="new-button text-center">
-                            <a href="">Ver cursos</a>
+                            <a href="/cursos">Ver cursos</a>
                         </div>
                     </div>
                 </div>
