@@ -20,9 +20,11 @@ class TypeNewsController extends Controller
     {
         $type_news = TypeNew::all();
         $resources["data"] = [];
+
         foreach ($type_news as $key => $value) {
             $resources['data'][]=$value;
         }
+
         return response()->json($resources);
     }
 
@@ -111,6 +113,7 @@ class TypeNewsController extends Controller
                'description'=>$request['description'],
         ]);
         $type_new->save();
+        
         return response()->json([
             "mensaje"=>"modificación exitosa"
         ]);

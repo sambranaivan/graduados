@@ -80,6 +80,7 @@ class NewsController extends Controller
 
            ]);
         }
+        
         return response()->json([
            "mensaje"=>"Registro Agregado"
         ]);
@@ -91,7 +92,10 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id){}
+    public function show($id)
+    {
+
+    }
     
     /**
      * Show the form for editing the specified resource.
@@ -101,7 +105,7 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-        $new =News::findOrFail($id);
+        $new = News::findOrFail($id);
         return response()->json(
           $new->toArray()
         );
@@ -115,39 +119,41 @@ class NewsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {//assets/img/photo_news/1489237566.png
-        $news =News::findOrFail($id);
-        if ($request->ajax()) {
-           if ($request->hasFile('photo_m')) {
+    {
+        $news = News::findOrFail($id);
+
+        if ($request->ajax())
+        {
+            if ($request->hasFile('photo_m')) 
+            {
                 $photo = time().'.'.$request->photo_m->getClientOriginalExtension();
                 $request->photo_m->move(public_path('assets/img/photo_news'), $photo);
                 $path_image = "assets/img/photo_news/" . $photo;
                 $news->fill([
-                    'title'=>$request['title_m'],
-                    'pompadour'=>$request['pompadour_m'],
-                    'body'=>$request['body_m'],
-                    'photo'=>$path_image,
-                    'typenew_id'=>$request['type_m'],
-                    'career_id'=>$request['carrera_m'],
-                    'great'=>'0',
-                    'publication_date'=>$request['publication_date_m'],
-                    'end_publication'=>$request['end_publication_m'],
+                    'title' => $request['title_m'],
+                    'pompadour' => $request['pompadour_m'],
+                    'body' => $request['body_m'],
+                    'photo' => $path_image,
+                    'typenew_id' => $request['type_m'],
+                    'career_id' => $request['carrera_m'],
+                    'great' => '0',
+                    'publication_date' => $request['publication_date_m'],
+                    'end_publication' => $request['end_publication_m'],
                 ]);
-                $news->save();
-           }else{
+            } else {
                 $news->fill([
-                    'title'=>$request['title_m'],
-                    'pompadour'=>$request['pompadour_m'],
-                    'body'=>$request['body_m'],
-                    'typenew_id'=>$request['type_m'],
-                    'career_id'=>$request['carrera_m'],
-                    'great'=>'0',
-                    'publication_date'=>$request['publication_date_m'],
-                    'end_publication'=>$request['end_publication_m'],
+                    'title' => $request['title_m'],
+                    'pompadour' => $request['pompadour_m'],
+                    'body' => $request['body_m'],
+                    'typenew_id' => $request['type_m'],
+                    'career_id' => $request['carrera_m'],
+                    'great' => '0',
+                    'publication_date' => $request['publication_date_m'],
+                    'end_publication' => $request['end_publication_m'],
                 ]);
-                $news->save();
-           } 
+            }
 
+            $news->save();
         }
     }
 
