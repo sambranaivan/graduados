@@ -31,8 +31,9 @@ class HomeController extends Controller
     public function news()
     {
         $type_new = TypeNew::where('description', 'General')->first()->typenew_id;  
-        $news = News::all()->where('great',1)->where('typenew_id',$type_new)->sortBy('publication_date');
-    	return view('web.new', compact('news'));
+        $news = News::all()->where('great', 1)->where('typenew_id', $type_new)->sortBy('publication_date');
+
+    	return view('web.news', compact('news'));
     }
 
     /**
@@ -68,8 +69,9 @@ class HomeController extends Controller
     }
 
     public function showNews($id){
-        $news = News::where('new_id',$id)->get();
-        return view('web.new', compact($news));          
+        $new = News::where('new_id',$id)->get();
+
+        return view('web.new', compact($new));          
     }
 
 }

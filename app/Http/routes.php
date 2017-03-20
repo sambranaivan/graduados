@@ -29,11 +29,9 @@ Route::group(['middleware' => ['web'], 'prefix' => 'panel'], function () {
 
 Route::group(['prefix' => '/'], function () {
 	Route::get('/', 'HomeController@index');
-	Route::get('/noticia', 'HomeController@news');
+	Route::get('/noticias', 'HomeController@news');
 	Route::get('/faq', 'HomeController@faq');
 	Route::get('/cursos', 'HomeController@courses');
 	Route::get('/empresas', 'HomeController@business');
 	Route::get('/noticia/{id}', 'HomeController@showNews');
-	Route::get('/prueba', 'HomeController@prueba');
-
 });
