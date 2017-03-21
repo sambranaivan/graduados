@@ -67,22 +67,21 @@ class NewsController extends Controller
         $path_image = "assets/img/photo_news/" . $photo;
 
         if ($request->ajax()) {
-           News::create([
-             'title'=>$request['title'],
-             'pompadour'=>$request['pompadour'],
-             'body'=>$request['body'],
-             'photo'=>$path_image,
-             'typenew_id'=>$request['type'],
-             'career_id'=>$request['carrera'],
-             'great'=>'0',
-             'publication_date'=>$request['publication_date'],
-             'end_publication'=>$request['end_publication'],
-
+            News::create([
+                'title'=>$request['title'],
+                'pompadour'=>$request['pompadour'],
+                'body'=>$request['body'],
+                'photo'=>$path_image,
+                'typenew_id'=>$request['type'],
+                'career_id'=>$request['carrera'],
+                'great'=>'0',
+                'publication_date'=>$request['publication_date'],
+                'end_publication'=>$request['end_publication'],
            ]);
         }
-        
+
         return response()->json([
-           "mensaje"=>"Registro Agregado"
+            "mensaje"=>"Registro Agregado"
         ]);
     }
 
@@ -107,7 +106,7 @@ class NewsController extends Controller
     {
         $new = News::findOrFail($id);
         return response()->json(
-          $new->toArray()
+            $new->toArray()
         );
     }
 
