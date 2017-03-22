@@ -3,7 +3,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Registra nueva noticia</h4>
+        <h4 class="modal-title">Registra nuevo curso</h4>
       </div>
       <div class="modal-body">
         {!! Form::open(['id'=>'form_new', 'files' => true]) !!}
@@ -40,7 +40,7 @@
             </div>
             <div class="form-group">
               {!! Form::label('type', 'Tipo de Noticia:') !!}
-              {!! Form::text('type', 'General', ['id'=>'1','class'=>'form-control', 'readonly'=>'readonly']) !!}          
+              {!! Form::text('type', 'Cursos', ['id'=>'2','class'=>'form-control', 'readonly'=>'readonly']) !!}        
             </div>
             <div class="form-group col-xs-6">
               {!! Form::label('publication_date', 'Inicio de publicación:') !!}

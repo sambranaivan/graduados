@@ -17,12 +17,18 @@ Route::group(['middleware' => ['web'], 'prefix' => 'panel'], function () {
 	Route::get('logout', 'Auth\AuthController@logout');
 	Route::group(['middleware' => ['auth']], function () {
 		Route::get('general', 'Auth\BackController@general');
+
 		Route::resource('tipo_noticias', 'Auth\TypeNewsController');
 		Route::get('type_news/{id}', 'Auth\TypeNewsController@show');
 		Route::get('type_news', 'Auth\TypeNewsController@listing');
+
 		Route::resource('noticias', 'Auth\NewsController');
 		Route::get('news/{id}', 'Auth\NewsController@show');
-        Route::get('news', 'Auth\NewsController@listing');
+        Route::get('noticia_general', 'Auth\NewsController@noticia_general');
+        Route::get('cursos_todos', 'Auth\NewsController@cursosall');
+        Route::get('cursos', 'Auth\NewsController@cursos');
+        Route::get('ofertasall', 'Auth\NewsController@ofertasall');
+        Route::get('ofertas_laborales', 'Auth\NewsController@ofertas_laborales');
 
     });
 });

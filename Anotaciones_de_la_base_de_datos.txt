@@ -57,12 +57,11 @@ Usuario: admin@admin.com
 Clave Admin del portal:4dM1NUNNE
 
 
-Anotaciones dia 16-03-2017
+Anotaciones dia 22-03-2017
 
+Agrega cursos y ofertas laborales.
 
-Modificación Noticias
-
-- Funciona correctaente la modificación.
-- Se agrega el campo career_id en el modelo News y en la migración para poder relacionar con que carrera esta relacionada la noticia.
-- Se agrega las relaciones correspondientes entre News y Career.
-- No olvidar verificar cuando no existen datos para mostrar en la vista que no genere error...
+__ CRUD de cursos y ofertas laborales vistas.
+__ Agregado las opciones en el menu principal.
+__ seed de type_news
+__ Agrego rutas nuevas para cursos y ofertas laborales.

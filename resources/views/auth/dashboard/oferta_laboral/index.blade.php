@@ -1,9 +1,9 @@
 @extends('layouts.dashboard')
 @section('content')
-<button type="button" class="btn btn-success pull-left"  data-toggle="modal" data-target="#myModal">Agregar noticia general</button><br><br>
+<button type="button" class="btn btn-success pull-left"  data-toggle="modal" data-target="#myModal">Agregar ofertas laborales</button><br><br>
 
-@include('auth.dashboard.news.modal_alta')
-@include('auth.dashboard.news.modal_modif')
+@include('auth.dashboard.oferta_laboral.modal_alta')
+@include('auth.dashboard.oferta_laboral.modal_modif')
 <table class="table table-bordered" id="new">
 		
 </table>
@@ -49,7 +49,7 @@
         	},               
         	"ajax":{
         		"method":"GET",
-        		"url":"{{url('panel/noticia_general')}}",
+        		"url":"{{url('panel/ofertas_laborales')}}",
                 "dataType":"JSON"
         	},
         	"columns":[
