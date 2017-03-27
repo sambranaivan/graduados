@@ -3,14 +3,15 @@
   <li class="active treeview">
     <a href="#">
       <i class="fa fa-files-o"></i>
-      <span>Gestión de Noticias</span>
+      <span>Gestión de Contenido</span>
       <span class="pull-right-container">
         <i class="fa fa-angle-left pull-right"></i>
       </span>
     </a>
     <ul class="treeview-menu">
-      <li class="active"><a href="{{url('panel/noticias')}}"><i class="fa fa-circle-o"></i> Noticias</a></li>
-      <li><a href="{{url('panel/tipo_noticias')}}"><i class="fa fa-circle-o"></i> Tipo de noticias</a></li>
+      <li class="active"><a href="{{url('panel/noticias')}}"><i class="fa fa-circle-o"></i> Noticias Generales</a></li>
+      <li class="active"><a href="{{url('panel/cursos_todos')}}"><i class="fa fa-circle-o"></i> Cursos</a></li>
+      <li class="active"><a href="{{url('panel/ofertasall')}}"><i class="fa fa-circle-o"></i> Ofertas Laborales</a></li>
     </ul>
   </li>
   <li class="treeview">
