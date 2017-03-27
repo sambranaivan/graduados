@@ -30,7 +30,7 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the New page.
+     * Show the News page.
      *
      * @return \Illuminate\Http\Response
      */

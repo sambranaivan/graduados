@@ -11,6 +11,21 @@
 |
  */
 
+/*
+	Web routes
+ */
+Route::group(['prefix' => '/'], function () {
+	Route::get('/', 'HomeController@index');
+	Route::get('/noticias', 'HomeController@news');
+	Route::get('/faq', 'HomeController@faq');
+	Route::get('/cursos', 'HomeController@courses');
+	Route::get('/empresas', 'HomeController@business');
+	Route::get('/noticia/{id}', 'HomeController@showNews');
+});
+
+/*
+	Panel Routes
+ */
 Route::group(['middleware' => ['web'], 'prefix' => 'panel'], function () {
 	Route::get('/', 'Auth\BackController@index');
 	Route::post('/', 'Auth\AuthController@login');
@@ -25,13 +40,4 @@ Route::group(['middleware' => ['web'], 'prefix' => 'panel'], function () {
         Route::get('news', 'Auth\NewsController@listing');
 
     });
-});
-
-Route::group(['prefix' => '/'], function () {
-	Route::get('/', 'HomeController@index');
-	Route::get('/noticias', 'HomeController@news');
-	Route::get('/faq', 'HomeController@faq');
-	Route::get('/cursos', 'HomeController@courses');
-	Route::get('/empresas', 'HomeController@business');
-	Route::get('/noticia/{id}', 'HomeController@showNews');
 });

@@ -18,7 +18,7 @@ class Handler extends ExceptionHandler
      */
     protected $dontReport = [
         AuthorizationException::class,
-        HttpException::class,
+        //HttpException::class,
         ModelNotFoundException::class,
         ValidationException::class,
     ];
@@ -45,6 +45,17 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
+        // Catching Exceptions
+        if($e instanceof NotFoundHttpException) {
+            // Ajax 404 json feedback
+            if ($request->ajax()) {
+                return response()->json(['error' => 'Not found'], 404);
+            }
+
+            // Normal 404 view page feedback
+            return response()->view('errors.missing', [], 404);
+        }
+
         return parent::render($request, $e);
     }
 }
