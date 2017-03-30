@@ -23,7 +23,7 @@ class HomeController extends Controller
             $news = News::all()->where('great',1)->where('typenew_id', $type_new)->sortBy('publication_date')->take(3);
         }
         catch (Exception $e) {
-            $news = [];
+            $news = collect([]);
         }
 
         return view('web.home', compact('news'));
@@ -41,7 +41,7 @@ class HomeController extends Controller
             $news = News::all()->where('great', 1)->where('typenew_id', $type_new)->sortBy('publication_date');
         }
         catch (Exception $e) {
-            $news = [];
+            $news = collect([]);
         }
 
     	return view('web.news', compact('news'));
@@ -69,7 +69,7 @@ class HomeController extends Controller
             $courses = News::all()->where('great',1)->where('typenew_id',$type_new)->sortBy('publication_date');
         }
         catch (Exception $e) {
-            $courses = [];
+            $courses = collect([]);
         }
 
         return view('web.courses', compact('courses'));

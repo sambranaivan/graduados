@@ -14,162 +14,27 @@
 				<a href="" class="course-filter">Filtrar</a>
 			</div>
 			<div class="courses-content">
-				<div class="col-md-4 course">
-					<div class="course-image">
-                    	<img src="assets/img/curso-gratuito-tecnico-marketing.jpg" alt="" class="img-responsive">
-                	</div>
-                	<div class="course-content">
-                        <div class="course-description text-center">
-                            <p>Trabajo en equipo <br>SCRUM <br> 1 Mes</p>
-                        </div>
-                        <div class="course-button text-center">
-                            <a href="">Inscribirse</a>
-                        </div>
-                    </div>
-				</div>
-				<div class="col-md-4 course">
-					<div class="course-image">
-                    	<img src="assets/img/curso-gratuito-tecnico-marketing.jpg" alt="" class="img-responsive">
-                	</div>
-                	<div class="course-content">
-                        <div class="course-description text-center">
-                            <p>Trabajo en equipo <br>SCRUM <br> 1 Mes</p>
-                        </div>
-                        <div class="course-button text-center">
-                            <a href="">Inscribirse</a>
-                        </div>
-                    </div>
-				</div>
-				<div class="col-md-4 course">
-					<div class="course-image">
-                    	<img src="assets/img/curso-gratuito-tecnico-marketing.jpg" alt="" class="img-responsive">
-                	</div>
-                	<div class="course-content">
-                        <div class="course-description text-center">
-                            <p>Trabajo en equipo <br>SCRUM <br> 1 Mes</p>
-                        </div>
-                        <div class="course-button text-center">
-                            <a href="">Inscribirse</a>
-                        </div>
-                    </div>
-				</div>
-				<div class="col-md-4 course">
-					<div class="course-image">
-                    	<img src="assets/img/curso-gratuito-tecnico-marketing.jpg" alt="" class="img-responsive">
-                	</div>
-                	<div class="course-content">
-                        <div class="course-description text-center">
-                            <p>Trabajo en equipo <br>SCRUM <br> 1 Mes</p>
-                        </div>
-                        <div class="course-button text-center">
-                            <a href="">Inscribirse</a>
-                        </div>
-                    </div>
-				</div>
-				<div class="col-md-4 course">
-					<div class="course-image">
-                    	<img src="assets/img/curso-gratuito-tecnico-marketing.jpg" alt="" class="img-responsive">
-                	</div>
-                	<div class="course-content">
-                        <div class="course-description text-center">
-                            <p>Trabajo en equipo <br>SCRUM <br> 1 Mes</p>
-                        </div>
-                        <div class="course-button text-center">
-                            <a href="">Inscribirse</a>
-                        </div>
-                    </div>
-				</div>
-				<div class="col-md-4 course">
-					<div class="course-image">
-                    	<img src="assets/img/curso-gratuito-tecnico-marketing.jpg" alt="" class="img-responsive">
-                	</div>
-                	<div class="course-content">
-                        <div class="course-description text-center">
-                            <p>Trabajo en equipo <br>SCRUM <br> 1 Mes</p>
-                        </div>
-                        <div class="course-button text-center">
-                            <a href="">Inscribirse</a>
-                        </div>
-                    </div>
-				</div>
-				<div class="col-md-4 course">
-					<div class="course-image">
-                    	<img src="assets/img/curso-gratuito-tecnico-marketing.jpg" alt="" class="img-responsive">
-                	</div>
-                	<div class="course-content">
-                        <div class="course-description text-center">
-                            <p>Trabajo en equipo <br>SCRUM <br> 1 Mes</p>
-                        </div>
-                        <div class="course-button text-center">
-                            <a href="">Inscribirse</a>
-                        </div>
-                    </div>
-				</div>
-				<div class="col-md-4 course">
-					<div class="course-image">
-                    	<img src="assets/img/curso-gratuito-tecnico-marketing.jpg" alt="" class="img-responsive">
-                	</div>
-                	<div class="course-content">
-                        <div class="course-description text-center">
-                            <p>Trabajo en equipo <br>SCRUM <br> 1 Mes</p>
-                        </div>
-                        <div class="course-button text-center">
-                            <a href="">Inscribirse</a>
-                        </div>
-                    </div>
-				</div>
-				<div class="col-md-4 course">
-					<div class="course-image">
-                    	<img src="assets/img/curso-gratuito-tecnico-marketing.jpg" alt="" class="img-responsive">
-                	</div>
-                	<div class="course-content">
-                        <div class="course-description text-center">
-                            <p>Trabajo en equipo <br>SCRUM <br> 1 Mes</p>
-                        </div>
-                        <div class="course-button text-center">
-                            <a href="">Inscribirse</a>
-                        </div>
-                    </div>
-				</div>
-				<div class="col-md-4 course">
-					<div class="course-image">
-                    	<img src="assets/img/curso-gratuito-tecnico-marketing.jpg" alt="" class="img-responsive">
-                	</div>
-                	<div class="course-content">
-                        <div class="course-description text-center">
-                            <p>Trabajo en equipo <br>SCRUM <br> 1 Mes</p>
-                        </div>
-                        <div class="course-button text-center">
-                            <a href="">Inscribirse</a>
-                        </div>
-                    </div>
-				</div>
-				<div class="col-md-4 course">
-					<div class="course-image">
-                    	<img src="assets/img/curso-gratuito-tecnico-marketing.jpg" alt="" class="img-responsive">
-                	</div>
-                	<div class="course-content">
-                        <div class="course-description text-center">
-                            <p>Trabajo en equipo <br>SCRUM <br> 1 Mes</p>
-                        </div>
-                        <div class="course-button text-center">
-                            <a href="">Inscribirse</a>
-                        </div>
-                    </div>
-				</div>
-				<div class="col-md-4 course">
-					<div class="course-image">
-                    	<img src="assets/img/curso-gratuito-tecnico-marketing.jpg" alt="" class="img-responsive">
-                	</div>
-                	<div class="course-content">
-                        <div class="course-description text-center">
-                            <p>Trabajo en equipo <br>SCRUM <br> 1 Mes</p>
-                        </div>
-                        <div class="course-button text-center">
-                            <a href="">Inscribirse</a>
-                        </div>
-                    </div>
-				</div>
+                @if($courses->isEmpty())
+                    <h3>No hay cursos vigentes, vuelve pronto!</h3>
+                @else
+                    @foreach($courses as $item)
+                        <a href="/curso/{{ $item->new_id }}" class="course-link">
+            				<div class="col-md-4 course">
+            					<div class="course-image">
+                                	<img src="{{ $item->photo }}" alt="" class="img-responsive">
+                            	</div>
+                            	<div class="course-content">
+                                    <div class="course-description text-center">
+                                        <p>{{ $item->title }}</p>
+                                    </div>
+                                    <div class="course-button text-center">
+                                        <a href="/curso/{{ $item->new_id }}/inscripcion">Inscribirse</a>
+                                    </div>
+                                </div>
+        				    </div>
+                        </a>
+                    @endforeach
+                @endif
 			</div>
 		</div>
 	</div>
