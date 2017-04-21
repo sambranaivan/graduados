@@ -89,7 +89,7 @@
         });
         
     }
-    //Validate form 
+    //Validate form ***MEJORAR***
     
     $(document).ready(function() {
             //Validate form in modal_alta   
