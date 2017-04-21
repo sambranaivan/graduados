@@ -4,9 +4,11 @@
 
 @include('auth.dashboard.cursos.modal_alta')
 @include('auth.dashboard.cursos.modal_modif')
-<table class="table table-bordered" id="new">
-		
-</table>
+<div class="table-responsive">
+    <table class="table table-bordered" id="new">
+    		
+    </table>
+</div>
 @endsection
 @section('script')
  <script>
@@ -39,7 +41,7 @@
       
     })
     var load_news = function (){
-      $('#new').empty();
+        $('#new').empty();
     	var table = $('#new').DataTable({
         	"destroy":true,
         	"order":[[0,"asc"]],
@@ -87,23 +89,230 @@
         });
         
     }
+    //Validate form 
     
-    $("#agregar_new").on("click", function(){
-       $.ajax({
-            url: "{{url('panel/noticias')}}",
-            headers:{'X-CSRF-TOKEN':token},
-            type: "POST",
-            cache: false,
-            contentType: false,
-            processData: false,
-            data: new FormData($("#form_new")[0]),
-            success: function(){
-              load_news();
-              $('#form_new')[0].reset();
-            }
-       });
-      
-    });
+    $(document).ready(function() {
+            //Validate form in modal_alta   
+            var validador = $("#form_new").validate({
+                rules: {
+                    title: {
+                        required: true,
+                        minlength: 5
+                    },
+                    pompadour: {
+                        required: true,
+                        minlength: 5
+                    },
+                    body: {
+                        required: true,
+                        minlength: 150
+                    },
+                    photo: {
+                        required: true
+                    },
+                    carrera: {
+                        required: true
+                    },
+                    publication_date: {
+                        required: true
+                    },
+                    end_publication: {
+                        required: true
+                    }
+                },
+                messages: {
+                  title: {
+                    required: "Por favor ingrese un título para el curso",
+                    minlength: "El título del curso debe contener como minimo 5 caracteres"
+                  },
+                  pompadour: {
+                    required: "Por favor ingrese un subtítulo para el curso",
+                    minlength: "Debe contener una minima descripción no debe quedar vacio"
+                  },
+                  body: {
+                    required: "Por favor ingrese una descripción del contenido del curso",
+                    minlength: "Debe contener al menos 150 caracteres"
+                  },
+                  photo: {
+                    required: "Debe cargar una imagen"
+                  },
+                  carrera: {
+                    required: "Debe seleccionar una carrera"
+                  },
+                  publication_date: {
+                    required: "Seleccione una fecha"
+                  },
+                  end_publication: {
+                    required: "Seleccione una fecha"
+                  }
+                },
+                errorElement: "em",
+                errorPlacement: function(error, element) {
+                  // Add the `help-block` class to the error element
+                  error.addClass("help-block");
+
+                  // Add `has-feedback` class to the parent div.form-group
+                  // in order to add icons to inputs
+                  element.parents(".form-group").addClass("has-feedback");
+
+                  if (element.prop("type") === "checkbox") {
+                    error.insertAfter(element.parent("label"));
+                  } else {
+                    error.insertAfter(element);
+                  }
+
+                  // Add the span element, if doesn't exists, and apply the icon classes to it.
+                  if (!element.next("span")[0]) {
+                    $("<span class='glyphicon glyphicon-remove form-control-feedback'></span>").insertAfter(element);
+                  }
+                },
+                success: function(label, element) {
+                    // Add the span element, if doesn't exists, and apply the icon classes to it.
+                    if (!$(element).next("span")[0]) {
+                        $("<span class='glyphicon glyphicon-ok form-control-feedback'></span>").insertAfter($(element));
+                    
+                    }
+                    
+                },
+                highlight: function(element, errorClass, validClass) {
+                  $(element).parents(".form-group").addClass("has-error").removeClass("has-success");
+                  $(element).next("span").addClass("glyphicon-remove").removeClass("glyphicon-ok");
+                },
+                unhighlight: function(element, errorClass, validClass) {
+                  $(element).parents(".form-group").addClass("has-success").removeClass("has-error");
+                  $(element).next("span").addClass("glyphicon-ok").removeClass("glyphicon-remove");
+                },
+                submitHandler: function() {
+                    $.ajax({
+                        url: "{{url('panel/noticias')}}",
+                         headers:{'X-CSRF-TOKEN':token},
+                        type: "POST",
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        data: new FormData($("#form_new")[0]),
+                        success: function(){
+                          load_news();
+                          $('#myModal').modal('toggle');
+                          $("#form_new").resetForm();
+                        }
+                    });
+                }
+            });
+            
+            //Validate form modal_modif
+            var validador_m = $("#form_new_modif").validate({
+                rules: {
+                    title_m: {
+                        required: true,
+                        minlength: 5
+                    },
+                    pompadour_m: {
+                        required: true,
+                        minlength: 5
+                    },
+                    body_m: {
+                        required: true,
+                        minlength: 150
+                    },
+                    carrera_m: {
+                        required: true
+                    },
+                    publication_date_m: {
+                        required: true
+                    },
+                    end_publication_m: {
+                        required: true
+                    }
+                },
+                messages: {
+                  title_m: {
+                    required: "Por favor ingrese un título para el curso",
+                    minlength: "El título del curso debe contener como minimo 5 caracteres"
+                  },
+                  pompadour_m: {
+                    required: "Por favor ingrese un subtítulo para el curso",
+                    minlength: "Debe contener una minima descripción no debe quedar vacio"
+                  },
+                  body_m: {
+                    required: "Por favor ingrese una descripción del contenido del curso",
+                    minlength: "Debe contener al menos 150 caracteres"
+                  },
+                  carrera_m: {
+                    required: "Debe seleccionar una carrera"
+                  },
+                  publication_date_m: {
+                    required: "Seleccione una fecha"
+                  },
+                  end_publication_m: {
+                    required: "Seleccione una fecha"
+                  }
+                },
+                errorElement: "em",
+                errorPlacement: function(error, element) {
+                  // Add the `help-block` class to the error element
+                  error.addClass("help-block");
+
+                  // Add `has-feedback` class to the parent div.form-group
+                  // in order to add icons to inputs
+                  element.parents(".form-group").addClass("has-feedback");
+
+                  if (element.prop("type_m") === "checkbox") {
+                    error.insertAfter(element.parent("label"));
+                  } else {
+                    error.insertAfter(element);
+                  }
+
+                  // Add the span element, if doesn't exists, and apply the icon classes to it.
+                  if (!element.next("span")[0]) {
+                    $("<span class='glyphicon glyphicon-remove form-control-feedback'></span>").insertAfter(element);
+                  }
+                },
+                success: function(label, element) {
+                    // Add the span element, if doesn't exists, and apply the icon classes to it.
+                    if (!$(element).next("span")[0]) {
+                        $("<span class='glyphicon glyphicon-ok form-control-feedback'></span>").insertAfter($(element));
+                    
+                    }
+                    
+                },
+                highlight: function(element, errorClass, validClass) {
+                  $(element).parents(".form-group").addClass("has-error").removeClass("has-success");
+                  $(element).next("span").addClass("glyphicon-remove").removeClass("glyphicon-ok");
+                },
+                unhighlight: function(element, errorClass, validClass) {
+                  $(element).parents(".form-group").addClass("has-success").removeClass("has-error");
+                  $(element).next("span").addClass("glyphicon-ok").removeClass("glyphicon-remove");
+                },
+                submitHandler: function() {
+                    var value = $("#id").val();
+                    var token = $("#token").val();
+                    $.ajax({
+                        url: "{{url('panel/noticias')}}"+'/'+value,
+                        headers:{'X-CSRF-TOKEN':token},
+                        type: "POST",
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        data: new FormData($("#form_new_modif")[0]),
+                        success: function(){
+                          load_news();
+                          $('#myModal_modif').modal('toggle');
+                          $("#form_new_modif").resetForm();
+                        }
+                    });
+                }
+            });
+            //Removing the error and success elements from the from-group
+            $(".modal").on('hidden.bs.modal', function () {
+              $(this).find("#title,#pompadour,#publication_date,#end_publication, textarea, :file").val('').end();
+              $('.form-group').removeClass('has-success has-feedback');
+              $('span').removeClass('glyphicon-ok glyphicon-remove');
+              $('.form-group').removeClass('has-error has-feedback');
+              $('em').remove();              
+            });
+    }); 
+    
     $("body").on("click","button.editar",function(){
         var id = $(this).parent("td").prev("td").prev("td").prev("td").prev("td").text();
         var route = "{{url('panel/noticias')}}"+'/'+id+'/edit';
@@ -116,24 +325,6 @@
             $("#publication_date_m").val(res.publication_date);
             $("#end_publication_m").val(res.end_publication);            
         });
-    });
-
-    $("#modif_new").on("click", function(e){       
-       var value = $("#id").val();
-       var token = $("#token").val();
-       $.ajax({
-            url: "{{url('panel/noticias')}}"+'/'+value,
-            headers:{'X-CSRF-TOKEN':token},
-            type: "POST",
-            cache: false,
-            contentType: false,
-            processData: false,
-            data: new FormData($("#form_new_modif")[0]),
-            success: function(){
-              load_news();
-              $('#form_new_modif')[0].reset();
-            }
-       });
     });
  </script>
 @endsection

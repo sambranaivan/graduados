@@ -39,7 +39,7 @@
             </div>
             <div class="form-group">
               {!! Form::label('carrera_m', 'Carrera:') !!}
-              {!! Form::select('carrera_m', $carrera , null, ['placeholder'=>'Seleccione carrera',  'class'=>'form-control','style'=>'width:100%','id'=>'carrera_m'])!!}          
+              {!! Form::select('carrera_m', $carrera , null, ['class'=>'form-control','style'=>'width:100%','id'=>'carrera_m'])!!}          
             </div>
             <div class="form-group">
               {!! Form::label('type_m', 'Tipo de Noticia:') !!}
@@ -54,13 +54,14 @@
               {!! Form::text('end_publication_m', null, ['id'=>'end_publication_m','class'=>'form-control', 'placeholder'=>'____/__/__', 'data-provide'=>'datepicker']) !!}             
             </div>
           </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-warning" id="modif_new">Modificar</button>
+          </div>
         </div>       
         {!! Form::close() !!}
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-warning" id="modif_new" data-dismiss="modal">Modificar</button>
-      </div>
+      
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
