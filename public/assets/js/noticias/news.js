@@ -26,7 +26,8 @@ $('#carrera').select2({
                 $('#agregar_new').show();
                 $('#_method').remove();
                 $('#photo_mm').remove();
-                $('.modal-title').html('Registrar nuevo contenido');                
+                $('.modal-title').html('Registrar nuevo contenido'); 
+                $('#long').show();               
             });
             var validador = $("#form_new").validate({
                 rules: {
@@ -120,7 +121,6 @@ $('#carrera').select2({
                         url:action,
                         type:'POST',
                         headers:{'X-CSRF-TOKEN':token},
-                        type: "POST",
                         cache: false,
                         contentType: false,
                         processData: false,
@@ -144,6 +144,7 @@ $('#carrera').select2({
               $('span').removeClass('glyphicon-ok glyphicon-remove');
               $('.form-group').removeClass('has-error has-feedback');
               $('em').remove();              
+              $('#long').html('Caracteres ingresados: <span>0</span>'); 
             });
             $("#agregar_new").click(function() {
                 $('#_method').remove();
@@ -158,8 +159,16 @@ $('#carrera').select2({
                 
             });
             
+            $('#body').keyup(function() {
+                var chars = $(this).val().length;
+                $('#long').html('Caracteres ingresados: <span>'+chars+'</span>');   
+            });
+
+
+
             load_news();
         })
+
         var load_news = function (){
             var opcion_listado = $('.table-responsive').attr("id");
             $('#new').empty();
@@ -224,6 +233,7 @@ $('#carrera').select2({
                 $("#body").val(res.body);
                 $("#photo_mm").attr('src', '../'+res.photo);
                 $("#publication_date").val(res.publication_date);
-                $("#end_publication").val(res.end_publication);            
+                $("#end_publication").val(res.end_publication);   
+                $('#long').html('Caracteres ingresados: <span>'+res.body.length+'</span>');           
             });
         });

@@ -27,6 +27,7 @@
                         <div class="form-group">
                             {!! Form::label('body', 'Contenido de la noticia:',['class'=>'control-label']) !!}
                             {!! Form::textarea('body', null, ['id'=>'body','class'=>'form-control', 'placeholder'=>'Ingrese contenido principal de la noticia']) !!}
+                            {!! Form::label('Caracteres ingresados','Caracteres ingresados:', ['id'=>'long'])!!}
                         </div>
                     </div>
                     <div class="col-xs-6">
