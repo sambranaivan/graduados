@@ -179,39 +179,39 @@ class NewsController extends Controller
 
         if ($request->ajax())
         {   
-            if ($request['type_m'] == 'General') {
+            if ($request['type'] == 'General') {
                 $type = 1;
-            }elseif ($request['type_m'] == 'Cursos') {
+            }elseif ($request['type'] == 'Cursos') {
                 $type = 2;
             }else{
                 $type = 3; 
             }
-            if ($request->hasFile('photo_m')) 
+            if ($request->hasFile('photo')) 
             {
-                $photo = time().'.'.$request->photo_m->getClientOriginalExtension();
-                $request->photo_m->move(public_path('assets/img/photo_news'), $photo);
+                $photo = time().'.'.$request->photo->getClientOriginalExtension();
+                $request->photo->move(public_path('assets/img/photo_news'), $photo);
                 $path_image = "assets/img/photo_news/" . $photo;
                 $news->fill([
-                    'title' => $request['title_m'],
-                    'pompadour' => $request['pompadour_m'],
-                    'body' => $request['body_m'],
+                    'title' => $request['title'],
+                    'pompadour' => $request['pompadour'],
+                    'body' => $request['body'],
                     'photo' => $path_image,
                     'typenew_id' =>  $type,
-                    'career_id' => $request['carrera_m'],
+                    'career_id' => $request['carrera'],
                     'great' => '0',
-                    'publication_date' => $request['publication_date_m'],
-                    'end_publication' => $request['end_publication_m'],
+                    'publication_date' => $request['publication_date'],
+                    'end_publication' => $request['end_publication'],
                 ]);
             } else {
                 $news->fill([
-                    'title' => $request['title_m'],
-                    'pompadour' => $request['pompadour_m'],
-                    'body' => $request['body_m'],
+                    'title' => $request['title'],
+                    'pompadour' => $request['pompadour'],
+                    'body' => $request['body'],
                     'typenew_id' =>  $type,
-                    'career_id' => $request['carrera_m'],
+                    'career_id' => $request['carrera'],
                     'great' => '0',
-                    'publication_date' => $request['publication_date_m'],
-                    'end_publication' => $request['end_publication_m'],
+                    'publication_date' => $request['publication_date'],
+                    'end_publication' => $request['end_publication'],
                 ]);
             }
 

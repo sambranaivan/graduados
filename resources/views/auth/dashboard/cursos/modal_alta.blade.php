@@ -7,7 +7,7 @@
             </div>
             <div class="modal-body">
                 {!! Form::open(['id'=>'form_new', 'files' => true]) !!}
-                <input type="hidden" name="_token" value="{{csrf_token()}}" id="token">
+                <input type="hidden" id="id">
                 <div class="row">
                   <div class="col-xs-6">
                     <div class="form-group">
@@ -32,6 +32,7 @@
                     <div class="col-xs-6">
                         <div class="form-group">
                             {!! Form::label('photo', 'Imagen de la noticia:',['class'=>'control-label']) !!}
+                            {!! Form::image('','success',['id'=>'photo_mm','class'=>'img-responsive', 'width' => 150, 'height' => 150 ] )  !!}
                             {!! Form::file('photo',null,['id'=>'photo','name'=>'photo','class'=>'form-control', 'placeholder'=>'Imagen de la noticia']) !!}
                         </div>
                         <div class="form-group">
@@ -57,6 +58,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" id="cerrar" data-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn btn-success" id="agregar_new">Registrar</button>
+                    <button type="submit" class="btn btn-warning" id="modif_new">Modificar</button>
                 </div>
             </div>       
             {!! Form::close() !!}

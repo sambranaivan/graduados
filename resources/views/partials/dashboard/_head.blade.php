@@ -11,6 +11,7 @@
 {!! Html::style('plugins/datepicker/datepicker3.css') !!}
 {!! Html::style('plugins/daterangepicker/daterangepicker.css') !!}
 {!! Html::style('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') !!}
-{!! Html::style('plugins/datatables/jquery.dataTables.min.css') !!}
+{!! Html::style('plugins/datatables/dataTables.bootstrap.min.css') !!}
+{!! Html::style('plugins/datatables/responsive.bootstrap.min.css') !!}
 {!! Html::style('plugins/select2/select2.css') !!}
 {!! Html::style('assets/css/css.css') !!}
