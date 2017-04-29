@@ -282,8 +282,7 @@ var app = app || {};
     }
 
     return {
-      init: init,
-      format: format
+      init: init
     }
   }();
 })();

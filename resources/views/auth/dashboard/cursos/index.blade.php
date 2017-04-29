@@ -11,4 +11,9 @@
 @endsection
 @section('script')
 	{!! Html::script('assets/js/noticias/news.js') !!}
+	<script type="text/javascript">
+		(function() {
+			app.news.init();
+		})();
+	</script>
 @endsection
