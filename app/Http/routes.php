@@ -45,5 +45,7 @@ Route::group(['middleware' => ['web'], 'prefix' => 'panel'], function () {
         Route::get('ofertasall', 'Auth\NewsController@ofertasall');
         Route::get('ofertas_laborales', 'Auth\NewsController@ofertas_laborales');
 
+        Route::resource('faqs', 'Auth\FaqController');
+
     });
 });
