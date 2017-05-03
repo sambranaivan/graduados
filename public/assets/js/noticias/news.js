@@ -69,7 +69,6 @@ var app = app || {};
       $('#alta').click(function() {
         $('#modif_new').hide();
         $('#_method').remove();
-        $('#photo_mm').hide();
         rangofechas();
         mostrarBotones();
         agregarContenidoModal();
@@ -213,7 +212,20 @@ var app = app || {};
         $('#long').html('Caracteres ingresados: <span>0</span>'); 
       });
     }
-
+    function mostrarImagen(input) {
+     if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function (e) {
+       $('#photo_mm').attr('src', e.target.result);
+      }
+      reader.readAsDataURL(input.files[0]);
+     }
+    }
+    function changebotton(){
+      $("#photo").change(function(){
+       mostrarImagen(this);
+      });  
+    }    
     function clickBoton() {
       $("#agregar_new").click(function() {
           $('#_method').remove();
@@ -264,8 +276,6 @@ var app = app || {};
             $('#agregar_new').hide();
             $('.modal-title').html('Modificar contenido seleccionado');
             $('#form_new').append( "<input type='hidden' name='_method' id='_method' value='PUT'>" );
-            //$('#form_new').append( "<input type='hidden' name='_method' id='_method' value='PUT'>" );
-            $('#photo_mm').show();
             var id = $(this).parent("td").prev("td").prev("td").prev("td").prev("td").text();
             var route = "noticias"+'/'+id+'/edit';
             $.get(route, function(res){
@@ -316,6 +326,7 @@ var app = app || {};
     function init() {
       load_news();
       usarSelect2();
+      changebotton();
       ocultarBotones();
       limpiarModals();
       clickBoton();
