@@ -115,66 +115,87 @@ var app = app || {};
         messages: {
           title: {
             required: "Por favor ingrese un título",
-            minlength: "El título del curso debe contener como minimo 5 caracteres"
+            minlength: "Debe contener como minimo 5 caracteres"
           },
           pompadour: {
             required: "Por favor ingrese un subtítulo",
-            minlength: "Debe contener una minima descripción no debe quedar vacio"
+            minlength: "Debe contener como minimo 5 caracteres"
           },
           body: {
             required: "Por favor ingrese una descripción para el contenido",
             minlength: "Debe contener al menos 150 caracteres"
           },
           photo: {
-            required: "Debe cargar una imagen"
+            required: "Debe cargar una imagen alusiva a la noticia"
           },
           carrera: {
             required: "Debe seleccionar una carrera"
           },
           publication_date: {
             required: "Seleccione una fecha",
-            date: "Seleccione una fecha valida"
+            argDate: "Seleccione una fecha valida"
           },
           end_publication: {
             required: "Seleccione una fecha",
-            fechafin: "Seleccione una fecha valida"
+            argDate: "Seleccione una fecha valida"
           }
         },
         errorElement: "em",
         errorPlacement: function(error, element) {
           // Add the `help-block` class to the error element
-          error.addClass("help-block");
+          /*error.addClass("help-block");
 
           // Add `has-feedback` class to the parent div.form-group
           // in order to add icons to inputs
           element.parents(".form-group").addClass("has-feedback");
+          */
 
-          if (element.prop("type") === "checkbox") {
-            error.insertAfter(element.parent("label"));
+          /*if (element.prop("type") === "checkbox") {
+            error.addClass("help-block");
+            //error.insertAfter(element.parent("label"));
           } else {
-            error.insertAfter(element);
-          }
+            error.addClass("help-block");
+            //error.insertAfter(element);
+          }*/
 
           // Add the span element, if doesn't exists, and apply the icon classes to it.
-          if (!element.next("span")[0]) {
-            $("<span class='glyphicon glyphicon-remove form-control-feedback'></span>").insertAfter(element);
-          }
-        },
-        success: function(label, element) {
-            // Add the span element, if doesn't exists, and apply the icon classes to it.
-            if (!$(element).next("span")[0]) {
-                $("<span class='glyphicon glyphicon-ok form-control-feedback'></span>").insertAfter($(element));
-            
+          //if (!element.next("span")[0]) {
+            if (element.prop("type") === "checkbox") {
+              error.addClass("help-block");
+              error.insertAfter(element.parent("label"));
+            } else {
+              error.addClass("help-block");
+              error.insertAfter(element);
             }
             
+            
+          //}
+        }/*,
+        success: function(label, element) {
+            // Add the span element, if doesn't exists, and apply the icon classes to it.
+            //if (!$(element).next("span")[0]) {
+                $("<i class='fa fa-check fa-lg form-control-feedback'></i>").insertAfter($(element));
+                
+            //}
+            
+        }*/,
+        highlight: function (element, errorClass, validClass) {
+            if (element.type === "radio") {
+                this.findByName(element.name).addClass(errorClass).removeClass(validClass);
+            } else {
+                $(element).closest('.form-group').removeClass('has-success has-feedback').addClass('has-error has-feedback');
+                $(element).closest('.form-group').find('i.fa-check').remove();
+                $(element).closest('.form-group').append('<i class="fa fa-exclamation fa-lg form-control-feedback"></i>');
+            }
         },
-        highlight: function(element, errorClass, validClass) {
-          $(element).parents(".form-group").addClass("has-error").removeClass("has-success");
-          $(element).next("span").addClass("glyphicon-remove").removeClass("glyphicon-ok");
-        },
-        unhighlight: function(element, errorClass, validClass) {
-          $(element).parents(".form-group").addClass("has-success").removeClass("has-error");
-          $(element).next("span").addClass("glyphicon-ok").removeClass("glyphicon-remove");
+        unhighlight: function (element, errorClass, validClass) {
+            if (element.type === "radio") {
+                this.findByName(element.name).removeClass(errorClass).addClass(validClass);
+            } else {
+                $(element).closest('.form-group').removeClass('has-error has-feedback').addClass('has-success has-feedback');
+                $(element).closest('.form-group').find('i.fa-exclamation').remove();
+                $(element).closest('.form-group').append('<i class="fa fa-check fa-lg form-control-feedback"></i>');
+            }
         },
         submitHandler: function(form) {
             var token = $('input:hidden[name=_token]').val();
@@ -206,9 +227,10 @@ var app = app || {};
       $("#myModal").on('hidden.bs.modal', function () {
         $(this).find("#title,#pompadour,#publication_date,#end_publication, textarea, :file").val('').end();
         $('.form-group').removeClass('has-success has-feedback');
-        $('span').removeClass('glyphicon-ok glyphicon-remove');
+        $('i').removeClass('fa-check fa-exclamation');
         $('.form-group').removeClass('has-error has-feedback');
-        $('em').remove();              
+        $('em').remove(); 
+        $('#photo_mm').attr('src', ''); 
         $('#long').html('Caracteres ingresados: <span>0</span>'); 
       });
     }
