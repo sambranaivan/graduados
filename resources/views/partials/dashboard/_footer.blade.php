@@ -9,6 +9,7 @@
 {!! Html::script('plugins/jQuery/jquery.validate.js') !!}
 {!! Html::script('plugins/datatables/jquery.dataTables.min.js') !!}
 {!! Html::script('plugins/datatables/dataTables.bootstrap.min.js') !!}
+{!! Html::script('plugins/datetimepicker/moment.min.js') !!}
 {!! Html::script('plugins/datatables/dataTables.responsive.min.js') !!}
 {!! Html::script('plugins/datatables/responsive.bootstrap.min.js') !!}
 {!! Html::script('assets/js/jquery-ui.min.js') !!}
@@ -22,7 +23,8 @@
 {!! Html::script('plugins/knob/jquery.knob.js') !!}
 {!! Html::script('plugins/daterangepicker/moment_1.min.js') !!}
 {!! Html::script('plugins/daterangepicker/daterangepicker.js') !!}
-{!! Html::script('plugins/datepicker/bootstrap-datepicker.js') !!}
+{!! Html::script('plugins/datetimepicker/bootstrap-datetimepicker.js') !!}
+{!! Html::script('plugins/datetimepicker/es.js') !!}
 {!! Html::script('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js') !!}
 {!! Html::script('plugins/slimScroll/jquery.slimscroll.min.js') !!}
 {!! Html::script('plugins/fastclick/fastclick.js') !!}

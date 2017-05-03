@@ -47,13 +47,19 @@
                         <div class="row">
                             <div class="form-group col-xs-6">
                                 {!! Form::label('publication_date', 'Inicio de publicación:',['class'=>'control-label']) !!}
-                                {!! Form::text('publication_date', null, ['id'=>'publication_date','class'=>'form-control', 'placeholder'=>'____/__/__', 'data-provide'=>'datepicker']) !!}          
+                                <div class="input-group startdatepicker date">
+                                    {!! Form::text('publication_date', null, ['id'=>'publication_date','class'=>'form-control','placeholder'=>'__/__/____', 'readonly'=>'readonly']) !!}
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                </div>          
                             </div>
                             <div class="form-group col-xs-6">
                                 {!! Form::label('end_publication', 'Fin de publicación:',['class'=>'control-label']) !!}
-                                {!! Form::text('end_publication', null, ['id'=>'end_publication','class'=>'form-control', 'placeholder'=>'____/__/__', 'data-provide'=>'datepicker']) !!}             
+                                <div class="input-group expiredatepicker date">
+                                    {!! Form::text('end_publication', null, ['id'=>'end_publication','class'=>'form-control','placeholder'=>'__/__/____', 'readonly'=>'readonly']) !!}
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                </div>             
                             </div> 
-                        </div>
+                        </div> 
                     </div>
                 </div> 
                 <div class="modal-footer">

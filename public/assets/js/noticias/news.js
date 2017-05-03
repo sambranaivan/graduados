@@ -3,8 +3,7 @@ var app = app || {};
 (function() {
 
   app.news = function() {
-
-    var opcion_listado = $('.table-responsive').attr("id");
+   var opcion_listado = $('.table-responsive').attr("id");
 
     var table = $('#new');
 
@@ -38,6 +37,7 @@ var app = app || {};
 
           ]
       });
+      eventosAttach();
     }
 
     function usarSelect2() {
@@ -69,8 +69,8 @@ var app = app || {};
       $('#alta').click(function() {
         $('#modif_new').hide();
         $('#_method').remove();
-        $('#photo_mm').remove();
-
+        $('#photo_mm').hide();
+        rangofechas();
         mostrarBotones();
         agregarContenidoModal();
       });
@@ -104,10 +104,13 @@ var app = app || {};
                 required: true
             },
             publication_date: {
-                required: true
+                required: true,
+                argDate: true
+                
             },
             end_publication: {
-                required: true
+                required: true,
+                argDate: true 
             }
         },
         messages: {
@@ -130,10 +133,12 @@ var app = app || {};
             required: "Debe seleccionar una carrera"
           },
           publication_date: {
-            required: "Seleccione una fecha"
+            required: "Seleccione una fecha",
+            date: "Seleccione una fecha valida"
           },
           end_publication: {
-            required: "Seleccione una fecha"
+            required: "Seleccione una fecha",
+            fechafin: "Seleccione una fecha valida"
           }
         },
         errorElement: "em",
@@ -194,7 +199,9 @@ var app = app || {};
         
       });
     }
-
+    jQuery.validator.addMethod("argDate", function(value, element) { 
+      return value.match(/^(0?[1-9]|[12][0-9]|3[0-1])[/., -](0?[1-9]|1[0-2])[/., -](19|20)?\d{2}$/);
+    },"Ingrese una fecha correcta");
     function limpiarModals() {
       //Removing the error and success elements from the from-group
       $("#myModal").on('hidden.bs.modal', function () {
@@ -252,10 +259,13 @@ var app = app || {};
         });
 
         $("body").on("click","button.editar",function(){
+            rangofechas();
             $('#modif_new').show();
             $('#agregar_new').hide();
             $('.modal-title').html('Modificar contenido seleccionado');
             $('#form_new').append( "<input type='hidden' name='_method' id='_method' value='PUT'>" );
+            //$('#form_new').append( "<input type='hidden' name='_method' id='_method' value='PUT'>" );
+            $('#photo_mm').show();
             var id = $(this).parent("td").prev("td").prev("td").prev("td").prev("td").text();
             var route = "noticias"+'/'+id+'/edit';
             $.get(route, function(res){
@@ -264,16 +274,47 @@ var app = app || {};
                 $("#pompadour").val(res.pompadour);
                 $("#body").val(res.body);
                 $("#photo_mm").attr('src', '../'+res.photo);
-                $("#publication_date").val(res.publication_date);
-                $("#end_publication").val(res.end_publication);   
+                var p_d = res.publication_date.split("-");
+                var publication_date = p_d[2]+'/'+p_d[1]+'/'+p_d[0];
+                var p_f = res.end_publication.split("-");
+                var end_publication = p_f[2]+'/'+p_f[1]+'/'+p_f[0];
+                $("#publication_date").val(publication_date);
+                $("#end_publication").val(end_publication);   
                 $('#long').html('Caracteres ingresados: <span>'+res.body.length+'</span>');           
             });
         });
+        
     }
-
+    function rangofechas(){
+      $(".startdatepicker,.expiredatepicker").datetimepicker({
+          locale: "es",
+          format: "L",
+          useCurrent: false,
+          showTodayButton: true,
+          showClear: true,
+          minDate: moment(),
+          ignoreReadonly: true,
+          icons: {
+              time: "fa fa-clock-o",
+              date: "fa fa-calendar",
+              up: "fa fa-arrow-up",
+              down: "fa fa-arrow-down",
+              previous: "fa fa-angle-left",
+              next: "fa fa-angle-right",
+              today: "fa fa-thumb-tack",
+              clear: "fa fa-trash"
+          }
+      });
+      $(".startdatepicker").on("dp.change", function (e) {
+          $(".expiredatepicker").data("DateTimePicker").minDate(e.date);
+      });
+      $(".expiredatepicker").on("dp.change", function (e) {
+          $(".startdatepicker").data("DateTimePicker").maxDate(e.date);
+      });
+      
+    }
     function init() {
       load_news();
-      eventosAttach();
       usarSelect2();
       ocultarBotones();
       limpiarModals();

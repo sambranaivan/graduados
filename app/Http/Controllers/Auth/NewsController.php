@@ -111,6 +111,10 @@ class NewsController extends Controller
 
     public function store(Request $request)
     {
+        $publication_date = explode("/", $request['publication_date']);
+        $publication_d= $publication_date[2].'-'.$publication_date[1].'-'.$publication_date[0];
+        $end_publication = explode("/", $request['end_publication']);
+        $end_pu = $end_publication[2].'-'.$end_publication[1].'-'.$end_publication[0];
         $photo = time().'.'.$request->photo->getClientOriginalExtension();
         $request->photo->move(public_path('assets/img/photo_news'), $photo);
         $path_image = "assets/img/photo_news/" . $photo;
@@ -122,6 +126,7 @@ class NewsController extends Controller
         }else{
             $type = 3; 
         }
+
         if ($request->ajax()) {
             News::create([
                 'title'=>$request['title'],
@@ -131,8 +136,8 @@ class NewsController extends Controller
                 'typenew_id'=>$type,
                 'career_id'=>$request['carrera'],
                 'great'=>'0',
-                'publication_date'=>$request['publication_date'],
-                'end_publication'=>$request['end_publication'],
+                'publication_date'=>$publication_d,
+                'end_publication'=>$end_pu,
            ]);
         }
 
@@ -179,6 +184,10 @@ class NewsController extends Controller
 
         if ($request->ajax())
         {   
+            $publication_date = explode("/", $request['publication_date']);
+            $publication_d= $publication_date[2].'-'.$publication_date[1].'-'.$publication_date[0];
+            $end_publication = explode("/", $request['end_publication']);
+            $end_pu = $end_publication[2].'-'.$end_publication[1].'-'.$end_publication[0];
             if ($request['type'] == 'General') {
                 $type = 1;
             }elseif ($request['type'] == 'Cursos') {
@@ -186,8 +195,10 @@ class NewsController extends Controller
             }else{
                 $type = 3; 
             }
+
             if ($request->hasFile('photo')) 
             {
+
                 $photo = time().'.'.$request->photo->getClientOriginalExtension();
                 $request->photo->move(public_path('assets/img/photo_news'), $photo);
                 $path_image = "assets/img/photo_news/" . $photo;
@@ -199,8 +210,8 @@ class NewsController extends Controller
                     'typenew_id' =>  $type,
                     'career_id' => $request['carrera'],
                     'great' => '0',
-                    'publication_date' => $request['publication_date'],
-                    'end_publication' => $request['end_publication'],
+                    'publication_date' => $publication_d,
+                    'end_publication' => $end_pu,
                 ]);
             } else {
                 $news->fill([
@@ -210,8 +221,8 @@ class NewsController extends Controller
                     'typenew_id' =>  $type,
                     'career_id' => $request['carrera'],
                     'great' => '0',
-                    'publication_date' => $request['publication_date'],
-                    'end_publication' => $request['end_publication'],
+                    'publication_date' => $publication_d,
+                    'end_publication' => $end_pu,
                 ]);
             }
 
