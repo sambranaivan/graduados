@@ -12,7 +12,7 @@ use App\Models\Career;
 
 class NewsController extends Controller
 {
-    
+
     /**
      * Display a listing type news.
      *
@@ -27,7 +27,7 @@ class NewsController extends Controller
         foreach ($news as $key => $value) {
             $resources['data'][]=$value;
         }
-        return response()->json($resources);        
+        return response()->json($resources);
     }
     public function cursos()
     {
@@ -37,7 +37,7 @@ class NewsController extends Controller
         foreach ($news as $key => $value) {
             $resources['data'][]=$value;
         }
-        return response()->json($resources);        
+        return response()->json($resources);
     }
     public function ofertas_laborales()
     {
@@ -47,7 +47,7 @@ class NewsController extends Controller
         foreach ($news as $key => $value) {
             $resources['data'][]=$value;
         }
-        return response()->json($resources);        
+        return response()->json($resources);
     }
 
     /**
@@ -78,7 +78,7 @@ class NewsController extends Controller
         }
         return view('auth.dashboard.cursos.index', compact('type','carrera'));
     }
-    
+
     public function ofertasall()
     {
         try {
@@ -124,7 +124,7 @@ class NewsController extends Controller
         }elseif ($request['type'] == 'Cursos') {
             $type = 2;
         }else{
-            $type = 3; 
+            $type = 3;
         }
 
         if ($request->ajax()) {
@@ -156,7 +156,7 @@ class NewsController extends Controller
     {
 
     }
-    
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -183,7 +183,7 @@ class NewsController extends Controller
         $news = News::findOrFail($id);
 
         if ($request->ajax())
-        {   
+        {
             $publication_date = explode("/", $request['publication_date']);
             $publication_d= $publication_date[2].'-'.$publication_date[1].'-'.$publication_date[0];
             $end_publication = explode("/", $request['end_publication']);
@@ -193,10 +193,10 @@ class NewsController extends Controller
             }elseif ($request['type'] == 'Cursos') {
                 $type = 2;
             }else{
-                $type = 3; 
+                $type = 3;
             }
 
-            if ($request->hasFile('photo')) 
+            if ($request->hasFile('photo'))
             {
 
                 $photo = time().'.'.$request->photo->getClientOriginalExtension();
@@ -212,6 +212,7 @@ class NewsController extends Controller
                     'great' => '0',
                     'publication_date' => $publication_d,
                     'end_publication' => $end_pu,
+                    'great' => $request['great'],
                 ]);
             } else {
                 $news->fill([
@@ -223,6 +224,7 @@ class NewsController extends Controller
                     'great' => '0',
                     'publication_date' => $publication_d,
                     'end_publication' => $end_pu,
+                    'great' => $request['great'],
                 ]);
             }
 

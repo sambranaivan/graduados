@@ -14,7 +14,7 @@ var app = app || {};
           "lengthChange": true,
           "language":{
               "url": "../plugins/datatables/Spanish.json"
-          },               
+          },
           "ajax":{
               "method":"GET",
               "url": opcion_listado,
@@ -27,12 +27,12 @@ var app = app || {};
               "data":           null,
               "defaultContent": ''
              },
-             {"data":'new_id',"title":"#"}, 
+             {"data":'new_id',"title":"#"},
              {"data":'type.description',"title":"Tipo de Noticia"},
              {"data":'title',"title":"Titulo"},
              {"data":'pompadour',"title":"Subtitulo"},
              {"data":null,"title":"Editar <i class='fa fa-pencil-square-o' aria-hidden='true'></i>",
-              "defaultContent":"<button type='button' id='editar' class='editar btn btn-danger' data-toggle='modal' data-target='#myModal'><i class='fa fa-pencil-square-o' aria-hidden='true'></i> Editar</button>" 
+              "defaultContent":"<button type='button' id='editar' class='editar btn btn-warning' data-toggle='modal' data-target='#myModal'><i class='fa fa-pencil-square-o' aria-hidden='true'></i> Editar</button>"
              }
 
           ]
@@ -41,7 +41,7 @@ var app = app || {};
     }
 
     function usarSelect2() {
-      $('#carrera').select2({       
+      $('#carrera').select2({
          dropdownParent: $("#myModal")
       });
     }
@@ -69,6 +69,8 @@ var app = app || {};
       $('#alta').click(function() {
         $('#modif_new').hide();
         $('#_method').remove();
+        $('#great').hide();
+        $('#great_l').hide();
         rangofechas();
         mostrarBotones();
         agregarContenidoModal();
@@ -105,11 +107,11 @@ var app = app || {};
             publication_date: {
                 required: true,
                 argDate: true
-                
+
             },
             end_publication: {
                 required: true,
-                argDate: true 
+                argDate: true
             }
         },
         messages: {
@@ -167,17 +169,17 @@ var app = app || {};
               error.addClass("help-block");
               error.insertAfter(element);
             }
-            
-            
+
+
           //}
         }/*,
         success: function(label, element) {
             // Add the span element, if doesn't exists, and apply the icon classes to it.
             //if (!$(element).next("span")[0]) {
                 $("<i class='fa fa-check fa-lg form-control-feedback'></i>").insertAfter($(element));
-                
+
             //}
-            
+
         }*/,
         highlight: function (element, errorClass, validClass) {
             if (element.type === "radio") {
@@ -216,10 +218,10 @@ var app = app || {};
                 }
             });
         }
-        
+
       });
     }
-    jQuery.validator.addMethod("argDate", function(value, element) { 
+    jQuery.validator.addMethod("argDate", function(value, element) {
       return value.match(/^(0?[1-9]|[12][0-9]|3[0-1])[/., -](0?[1-9]|1[0-2])[/., -](19|20)?\d{2}$/);
     },"Ingrese una fecha correcta");
     function limpiarModals() {
@@ -229,9 +231,9 @@ var app = app || {};
         $('.form-group').removeClass('has-success has-feedback');
         $('i').removeClass('fa-check fa-exclamation');
         $('.form-group').removeClass('has-error has-feedback');
-        $('em').remove(); 
-        $('#photo_mm').attr('src', ''); 
-        $('#long').html('Caracteres ingresados: <span>0</span>'); 
+        $('em').remove();
+        $('#photo_mm').attr('src', '');
+        $('#long').html('Caracteres ingresados: <span>0</span>');
       });
     }
     function mostrarImagen(input) {
@@ -246,8 +248,8 @@ var app = app || {};
     function changebotton(){
       $("#photo").change(function(){
        mostrarImagen(this);
-      });  
-    }    
+      });
+    }
     function clickBoton() {
       $("#agregar_new").click(function() {
           $('#_method').remove();
@@ -260,12 +262,12 @@ var app = app || {};
           });
           var value = $("#id").val();
           action = "noticias"+'/'+value;
-          
+
       });
-      
+
       $('#body').keyup(function() {
           var chars = $(this).val().length;
-          $('#long').html('Caracteres ingresados: <span>'+chars+'</span>');   
+          $('#long').html('Caracteres ingresados: <span>'+chars+'</span>');
       });
     }
 
@@ -279,7 +281,7 @@ var app = app || {};
         $('#new tbody').on('click', 'td.details-control', function() {
             var tr = $(this).closest('tr');
             var row = table.DataTable().row( tr );
-     
+
             if ( row.child.isShown() ) {
                 // This row is already open - close it
                 row.child.hide();
@@ -298,6 +300,9 @@ var app = app || {};
             $('#agregar_new').hide();
             $('.modal-title').html('Modificar contenido seleccionado');
             $('#form_new').append( "<input type='hidden' name='_method' id='_method' value='PUT'>" );
+            $('#great').show();
+            $('#great_l').show();
+
             var id = $(this).parent("td").prev("td").prev("td").prev("td").prev("td").text();
             var route = "noticias"+'/'+id+'/edit';
             $.get(route, function(res){
@@ -311,11 +316,11 @@ var app = app || {};
                 var p_f = res.end_publication.split("-");
                 var end_publication = p_f[2]+'/'+p_f[1]+'/'+p_f[0];
                 $("#publication_date").val(publication_date);
-                $("#end_publication").val(end_publication);   
-                $('#long').html('Caracteres ingresados: <span>'+res.body.length+'</span>');           
+                $("#end_publication").val(end_publication);
+                $('#long').html('Caracteres ingresados: <span>'+res.body.length+'</span>');
             });
         });
-        
+
     }
     function rangofechas(){
       $(".startdatepicker,.expiredatepicker").datetimepicker({
@@ -343,7 +348,7 @@ var app = app || {};
       $(".expiredatepicker").on("dp.change", function (e) {
           $(".startdatepicker").data("DateTimePicker").maxDate(e.date);
       });
-      
+
     }
     function init() {
       load_news();
