@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class FAQ extends Model {
 	protected $table = 'faqs';
-	protected $primaryKey = 'faq_id';
-	protected $fillable = ['title','description'];
+	protected $primaryKey = 'id';
+	protected $fillable = ['title','description', 'url_file'];
 
 	public $timestamps = true;
 }

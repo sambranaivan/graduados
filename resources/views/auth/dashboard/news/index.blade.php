@@ -5,12 +5,12 @@
 @include('auth.dashboard.news.modal_alta')
 <div class="table-responsive" id="noticia_general">
 <table class="table table-bordered" id="new">
-		
+
 </table>
 </div>
 @endsection
 @section('script')
-    {!! Html::script('assets/js/noticias/news.js') !!}
+    {!! Html::script('assets/js/personalizado/news.js') !!}
     <script type="text/javascript">
 		(function() {
 			app.news.init();

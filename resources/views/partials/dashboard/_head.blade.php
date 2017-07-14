@@ -14,4 +14,5 @@
 {!! Html::style('plugins/datatables/dataTables.bootstrap.min.css') !!}
 {!! Html::style('plugins/datatables/responsive.bootstrap.min.css') !!}
 {!! Html::style('plugins/select2/select2.css') !!}
+{!! Html::style('plugins/sweetalert2/sweetalert2.min.css') !!}
 {!! Html::style('assets/css/css.css') !!}

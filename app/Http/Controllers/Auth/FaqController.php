@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
 
-use App\Models\FAQ;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\Faq;
 
 class FaqController extends Controller
 {
@@ -18,11 +18,20 @@ class FaqController extends Controller
     public function index()
     {
         $preguntas = FAQ::all();
-
-
         return view('auth.dashboard.faqs.index',compact('preguntas'));
     }
-
+    /**
+     * Show all files faqs json
+     *@return \Illuminate\Http\Response
+     */
+    public function all_faqs(){
+        $faqs = FAQ::all();
+        $resources["data"] = [];
+        foreach ($faqs as $key => $value) {
+            $resources['data'][]=$value;
+        }
+        return response()->json($resources);
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -30,7 +39,7 @@ class FaqController extends Controller
      */
     public function create()
     {
-        return view('auth.dashboard.faqs.create');
+        //return view('auth.dashboard.faqs.create');
     }
 
     /**
@@ -41,12 +50,30 @@ class FaqController extends Controller
      */
     public function store(Request $request)
     {
-        FAQ::create([
-                'title'=>$request['title'],
-                'description'=>$request['description'],
-           ]);
-
-        return $this->index();
+        if (!$request->hasFile('el_adjunto'))
+        {
+            if ($request->ajax()) {
+                FAQ::create([
+                    'title'=>$request['title'],
+                    'description'=>$request['description'],
+                    'url_file'=>'sin contenido',
+                    ]);
+            }
+        }else{
+            $this->validate($request, [
+                'el_adjunto' => 'mimes:pdf|max:4096',
+            ]);
+            $fileName = $request->el_adjunto->getClientOriginalName();
+            $request->el_adjunto->move(public_path('assets/pdf'), $fileName);
+            $path_file = "assets/pdf/" . $fileName;
+            if ($request->ajax()) {
+                FAQ::create([
+                    'title'=>$request['title'],
+                    'description'=>$request['description'],
+                    'url_file'=>$path_file,
+                    ]);
+            }
+        }
     }
 
     /**

@@ -29,6 +29,7 @@
 {!! Html::script('plugins/slimScroll/jquery.slimscroll.min.js') !!}
 {!! Html::script('plugins/fastclick/fastclick.js') !!}
 {!! Html::script('plugins/select2/select2.js') !!}
+{!! Html::script('plugins/sweetalert2/sweetalert2.min.js') !!}
 {!! Html::script('assets/js/app.min.js') !!}
 {!! Html::script('assets/js/pages/dashboard.js') !!}
 {!! Html::script('assets/js/demo.js') !!}
