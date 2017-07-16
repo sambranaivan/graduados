@@ -214,7 +214,11 @@ var app = app || {};
                     $('#myModal').modal('toggle');
                 },
                 error : function(responseText){
-                    alert("ERROR :: " + action);
+                  swal(
+                    'Oops...',
+                    'Error al realizar la acción, verifique los datos..',
+                    'error'
+                  );
                 }
             });
         }

@@ -6,4 +6,5 @@ Homestead.json
 .env
 npm-debug.log
 public/assets/img
+public/assets/pdf
 Anotaciones_de_la_base_de_datos.txt
