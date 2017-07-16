@@ -29,6 +29,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-6">
+                       <div class="pdf"></div>
 
                     </div>
                     <div class="col-xs-6">

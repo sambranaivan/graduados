@@ -17,7 +17,7 @@ class FaqController extends Controller
      */
     public function index()
     {
-        $preguntas = FAQ::all();
+        $preguntas = Faq::all();
         return view('auth.dashboard.faqs.index',compact('preguntas'));
     }
     /**
@@ -25,7 +25,7 @@ class FaqController extends Controller
      *@return \Illuminate\Http\Response
      */
     public function all_faqs(){
-        $faqs = FAQ::all();
+        $faqs = Faq::all();
         $resources["data"] = [];
         foreach ($faqs as $key => $value) {
             $resources['data'][]=$value;
@@ -53,7 +53,7 @@ class FaqController extends Controller
         if (!$request->hasFile('el_adjunto'))
         {
             if ($request->ajax()) {
-                FAQ::create([
+                Faq::create([
                     'title'=>$request['title'],
                     'description'=>$request['description'],
                     'url_file'=>'sin contenido',
@@ -67,7 +67,7 @@ class FaqController extends Controller
             $request->el_adjunto->move(public_path('assets/pdf'), $fileName);
             $path_file = "assets/pdf/" . $fileName;
             if ($request->ajax()) {
-                FAQ::create([
+                Faq::create([
                     'title'=>$request['title'],
                     'description'=>$request['description'],
                     'url_file'=>$path_file,
@@ -95,7 +95,10 @@ class FaqController extends Controller
      */
     public function edit($id)
     {
-        //
+        $faq = Faq::findOrFail($id);
+        return response()->json(
+            $faq->toArray()
+        );
     }
 
     /**
@@ -107,7 +110,30 @@ class FaqController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $faq = Faq::findOrFail($id);
+        if($request->ajax())
+        {
+            if ($request->hasFile('el_adjunto'))
+            {
+                $this->validate($request, [
+                    'el_adjunto' => 'mimes:pdf|max:4096',
+                    ]);
+                $fileName = $request->el_adjunto->getClientOriginalName();
+                $request->el_adjunto->move(public_path('assets/pdf'), $fileName);
+                $path_file = "assets/pdf/" . $fileName;
+                $faq->fill([
+                    'title'=>$request['title'],
+                    'description'=>$request['description'],
+                    'url_file'=>$path_file,
+                ]);
+            } else {
+                $faq->fill([
+                    'title'=>$request['title'],
+                    'description'=>$request['description'],
+                ]);
+            }
+            $faq->save();
+        }
     }
 
     /**

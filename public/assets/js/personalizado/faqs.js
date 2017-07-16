@@ -55,24 +55,23 @@ var app = app || {};
               }
             });
 
-       $("body").on("click","button.editar",function(){
-       	$('#modif_new').show();
-       	$('#agregar_new').hide();
-       	$('.modal-title').html('Modificar contenido seleccionado');
-       	$('#form_new').append( "<input type='hidden' name='_method' id='_method' value='PUT'>" );
+            $("body").on("click","button.editar",function(){
+             	$('#modif_new').show();
+             	$('#agregar_new').hide();
+             	$('.modal-title').html('Modificar contenido seleccionado');
+             	$('#form_new').append( "<input type='hidden' name='_method' id='_method' value='PUT'>" );
 
-       	var id = $(this).parent("td").prev("td").prev("td").prev("td").text();
-        var route = "faqs"+'/'+id+'/edit';
-        $.get(route, function(res){
-          console.log(res.id);
-       		/*$("#id").val(res.new_id);
-       		$("#title").val(res.title);
-       		$("#pompadour").val(res.pompadour);
-       		$("#body").val(res.body);
-       		$("#photo_mm").attr('src', '../'+res.photo);
-       		$('#long').html('Caracteres ingresados: <span>'+res.body.length+'</span>');*/
-       	});
-       });
+             	var id = $(this).parent("td").prev("td").prev("td").prev("td").text();
+              var route = "faqs"+'/'+id+'/edit';
+              $.get(route, function(res){
+                $("#id").val(res.id);
+                $("#title").val(res.title);
+             		$("#description").val(res.description);
+                var iframe = '<div><iframe src="'+'../'+res.url_file+'"></iframe></div>'
+                $('.pdf').html(iframe);
+                $('#long').html('Caracteres ingresados: <span>'+res.description.length+'</span>');
+             	});
+            });
     }
     function format (d) {
       // `d` is the original data object for the row
@@ -220,7 +219,7 @@ var app = app || {};
                 //alert('');
                 swal(
                   'Oops...',
-                  'El adjunto debe ser un archivo con formato: pdf.',
+                  'El adjunto no cumple con las restricciones requeridas: De ser formato PDF o su peso menor a 4mb',
                   'error'
                 );
               });
@@ -229,11 +228,7 @@ var app = app || {};
         }
       });
     }
-    /*function error_alert(errores){
-      alertify.alert("This is an alert dialog.", function(){
-        alertify.message('OK');
-      });
-    }*/
+
     function mostrarBotones() {
       $('#agregar_new').show();
       $('#long').show();
