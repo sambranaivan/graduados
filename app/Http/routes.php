@@ -42,10 +42,15 @@ Route::group(['middleware' => ['web'], 'prefix' => 'panel'], function () {
 		Route::resource('noticias', 'Auth\NewsController');
 		Route::get('news/{id}', 'Auth\NewsController@show');
         Route::get('noticia_general', 'Auth\NewsController@noticia_general');
+
         Route::get('cursos_todos', 'Auth\NewsController@cursosall');
         Route::get('cursos', 'Auth\NewsController@cursos');
         Route::get('ofertasall', 'Auth\NewsController@ofertasall');
         Route::get('ofertas_laborales', 'Auth\NewsController@ofertas_laborales');
+
+        Route::resource('faqs', 'Auth\FaqController');
+		Route::get('preguntas_frecuentes', 'Auth\FaqController@all_faqs');
+
 
     });
 });

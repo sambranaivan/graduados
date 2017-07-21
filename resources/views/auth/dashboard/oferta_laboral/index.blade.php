@@ -5,12 +5,12 @@
 @include('auth.dashboard.oferta_laboral.modal_alta')
 <div class="table-responsive" id="ofertas_laborales">
 <table class="table table-bordered display nowrap" id="new">
-		
+
 </table>
 </div>
 @endsection
 @section('script')
-    {!! Html::script('assets/js/noticias/news.js') !!}
+    {!! Html::script('assets/js/personalizado/news.js') !!}
     <script type="text/javascript">
 		(function() {
 			app.news.init();

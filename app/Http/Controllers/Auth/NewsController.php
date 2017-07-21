@@ -12,7 +12,7 @@ use App\Models\Career;
 
 class NewsController extends Controller
 {
-    
+
     /**
      * Display a listing type news.
      *
@@ -27,7 +27,7 @@ class NewsController extends Controller
         foreach ($news as $key => $value) {
             $resources['data'][]=$value;
         }
-        return response()->json($resources);        
+        return response()->json($resources);
     }
     public function cursos()
     {
@@ -37,7 +37,7 @@ class NewsController extends Controller
         foreach ($news as $key => $value) {
             $resources['data'][]=$value;
         }
-        return response()->json($resources);        
+        return response()->json($resources);
     }
     public function ofertas_laborales()
     {
@@ -47,7 +47,7 @@ class NewsController extends Controller
         foreach ($news as $key => $value) {
             $resources['data'][]=$value;
         }
-        return response()->json($resources);        
+        return response()->json($resources);
     }
 
     /**
@@ -78,7 +78,7 @@ class NewsController extends Controller
         }
         return view('auth.dashboard.cursos.index', compact('type','carrera'));
     }
-    
+
     public function ofertasall()
     {
         try {
@@ -111,6 +111,10 @@ class NewsController extends Controller
 
     public function store(Request $request)
     {
+        $publication_date = explode("/", $request['publication_date']);
+        $publication_d= $publication_date[2].'-'.$publication_date[1].'-'.$publication_date[0];
+        $end_publication = explode("/", $request['end_publication']);
+        $end_pu = $end_publication[2].'-'.$end_publication[1].'-'.$end_publication[0];
         $photo = time().'.'.$request->photo->getClientOriginalExtension();
         $request->photo->move(public_path('assets/img/photo_news'), $photo);
         $path_image = "assets/img/photo_news/" . $photo;
@@ -120,8 +124,9 @@ class NewsController extends Controller
         }elseif ($request['type'] == 'Cursos') {
             $type = 2;
         }else{
-            $type = 3; 
+            $type = 3;
         }
+
         if ($request->ajax()) {
             News::create([
                 'title'=>$request['title'],
@@ -131,8 +136,8 @@ class NewsController extends Controller
                 'typenew_id'=>$type,
                 'career_id'=>$request['carrera'],
                 'great'=>'0',
-                'publication_date'=>$request['publication_date'],
-                'end_publication'=>$request['end_publication'],
+                'publication_date'=>$publication_d,
+                'end_publication'=>$end_pu,
            ]);
         }
 
@@ -151,7 +156,7 @@ class NewsController extends Controller
     {
 
     }
-    
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -178,16 +183,22 @@ class NewsController extends Controller
         $news = News::findOrFail($id);
 
         if ($request->ajax())
-        {   
+        {
+            $publication_date = explode("/", $request['publication_date']);
+            $publication_d= $publication_date[2].'-'.$publication_date[1].'-'.$publication_date[0];
+            $end_publication = explode("/", $request['end_publication']);
+            $end_pu = $end_publication[2].'-'.$end_publication[1].'-'.$end_publication[0];
             if ($request['type'] == 'General') {
                 $type = 1;
             }elseif ($request['type'] == 'Cursos') {
                 $type = 2;
             }else{
-                $type = 3; 
+                $type = 3;
             }
-            if ($request->hasFile('photo')) 
+
+            if ($request->hasFile('photo'))
             {
+
                 $photo = time().'.'.$request->photo->getClientOriginalExtension();
                 $request->photo->move(public_path('assets/img/photo_news'), $photo);
                 $path_image = "assets/img/photo_news/" . $photo;
@@ -199,8 +210,9 @@ class NewsController extends Controller
                     'typenew_id' =>  $type,
                     'career_id' => $request['carrera'],
                     'great' => '0',
-                    'publication_date' => $request['publication_date'],
-                    'end_publication' => $request['end_publication'],
+                    'publication_date' => $publication_d,
+                    'end_publication' => $end_pu,
+                    'great' => $request['great'],
                 ]);
             } else {
                 $news->fill([
@@ -210,8 +222,9 @@ class NewsController extends Controller
                     'typenew_id' =>  $type,
                     'career_id' => $request['carrera'],
                     'great' => '0',
-                    'publication_date' => $request['publication_date'],
-                    'end_publication' => $request['end_publication'],
+                    'publication_date' => $publication_d,
+                    'end_publication' => $end_pu,
+                    'great' => $request['great'],
                 ]);
             }
 

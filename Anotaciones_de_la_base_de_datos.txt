@@ -65,3 +65,5 @@ __ CRUD de cursos y ofertas laborales vistas.
 __ Agregado las opciones en el menu principal.
 __ seed de type_news
 __ Agrego rutas nuevas para cursos y ofertas laborales.
+
+input-daterange
