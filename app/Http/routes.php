@@ -16,10 +16,12 @@
  */
 Route::group(['prefix' => '/'], function () {
 	Route::get('/', 'HomeController@index');
+	Route::get('/ingreso', 'HomeController@signin');
 	Route::get('/noticias', 'HomeController@news');
 	Route::get('/faq', 'HomeController@faq');
 	Route::get('/cursos', 'HomeController@courses');
-	Route::get('/empresas', 'HomeController@business');
+	Route::get('/empresas', 'HomeController@companies');
+	Route::get('/ofertas', 'HomeController@offers');
 	Route::get('/noticia/{id}', 'HomeController@showNews');
 });
 
