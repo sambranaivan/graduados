@@ -1,13 +1,13 @@
-#featured {
+.featured {
 	height: 380px;
 	overflow: hidden;
 	.row {
 		position: relative;
 	}
-	.featured-title {
+	&__title {
 		padding: 15px 0;
 	}
-	.featured-title h2 {
+	&__title h2 {
 		font-size: 24px;
 		background: #ededed;
 		color: #454545;
@@ -15,7 +15,7 @@
 		display: inline;
 		padding: 5px 10px;
 	}
-	.featured-wrapper {
+	&__wrapper {
 		position: absolute;
 		width: 100%;
 		height: 100%;
@@ -24,11 +24,11 @@
 		background-color: rgba(0, 0, 0, 0.3);
 		padding-top: 115px;
 	}
-	.featured-text {
+	&__text {
 		font-size: 20px;
 		color: #ededed;
 	}
-	.featured-link a {
+	&__link a {
 		color: #ededed;
 		border: 1px solid #ededed;
 		padding: 5px 10px;

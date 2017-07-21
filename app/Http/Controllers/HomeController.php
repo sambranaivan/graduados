@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
-use App\Models\News;
-use App\Models\TypeNew;
 use Exception;
+use App\Models;
 
 class HomeController extends Controller
 {
@@ -19,14 +18,24 @@ class HomeController extends Controller
     public function index()
     {
         try {
-            $type_new = TypeNew::where('description', 'General')->first()->typenew_id;  
-            $news = News::all()->where('great',1)->where('typenew_id', $type_new)->sortBy('publication_date')->take(3);
+            $type_new = Models\TypeNew::where('description', 'General')->first()->typenew_id;  
+            $news = Models\News::all()->where('great',1)->where('typenew_id', $type_new)->sortBy('publication_date')->take(3);
         }
         catch (Exception $e) {
             $news = collect([]);
         }
 
         return view('web.home', compact('news'));
+    }
+
+    /**
+     * Show the SignIn page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function signin()
+    {
+        return view('web.signin');
     }
 
     /**
@@ -37,8 +46,8 @@ class HomeController extends Controller
     public function news()
     {
         try {
-            $type_new = TypeNew::where('description', 'General')->first()->typenew_id;
-            $news = News::all()->where('great', 1)->where('typenew_id', $type_new)->sortBy('publication_date');
+            $type_new = Models\TypeNew::where('description', 'General')->first()->typenew_id;
+            $news = Models\News::all()->where('great', 1)->where('typenew_id', $type_new)->sortBy('publication_date');
         }
         catch (Exception $e) {
             $news = collect([]);
@@ -65,8 +74,8 @@ class HomeController extends Controller
     public function courses()
     {
         try {
-            $type_new = TypeNew::where('description', 'Cursos')->first()->typenew_id;
-            $courses = News::all()->where('great',1)->where('typenew_id',$type_new)->sortBy('publication_date');
+            $type_new = Models\TypeNew::where('description', 'Cursos')->first()->typenew_id;
+            $courses = Models\News::all()->where('great', 1)->where('typenew_id', $type_new)->sortBy('publication_date');
         }
         catch (Exception $e) {
             $courses = collect([]);
@@ -80,15 +89,36 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function business()
+    public function companies()
     {
-        return view('web.business');
+        // TODO: Traer todas las empresas y asignar en companies
+        $companies = collect([]);
+
+        return view('web.companies', compact('companies'));
+    }
+
+    /**
+     * Show the Business page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function offers()
+    {
+        try {
+            $type_new = Models\TypeNew::where('description', 'Ofertas Laborales')->first()->typenew_id;
+            $offers = Models\News::all()->where('great', 1)->where('typenew_id', $type_new)->sortBy('publication_date');
+        }
+        catch (Exception $e) {
+            $offers = collect([]);
+        }
+
+        return view('web.offers', compact('offers'));
     }
 
     public function showNews($id){
-        $new = News::where('new_id',$id)->get();
+        $new = Models\News::where('new_id', $id)->get();
 
-        return view('web.new', compact($new));          
+        return view('web.new', compact('new'));          
     }
 
 }

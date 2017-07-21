@@ -1,0 +1,63 @@
+.offers {
+	margin-top: -20px;
+	.offers-header {
+		padding: 45px 20px;
+		background-color: #0066ad;
+		color: #fff;
+		text-align: center;
+	}
+	.offers-title {
+		font-size: 35px;
+		text-transform: uppercase;
+		margin: 0;
+		font-weight: 700;
+	}
+	.course-filter {
+		margin-top: 20px;
+		background-color: #131313;
+		color: #fff;
+		font-weight: 700;
+		padding: 10px 20px;
+		display: inline-block;
+		border-radius: 10px;
+		text-transform: uppercase;
+	}
+	.offers-content {
+		margin-top: 20px;
+		position: relative;
+		overflow: hidden;
+	}
+	.course {
+		height: 200px;
+		overflow: hidden;
+		position: relative;
+		margin-bottom: 20px;
+	}
+	.course-content {
+		position: absolute;
+		top: 0;
+		left: 20px;
+		width: 92%;
+	}
+	.course-title h3 {
+		margin-top: 0;
+		padding-top: 20px;
+		padding-bottom: 10px;
+		color: #fff;
+	}
+	.course-description {
+		margin-top: 45px;
+		padding: 0 5px;
+		p {
+			text-transform: uppercase;
+			color: #454545;
+		}
+	}
+	.course-button a {
+		text-decoration: none;
+		color: #454545;
+		padding: 10px 15px;
+		display: inline-block;
+		border: 1px solid #454545;
+	}
+}

@@ -1,42 +1,42 @@
 @extends('layouts.web')
 
 @section('content')
-<section id="featured">
-    <div class="container">
+<section class="featured">
+    <div class="container featured__container">
         <div class="row">
-            <div class="featured-image">
+            <div class="featured__image">
                 <img src="assets/img/OB82100.jpg" alt="" class="img-responsive">
             </div>
-            <div class="featured-wrapper text-center">
+            <div class="featured__wrapper text-center">
                 <div class="col-md-12 featured-title">
                     <h2>Lorem ipsum</h2>
                 </div>
-                <div class="featured-text col-md-12">
+                <div class="featured__text col-md-12">
                     <p> Suspendisse sed interdum turpis. <br>
                     Nam in euismod risus, nec mollis eros.</p>
                 </div>
-                <div class="featured-link col-md-12">
+                <div class="featured__link col-md-12">
                     <a href="">Leer Mas</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section id="welcome">
-    <div class="container">
+<section class="welcome">
+    <div class="container welcome__container">
         <div class="row">
-            <div class="col-xs-12 col-sm-8 col-md-8 welcome-message">
+            <div class="col-xs-12 col-sm-8 col-md-8 welcome__message">
                 <h3>Bienvenidos <span>Egresados</span></h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta adipisci libero hic, molestias incidunt, magni laudantium asperiores similique ducimus labore quia, quibusdam architecto illo dolor accusamus! Necessitatibus praesentium, consequuntur provident?</p>
-                <a href="" class="view-more">Leer mas</a>
+                <a href="" class="welcome__view-more">Leer mas</a>
             </div>
-            <div class="hidden-xs col-sm-4 col-md-4 welcome-image">
+            <div class="hidden-xs col-sm-4 col-md-4 welcome__image">
                 <img src="assets/img/bienvenida.png" alt="">
             </div>
         </div>
     </div>
 </section>
-<section id="news-institutionals" class="news">
+<section class="news news-institutionals">
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-offset-4 title">

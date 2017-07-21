@@ -37,11 +37,10 @@
                                 <li><a href="/faq">Preguntas frecuentes</a></li>
                                 <li><a href="/cursos">Cursos</a></li>
                                 <li><a href="/ofertas">Ofertas</a></li>
-                                <li><a href="/empresas">Empresas</a></li>
+                                <li><a href="/empresas">Socios estratégicos</a></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a href="/ingreso">Ingreso</a></li>
-                                <li><a href="/registro">Registro</a></li>
                             </ul>
                         </div>
                     </div>

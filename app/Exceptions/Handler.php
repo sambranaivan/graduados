@@ -48,16 +48,27 @@ class Handler extends ExceptionHandler
     public function render($request, Exception $e)
     {
         // Catching Exceptions
-        if($e instanceof NotFoundHttpException) {
-            // Ajax 404 json feedback
-            if ($request->ajax()) {
-                return response()->json(['error' => 'Not found'], 404);
+        if ($this->isHttpException($e)) {
+            switch (intval($e->getStatusCode())) {
+                // not found
+                case 404:
+                    if ($request->ajax()) {
+                        return response()->json(['error' => 'Not found'], 404);
+                    }
+                    return redirect()->route('home');
+                    break;
+                // internal error
+                case 500:
+                    return \Response::view('errors.503', array(), 500);
+                    break;
+                default:
+                  return $this->renderHttpException($e);
+                  break;
             }
-
-            // Normal 404 view page feedback
-            return response()->view('errors.missing', [], 404);
         }
-
-        return parent::render($request, $e);
+        else
+        {
+          return parent::render($request, $e);
+        }
     }
 }

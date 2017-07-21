@@ -1,13 +1,13 @@
-#welcome {
+.welcome {
 	padding-top: 20px;
-	.welcome-image {
+	&__image {
 		img {
 			height: 150px;
 			width: 193px;
 		}
 		text-align: right;
 	}
-	.welcome-message {
+	&__message {
 		h3 {
 			margin-top: 0;
 			text-transform: uppercase;
@@ -18,15 +18,15 @@
 		span {
 			color: #606060;
 		}
-		.view-more {
-			color: #fdfdfd;
-			text-transform: uppercase;
-			background: #454545;
-			padding: 10px 25px;
-			display: inline-block;
-			&:hover {
-				text-decoration: none;
-			}
+	}
+	&__view-more {
+		color: #fdfdfd;
+		text-transform: uppercase;
+		background: #454545;
+		padding: 10px 25px;
+		display: inline-block;
+		&:hover {
+			text-decoration: none;
 		}
 	}
 }
