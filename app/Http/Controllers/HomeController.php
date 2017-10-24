@@ -18,7 +18,7 @@ class HomeController extends Controller
     public function index()
     {
         try {
-            $type_new = Models\TypeNew::where('description', 'General')->first()->typenew_id;  
+            $type_new = Models\TypeNew::where('description', 'General')->first()->typenew_id;
             $news = Models\News::all()->where('great',1)->where('typenew_id', $type_new)->sortBy('publication_date')->take(3);
         }
         catch (Exception $e) {
@@ -63,7 +63,8 @@ class HomeController extends Controller
      */
     public function faq()
     {
-        return view('web.faq');
+        $preguntas = Models\Faq::all();
+        return view('web.faq', compact('preguntas'));
     }
 
     /**
@@ -118,7 +119,7 @@ class HomeController extends Controller
     public function showNews($id){
         $new = Models\News::where('new_id', $id)->get();
 
-        return view('web.new', compact('new'));          
+        return view('web.new', compact('new'));
     }
 
 }

@@ -10,7 +10,7 @@
                 <div class="row">
                   <div class="col-xs-6">
                     <div class="form-group">
-                        {!! Form::label('title', 'Titulo de la noticia:',['class'=>'control-label']) !!}
+                        {!! Form::label('title', 'Titulo de la noticia:',['class'=>'control-label ']) !!}
                         {!! Form::text('title',null,['id'=>'title','class'=>'form-control', 'placeholder'=>'Ingrese titulo de la noticia']) !!}
                     </div>
                   </div>

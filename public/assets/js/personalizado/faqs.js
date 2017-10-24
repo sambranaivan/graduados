@@ -28,7 +28,7 @@ var app = app || {};
     		},
     		{"data":'id',"title":"#"},
     		{"data":'title',"title":"Titulo de la pregunta"},
-    		{"data":'description',"title":"Descripción"},
+    		{"data":'url_file',"title":"Url PDF"},
     		{"data":null,"title":"Editar <i class='fa fa-pencil-square-o' aria-hidden='true'></i>",
     		"defaultContent":"<button type='button' id='editar' class='editar btn btn-warning' data-toggle='modal' data-target='#myModal'><i class='fa fa-pencil-square-o' aria-hidden='true'></i> Editar</button>"
     	}
@@ -77,8 +77,8 @@ var app = app || {};
       // `d` is the original data object for the row
       return "<div class='table-responsive'><table cellpadding='4' cellspacing='0' border='0' style='padding-left:50px;'>"+
       "<tr>"+
-      "<td>Url del archivo:</td>"+
-      "<td><textarea rows='4' cols='100' readonly>"+d.url_file+"</textarea></td>"+
+      "<td>Descripción:</td>"+
+      "<td><textarea rows='4' cols='100' readonly>"+d.description+"</textarea></td>"+
       "</tr>"+
       "<tr>"+
       "<td>Fecha de creación:</td>"+

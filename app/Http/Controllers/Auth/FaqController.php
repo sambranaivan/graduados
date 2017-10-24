@@ -19,6 +19,8 @@ class FaqController extends Controller
     {
         $preguntas = Faq::all();
         return view('auth.dashboard.faqs.index',compact('preguntas'));
+
+
     }
     /**
      * Show all files faqs json

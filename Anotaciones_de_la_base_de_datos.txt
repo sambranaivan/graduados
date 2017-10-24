@@ -12,7 +12,7 @@ Todas  las anotaciones sobre las tablas de la base de dato:
 8-TypeLog          -TipoLog    		-OK
 9-Log              -Log        		-OK
 10-TypeNew         -TipoNoticia		-OK
-11-New             -Noticia    		-OK              
+11-New             -Noticia    		-OK
 12-Country         -Pais       		-OK
 13-Province        -Provincia  		-OK
 14-City            -Localidad  		-OK
@@ -32,12 +32,12 @@ php artisan migrate
 
 php artisan migrate:rollback
 
---Models y Migrations Laravel 5.2.* 
+--Models y Migrations Laravel 5.2.*
 
 Comando a ejecutar en consola: php artisan make:model Models/User -m
 
---Para que admita nulo un campo 
-  
+--Para que admita nulo un campo
+
 agregar al campo indicado en el archivo migrations:  ->nullable()
 
 --dump-autoload
@@ -67,3 +67,34 @@ __ seed de type_news
 __ Agrego rutas nuevas para cursos y ofertas laborales.
 
 input-daterange
+
+
+Roles de usuario
+Gestor de contenido (Solo dar de alta y modificar, pero no publicar)
+Revisor de contenido puedo publicar.
+<!--h2>Collapsible Panel</h2>
+							<p>Click on the collapsible panel to open and close it.</p-->
+								<div class="panel-group">
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h4 class="panel-title">
+												<a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
+											</h4>
+										</div>
+										<div id="collapse1" class="panel-collapse collapse">
+											<div class="panel-body">Panel Body</div>
+											<div class="panel-footer">Panel Footer</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h4 class="panel-title">
+												<a data-toggle="collapse" href="#collapse2">Collapsible panel</a>
+											</h4>
+										</div>
+										<div id="collapse2" class="panel-collapse collapse">
+											<div class="panel-body">Panel Body</div>
+											<div class="panel-footer">Panel Footer</div>
+										</div>
+									</div>
+								</div>
