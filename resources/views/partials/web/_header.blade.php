@@ -14,7 +14,7 @@
                     </div>
                 </div>
                 <div class="col-sm-2 col-md-4 header-social text-right">
-                    <a href=""><i class="icon ion-social-facebook"></i></a> 
+                    <a href=""><i class="icon ion-social-facebook"></i></a>
                     <a href=""><i class="icon ion-social-twitter"></i></a>
                 </div>
             </section>
@@ -33,11 +33,11 @@
                         </div>
                         <div class="navbar-collapse collapse navbar-responsive-collapse">
                             <ul class="nav navbar-nav">
-                                <li><a href="/">Inicio</a></li>
-                                <li><a href="/faq">Preguntas frecuentes</a></li>
-                                <li><a href="/cursos">Cursos</a></li>
-                                <li><a href="/ofertas">Ofertas</a></li>
-                                <li><a href="/empresas">Socios estratégicos</a></li>
+                                <li><a href="{{url('/')}}">Inicio</a></li>
+                                <li><a href="{{url('/faq')}}">Preguntas frecuentes</a></li>
+                                <li><a href="{{url('/cursos')}}">Cursos</a></li>
+                                <li><a href="{{url('/ofertas')}}">Ofertas</a></li>
+                                <li><a href="{{url('/empresas')}}">Socios estratégicos</a></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a href="/ingreso">Ingreso</a></li>
