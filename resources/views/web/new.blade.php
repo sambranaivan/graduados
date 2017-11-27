@@ -1,25 +1,27 @@
 @extends('layouts.web')
 
 @section('web.title')
-	Noticias
+Noticias
 @endsection
 
 @section('content')
 <section class="content">
 	<div class="container">
 		<div class="row new">
-			<div class="col-md-8">
-				<div class="new-header">
-					<img src="assets/img/grado.jpg" alt="" class="new-image">
-					<h3 class="new-title">Titulo</h3>
-				</div>
-				<div class="new-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quisquam possimus ipsam consequuntur id deserunt doloribus molestias! Atque delectus reiciendis minus sit repellat accusamus, amet aliquam debitis, dolorum, similique incidunt?. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quod sequi vero fuga omnis vitae beatae numquam, perferendis soluta. Voluptatem beatae asperiores necessitatibus praesentium. Fugit ex, ipsa tempore quaerat nemo!</p>
-				</div>
+			@foreach($new as $noticia)
+			<div class="col-md-6">
+
+					<div class="new-header">
+						<img src="{{url($noticia->photo)}}" alt="" class="new-image">
+					</div>
+
 			</div>
-			<div class="col-md-4">
-				
+			<div class="col-md-6">
+				<h4 class="new-title">{{$noticia->title}}</h4>
+				<h6 class="new-title"><small>{{$noticia->pompadour}}</small></h6>
+				<p>{{$noticia->body}}</p>
 			</div>
+			@endforeach
 		</div>
 	</div>
 </section>

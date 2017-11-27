@@ -18,21 +18,21 @@
                     <h3>No hay cursos vigentes, vuelve pronto!</h3>
                 @else
                     @foreach($courses as $item)
-                        <a href="/curso/{{ $item->new_id }}" class="course-link">
-            				<div class="col-md-4 course">
-            					<div class="course-image">
-                                	<img src="{{ $item->photo }}" alt="" class="img-responsive">
-                            	</div>
-                            	<div class="course-content">
+                        <div class="col-md-4 course">
+                            <div class="course-image">
+                                <img src="{{ $item->photo }}" alt="" class="img-responsive">
+                            </div>
+                            <div class="course-content">
+                                <a href="{{url('/curso')."/$item->new_id" }}" class="course-link">
                                     <div class="course-description text-center">
                                         <p>{{ $item->title }}</p>
                                     </div>
-                                    <div class="course-button text-center">
-                                        <a href="/curso/{{ $item->new_id }}/inscripcion">Inscribirse</a>
-                                    </div>
+                                </a>
+                                <div class="course-button text-center">
+                                    <a href="/curso/{{ $item->new_id }}/inscripcion">Inscribirse</a>
                                 </div>
-        				    </div>
-                        </a>
+                            </div>
+                    </div>
                     @endforeach
                 @endif
 			</div>

@@ -44,18 +44,15 @@
             </div>
             <div class="col-md-12">
                 @foreach($news as $item)
-                    <a href="/noticia/{{ $item->new_id }}" class="new-link">
-                        <div class="col-xs-12 col-sm-4 col-md-4 new">
+                    <a href="{{url('/noticia')."/$item->new_id" }}" class="new-link">
+                        <div class="col-xs-12 col-sm-4 col-md-4 new thumbnail">
                             <div class="new-image">
                                 <img src="{{ $item->photo }}" alt="" class="img-responsive">
                             </div>
-                            <div class="new-content">
-                                <div class="new-title">
-                                    <h3>{{ $item->title }}</h3>
-                                </div>
-                                <div class="new-description">
-                                    <p>{{ $item->body }}</p>
-                                </div>
+                            <div class="caption">
+                                <h4>{{ $item->title }}</h4>
+                                <p>{{$item->pompadour}}</p>
+                                <p class="label label-info">Ver más...</p>
                             </div>
                         </div>
                     </a>

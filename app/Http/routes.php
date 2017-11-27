@@ -23,6 +23,8 @@ Route::group(['prefix' => '/'], function () {
 	Route::get('/empresas', 'HomeController@companies');
 	Route::get('/ofertas', 'HomeController@offers');
 	Route::get('/noticia/{id}', 'HomeController@showNews');
+
+	Route::get('/curso/{id}', 'HomeController@showCourse');
 });
 
 /*

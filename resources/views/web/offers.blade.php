@@ -18,21 +18,23 @@
                     <h3>No hay ofertas vigentes, vuelve pronto!</h3>
                 @else
                     @foreach($offers as $item)
+                    <div class="col-md-4 course">
+                       <div class="course-image">
+                           <img src="{{ $item->photo }}" alt="" class="img-responsive">
+                       </div>
+                       <div class="course-content">
                         <a href="/oferta/{{ $item->new_id }}" class="course-link">
-            				<div class="col-md-4 course">
-            					<div class="course-image">
-                                	<img src="{{ $item->photo }}" alt="" class="img-responsive">
-                            	</div>
-                            	<div class="course-content">
-                                    <div class="course-description text-center">
-                                        <p>{{ $item->title }}</p>
-                                    </div>
-                                    <div class="course-button text-center">
-                                        <a href="/oferta/{{ $item->new_id }}/inscripcion">Postularme</a>
-                                    </div>
-                                </div>
-        				    </div>
+
+                            <div class="course-description text-center">
+                                <p>{{ $item->title }}</p>
+                            </div>
                         </a>
+                        <div class="course-button text-center">
+                            <a href="/oferta/{{ $item->new_id }}/inscripcion">Postularme</a>
+                        </div>
+                    </div>
+                </div>
+
                     @endforeach
                 @endif
 			</div>

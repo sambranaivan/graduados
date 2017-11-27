@@ -118,7 +118,12 @@ class HomeController extends Controller
 
     public function showNews($id){
         $new = Models\News::where('new_id', $id)->get();
-
+       // dd($new);
+        return view('web.new', compact('new'));
+    }
+    public function showCourse($id){
+        $new = Models\News::where('new_id', $id)->get();
+       // dd($new);
         return view('web.new', compact('new'));
     }
 

@@ -27,6 +27,18 @@
   </li>
   <li class="treeview">
     <a href="#">
+      <i class="fa fa-building"></i> <span>Gestión de empresas</span>
+      <span class="pull-right-container">
+        <i class="fa fa-angle-left pull-right"></i>
+      </span>
+    </a>
+    <ul class="treeview-menu">
+      <li><a href="#"><i class="fa fa-circle-o"></i> Activas</a></li>
+      <li><a href="#"><i class="fa fa-circle-o"></i> Inactivas</a></li>
+    </ul>
+  </li>
+  <li class="treeview">
+    <a href="#">
       <i class="fa fa-users"></i> <span>Gestión de Usuarios</span>
       <span class="pull-right-container">
         <i class="fa fa-angle-left pull-right"></i>
