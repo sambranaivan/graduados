@@ -56,7 +56,7 @@
                             </div>
                             <div class="caption caption-half-up">
                                 <p>
-                                    <a class="btn btn-primary" href="#">Ver más...</a>
+                                    <a class="btn btn-primary" href="{{url('/noticia')."/$item->new_id" }}">Ver más...</a>
                                 </p>
                             </div>
                         </div>
