@@ -49,10 +49,15 @@
                             <div class="new-image">
                                 <img src="{{ $item->photo }}" alt="" class="img-responsive">
                             </div>
-                            <div class="caption">
+                            <div class="caption caption-half-down">
                                 <h4>{{ $item->title }}</h4>
                                 <p>{{$item->pompadour}}</p>
-                                <p class="label label-info">Ver más...</p>
+                                <p class="label label-info"></p>
+                            </div>
+                            <div class="caption caption-half-up">
+                                <p>
+                                    <a class="btn btn-primary" href="#">Ver más...</a>
+                                </p>
                             </div>
                         </div>
                     </a>
@@ -69,6 +74,26 @@
             </div>
             <div class="col-md-12">
                 <div class="col-xs-12 col-md-4 new cursos">
+                    <div class="thumbnail">
+                        <img src="assets/img/O6ZK030.jpg" class="img-responsive">
+                        <div class="caption caption-half-down">
+                            <br><br><br>
+                            <p>SEGUI CAPACITANDOTE CON NUESTROS CURSOS</p>
+                        </div>
+                        <div class="caption caption-half-up">
+                            <p>
+                                <a class="btn btn-primary" href="{{url('/cursos')}}">Ver cursos</a>
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="new-content">
+                        <div class="new-title">
+                            <h3 class="text-center">CURSOS</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--div class="col-xs-12 col-md-4 new cursos">
                     <div class="new-image">
                         <img src="assets/img/O6ZK030.jpg" alt="" class="img-responsive">
                     </div>
@@ -76,16 +101,16 @@
                         <div class="new-title">
                             <h3 class="text-center">CURSOS</h3>
                         </div>
-                        <div class="new-description text-center">
+                        <div class="new-description text-center ">
                             <p>SEGUI CAPACITANDOTE CON NUESTROS CURSOS</p>
                         </div>
                         <div class="new-button text-center">
                             <a href="/cursos">Ver cursos</a>
                         </div>
                     </div>
-                </div>
+                </div-->
                 <div class="col-xs-12 col-md-4 new ofertas-laborales">
-                    <div class="new-image">
+                    <!--div class="new-image">
                         <img src="assets/img/OCIG380.jpg" alt="" class="img-responsive">
                     </div>
                     <div class="new-content">
@@ -98,10 +123,46 @@
                         <div class="new-button text-center">
                             <a href="">Buscar</a>
                         </div>
+                    </div-->
+                    <div class="thumbnail">
+                        <img src="assets/img/OCIG380.jpg" class="img-responsive">
+                        <div class="caption caption-half-down">
+                            <br><br><br>
+                            <p>ENCUENTRA OFERTAS LABORALES DE EMPRESAS CONECTADAS CON LA UNNE</p>
+                        </div>
+                        <div class="caption caption-half-up">
+                            <p>
+                                <a class="btn btn-primary" href="{{url('/ofertas')}}">Buscar</a>
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="new-content">
+                        <div class="new-title">
+                            <h3 class="text-center">OFERTAS LABORALES</h3>
+                        </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-4 new eventos">
-                    <div class="new-image">
+                    <div class="thumbnail">
+                        <img src="assets/img/OAYTQA0.jpg" class="img-responsive">
+                        <div class="caption caption-half-down">
+                            <br><br><br>
+                            <p>ACCEDE A LA AGENDA DE EVENTOS INSTITUCIONALES</p>
+                        </div>
+                        <div class="caption caption-half-up">
+                            <p>
+                                <a class="btn btn-primary" href="#">Acceder</a>
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="new-content">
+                        <div class="new-title">
+                            <h3 class="text-center">EVENTOS</h3>
+                        </div>
+                    </div>
+                    <!--div class="new-image">
                         <img src="assets/img/OAYTQA0.jpg" alt="" class="img-responsive">
                     </div>
                     <div class="new-content">
@@ -114,7 +175,7 @@
                         <div class="new-button text-center">
                             <a href="">Acceder</a>
                         </div>
-                    </div>
+                    </div-->
                 </div>
             </div>
         </div>

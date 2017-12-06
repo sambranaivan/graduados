@@ -2,13 +2,21 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 $( document ).ready(function() {
-    $('.thumbnail').hover(
+    /*$('.thumbnail').hover(
         function(){
+            $(this).find('.caption').slideDown(300); //.fadeIn(250)
+        },
+        function(){
+            $(this).find('.caption').slideUp(300); //.fadeOut(205)
+        }
+    );
+    $('.info_pie').hover(
+    	function(){
             $(this).find('.caption').slideDown(250); //.fadeIn(250)
         },
         function(){
             $(this).find('.caption').slideUp(250); //.fadeOut(205)
         }
-    );
+        );*/
 });
 </script>

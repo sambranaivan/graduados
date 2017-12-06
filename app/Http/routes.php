@@ -15,7 +15,7 @@
 	Web routes
  */
 Route::group(['prefix' => '/'], function () {
-	Route::get('/', 'HomeController@index');
+	Route::get('', 'HomeController@index');
 	Route::get('/ingreso', 'HomeController@signin');
 	Route::get('/noticias', 'HomeController@news');
 	Route::get('/faq', 'HomeController@faq');
