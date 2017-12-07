@@ -13,7 +13,7 @@
 			<div class="row new">
 				<div class="col-md-8">
 					<div class="new-header">
-						<img src="assets/img/grado.jpg" alt="" class="new-image">
+						<img src="{{URL::asset("public/assets/img/grado.jpg") }}" alt="" class="new-image">
 						<h3 class="new-title">Titulo</h3>
 					</div>
 					<div class="new-content">
@@ -21,7 +21,7 @@
 					</div>
 				</div>
 				<div class="col-md-4">
-					
+
 				</div>
 			</div>
 		@endif

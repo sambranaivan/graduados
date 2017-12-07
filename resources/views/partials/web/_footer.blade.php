@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-4 col-sm-3 col-md-3 footer-logo">
-                <img src="assets/img/unne-logo.png" alt="" class="img-responsive footer-logo">
+                <img src="{{URL::asset('public/assets/img/unne-logo.png')}}" alt="" class="img-responsive footer-logo">
             </div>
             <div class="hidden-xs col-sm-3 col-md-2 footer-menu">
                 <a href="">Acerca de</a>
@@ -26,7 +26,7 @@
                 <a href="">info@unne.com.ar</a>
             </div>
             <div class="col-xs-8 hidden-sm col-md-3 text-right footer-social">
-                <a href=""><i class="icon ion-social-facebook"></i></a> 
+                <a href=""><i class="icon ion-social-facebook"></i></a>
                 <a href=""><i class="icon ion-social-twitter"></i></a>
             </div>
         </div>

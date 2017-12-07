@@ -19,7 +19,7 @@
                     @foreach($company as $companies)
         				<div class="col-md-4 business-list">
         					<div class="business-list-image">
-                            	<img src="assets/img/curso-gratuito-tecnico-marketing.jpg" alt="" class="img-responsive">
+                            	<img src="{{URL::asset('public/assets/img/curso-gratuito-tecnico-marketing.jpg')}}" alt="" class="img-responsive">
                         	</div>
         				</div>
                     @endforeach

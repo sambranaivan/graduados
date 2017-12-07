@@ -28,7 +28,7 @@
                                 <span class="icon-bar"></span>
                             </button>
                             <a href="/">
-                                <img src="assets/img/unne.png" alt="" class="img-responsive header-logo">
+                                <img src="{{URL::asset("public/assets/img/unne.png") }}" alt="" class="img-responsive header-logo">
                             </a>
                         </div>
                         <div class="navbar-collapse collapse navbar-responsive-collapse">

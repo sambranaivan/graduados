@@ -5,7 +5,7 @@
     <div class="container featured__container">
         <div class="row">
             <div class="featured__image">
-                <img src="assets/img/OB82100.jpg" alt="" class="img-responsive">
+                <img src="{{URL::asset('public/assets/img/OB82100.jpg')}}" alt="" class="img-responsive">
             </div>
             <div class="featured__wrapper text-center">
                 <div class="col-md-12 featured-title">
@@ -31,7 +31,7 @@
                 <a href="" class="welcome__view-more">Leer mas</a>
             </div>
             <div class="hidden-xs col-sm-4 col-md-4 welcome__image">
-                <img src="assets/img/bienvenida.png" alt="">
+                <img src="{{URL::asset('public/assets/img/bienvenida.png')}}" alt="">
             </div>
         </div>
     </div>
@@ -47,7 +47,7 @@
                     <a href="{{url('/noticia')."/$item->new_id" }}" class="new-link">
                         <div class="col-xs-12 col-sm-4 col-md-4 new thumbnail">
                             <div class="new-image">
-                                <img src="{{ $item->photo }}" alt="" class="img-responsive">
+                                <img src="{{URL::asset("public/$item->photo") }}" alt="" class="img-responsive">
                             </div>
                             <div class="caption caption-half-down">
                                 <h4>{{ $item->title }}</h4>
@@ -75,7 +75,7 @@
             <div class="col-md-12">
                 <div class="col-xs-12 col-md-4 new cursos">
                     <div class="thumbnail">
-                        <img src="assets/img/O6ZK030.jpg" class="img-responsive">
+                        <img src="{{URL::asset('public/assets/img/O6ZK030.jpg')}}" class="img-responsive">
                         <div class="caption caption-half-down">
                             <br><br><br>
                             <p>SEGUI CAPACITANDOTE CON NUESTROS CURSOS</p>
@@ -125,7 +125,7 @@
                         </div>
                     </div-->
                     <div class="thumbnail">
-                        <img src="assets/img/OCIG380.jpg" class="img-responsive">
+                        <img src="{{URL::asset('public/assets/img/OCIG380.jpg')}}" class="img-responsive">
                         <div class="caption caption-half-down">
                             <br><br><br>
                             <p>ENCUENTRA OFERTAS LABORALES DE EMPRESAS CONECTADAS CON LA UNNE</p>
@@ -145,7 +145,7 @@
                 </div>
                 <div class="col-xs-12 col-md-4 new eventos">
                     <div class="thumbnail">
-                        <img src="assets/img/OAYTQA0.jpg" class="img-responsive">
+                        <img src="{{URL::asset('public/assets/img/OAYTQA0.jpg')}}" class="img-responsive">
                         <div class="caption caption-half-down">
                             <br><br><br>
                             <p>ACCEDE A LA AGENDA DE EVENTOS INSTITUCIONALES</p>
