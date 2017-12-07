@@ -18,8 +18,8 @@ class HomeController extends Controller
     public function index()
     {
         try {
-            $type_new = Models\TypeNew::where('description', 'General')->first()->typenew_id;
-            $news = Models\News::all()->where('great',1)->where('typenew_id', $type_new)->sortBy('publication_date')->take(3);
+            /*$type_new = Models\TypeNew::where('description', 'General')->first()->typenew_id;*/
+            $news = Models\News::all()->where('great',1)->where('destacado', 1)->sortBy('publication_date')->take(3);
         }
         catch (Exception $e) {
             $news = collect([]);

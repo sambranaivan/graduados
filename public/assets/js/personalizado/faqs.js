@@ -12,7 +12,7 @@ var app = app || {};
     		"order":[[0,"asc"]],
     		"lengthChange": true,
     		"language":{
-    			"url": "../plugins/datatables/Spanish.json"
+    			"url": "../public/plugins/datatables/Spanish.json"
     		},
     		"ajax":{
     			"method":"GET",

@@ -111,6 +111,7 @@ class NewsController extends Controller
 
     public function store(Request $request)
     {
+        //dd($request['des']);
         $publication_date = explode("/", $request['publication_date']);
         $publication_d= $publication_date[2].'-'.$publication_date[1].'-'.$publication_date[0];
         $end_publication = explode("/", $request['end_publication']);
@@ -138,6 +139,7 @@ class NewsController extends Controller
                 'great'=>'0',
                 'publication_date'=>$publication_d,
                 'end_publication'=>$end_pu,
+                'destacado'=>$request['des'],
            ]);
         }
 
@@ -213,6 +215,7 @@ class NewsController extends Controller
                     'publication_date' => $publication_d,
                     'end_publication' => $end_pu,
                     'great' => $request['great'],
+                    'destacado'=>$request['des'],
                 ]);
             } else {
                 $news->fill([
@@ -225,6 +228,7 @@ class NewsController extends Controller
                     'publication_date' => $publication_d,
                     'end_publication' => $end_pu,
                     'great' => $request['great'],
+                    'destacado'=>$request['des'],
                 ]);
             }
 

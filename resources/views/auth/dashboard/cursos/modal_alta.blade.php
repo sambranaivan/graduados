@@ -82,6 +82,15 @@
                                     {!! Form::select('great', array('0' => 'NO', '1' => 'SI') , null, ['class'=>'form-control','style'=>'width:100%','id'=>'great'])!!}
                                 </div>
                             </div>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    {!! Form::label('Destacado', 'Destacado:',['class'=>'control-label', 'id'=>'great_l']) !!}
+                                    <div class="radio">
+                                        <label class="radio-inline">{{ Form::radio('des', '1',false,['id'=>'desI']) }}SI</label>
+                                        <label class="radio-inline">{{ Form::radio('des', '0', true,['id'=>'desN']) }}NO</label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xs-6">

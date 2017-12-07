@@ -13,7 +13,7 @@ var app = app || {};
           "order":[[0,"asc"]],
           "lengthChange": true,
           "language":{
-              "url": "../plugins/datatables/Spanish.json"
+              "url": "../public/plugins/datatables/Spanish.json"
           },
           "ajax":{
               "method":"GET",
@@ -200,6 +200,7 @@ var app = app || {};
             }
         },
         submitHandler: function(form) {
+            //alert($('input:radio[name=des]:checked').val());
             var token = $('input:hidden[name=_token]').val();
             $.ajax({
                 url:action,
@@ -232,6 +233,8 @@ var app = app || {};
       //Removing the error and success elements from the from-group
       $("#myModal").on('hidden.bs.modal', function () {
         $(this).find("#title,#pompadour,#publication_date,#end_publication, textarea, :file").val('').end();
+        $('#desI').prop('checked', false);
+        $('#desN').prop('checked', true);
         $('.form-group').removeClass('has-success has-feedback');
         $('i').removeClass('fa-check fa-exclamation');
         $('.form-group').removeClass('has-error has-feedback');
@@ -315,6 +318,11 @@ var app = app || {};
                 $("#pompadour").val(res.pompadour);
                 $("#body").val(res.body);
                 $("#photo_mm").attr('src', '../'+res.photo);
+                if (res.destacado===1) {
+                  $('#desI').prop('checked', true);
+                }else{
+                  $('#desN').prop('checked', true);
+                }
                 var p_d = res.publication_date.split("-");
                 var publication_date = p_d[2]+'/'+p_d[1]+'/'+p_d[0];
                 var p_f = res.end_publication.split("-");
@@ -355,6 +363,7 @@ var app = app || {};
 
     }
     function init() {
+      $('#desN').prop('checked', true);
       load_news();
       usarSelect2();
       changebotton();
