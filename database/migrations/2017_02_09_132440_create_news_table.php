@@ -21,7 +21,7 @@ class CreateNewsTable extends Migration {
 			$table->boolean('great');
 			$table->date('publication_date');
 			$table->date('end_publication');
-			$table->date('destacado')->default(0);
+			$table->integer('destacado')->default(0);
 			$table->integer('career_id')->unsigned();
 			$table->foreign('career_id')->references('career_id')->on('careers');
 			$table->timestamps();
