@@ -10,7 +10,7 @@
 </div>
 @endsection
 @section('script')
-  {!! Html::script('assets/js/personalizado/faqs.js') !!}
+  {!! Html::script('public/assets/js/personalizado/faqs.js') !!}
   <script type="text/javascript">
     (function() {
       app.faqs.init();
