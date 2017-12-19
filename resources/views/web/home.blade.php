@@ -26,9 +26,10 @@
     <div class="container welcome__container">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-md-8 welcome__message">
-                <h3>Bienvenidos <span>Egresados</span></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta adipisci libero hic, molestias incidunt, magni laudantium asperiores similique ducimus labore quia, quibusdam architecto illo dolor accusamus! Necessitatibus praesentium, consequuntur provident?</p>
-                <a href="" class="welcome__view-more">Leer mas</a>
+                <h3>Programa de Seguimiento al Graduado</span></h3>
+                <p>Este programa pretende recolectar datos e información, que permitan mejorar la información de contacto y ubicación de nuestros graduados, aspecto elemental para iniciar un proceso de vinculación institucional entre la FaCENA y sus profesionales.
+                El sistema SIU-Kolla es una herramienta que permite realizar encuestas on-line a graduados, con el objetivo de obtener información sobre su inserción profesional, su relación con la universidad, el interés por otros estudios y otros datos relevantes. Se trata de encuestas para analizar, diagnosticar y conocer los perfiles de los egresados, y constituye una parte de un proyecto integral que aspira a crear una base de conocimiento sobre la población estudiantil.</p>
+                <a href="#" class="welcome__view-more">Leer mas</a>
             </div>
             <div class="hidden-xs col-sm-4 col-md-4 welcome__image">
                 <img src="{{URL::asset('public/assets/img/bienvenida.png')}}" alt="">
