@@ -9,11 +9,11 @@
             </div>
             <div class="featured__wrapper text-center">
                 <div class="col-md-12 featured-title">
-                    <h2>Lorem ipsum</h2>
+                    <h2>Portal de graduados</h2>
                 </div>
                 <div class="featured__text col-md-12">
-                    <p> Suspendisse sed interdum turpis. <br>
-                    Nam in euismod risus, nec mollis eros.</p>
+                    <p> Facultad de Ciencias Exactas y Naturales y Agrimensura<br>
+                    Universidad Nacional del Nordeste</p>
                 </div>
                 <div class="featured__link col-md-12">
                     <a href="">Leer Mas</a>
