@@ -1,5 +1,4 @@
 @extends('layouts.web')
-
 @section('web.title')
 	Empresas
 @endsection

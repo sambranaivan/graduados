@@ -144,43 +144,14 @@ var app = app || {};
         },
         errorElement: "em",
         errorPlacement: function(error, element) {
-          // Add the `help-block` class to the error element
-          /*error.addClass("help-block");
-
-          // Add `has-feedback` class to the parent div.form-group
-          // in order to add icons to inputs
-          element.parents(".form-group").addClass("has-feedback");
-          */
-
-          /*if (element.prop("type") === "checkbox") {
-            error.addClass("help-block");
-            //error.insertAfter(element.parent("label"));
-          } else {
-            error.addClass("help-block");
-            //error.insertAfter(element);
-          }*/
-
-          // Add the span element, if doesn't exists, and apply the icon classes to it.
-          //if (!element.next("span")[0]) {
             if (element.prop("type") === "checkbox") {
               error.addClass("help-block");
               error.insertAfter(element.parent("label"));
             } else {
               error.addClass("help-block");
               error.insertAfter(element);
-            }
-
-
-          //}
-        }/*,
-        success: function(label, element) {
-            // Add the span element, if doesn't exists, and apply the icon classes to it.
-            //if (!$(element).next("span")[0]) {
-                $("<i class='fa fa-check fa-lg form-control-feedback'></i>").insertAfter($(element));
-
-            //}
-
-        }*/,
+            }          
+        },
         highlight: function (element, errorClass, validClass) {
             if (element.type === "radio") {
                 this.findByName(element.name).addClass(errorClass).removeClass(validClass);
@@ -223,7 +194,6 @@ var app = app || {};
                 }
             });
         }
-
       });
     }
     jQuery.validator.addMethod("argDate", function(value, element) {
