@@ -6,19 +6,19 @@
                 </h4>
             </div>
             <div class="modal-body">
-                {!! Form::open(['id'=>'form_new', 'files' => true]) !!}
+                {!! Form::open(['id'=>'form_new']) !!}
                 <input id="id" type="hidden">
                     <div class="row">
                         <div class="col-xs-6">
                             <div class="form-group">
                                 {!! Form::label('name', 'Username:',['class'=>'control-label']) !!}
-                        {!! Form::text('name',null,['id'=>'name','class'=>'form-control', 'placeholder'=>'Ingrese username']) !!}
+                                {!! Form::text('name',null,['id'=>'name','class'=>'form-control', 'placeholder'=>'Ingrese username']) !!}
                             </div>
                         </div>
-                        <div class="col-xs-6">
+                        <div class="col-xs-6" >
                             <div class="form-group">
                                 {!! Form::label('password', 'Contraseña:',['class'=>'control-label']) !!}
-                        {!! Form::text('password', null, ['id'=>'password','class'=>'form-control', 'placeholder'=>'Ingrese contraseña']) !!}
+                                {!! Form::text('password', null, ['id'=>'password','class'=>'form-control', 'placeholder'=>'Ingrese contraseña']) !!}
                             </div>
                         </div>
                     </div>
@@ -26,18 +26,22 @@
                         <div class="col-xs-6">
                             <div class="form-group">
                                 {!! Form::label('phone', 'Teléfono:',['class'=>'control-label']) !!}
-                        {!! Form::text('phone',null,['id'=>'phone','class'=>'form-control', 'placeholder'=>'Ingrese número de telefono']) !!}
+                                {!! Form::text('phone',null,['id'=>'phone','class'=>'form-control', 'placeholder'=>'Ingrese número de telefono']) !!}
                             </div>
                         </div>
                         <div class="col-xs-6">
                             <div class="form-group">
                                 {!! Form::label('email', 'Correo:',['class'=>'control-label']) !!}
-                        {!! Form::text('email', null, ['id'=>'email','class'=>'form-control', 'placeholder'=>'Ingrese correo']) !!}
+                                {!! Form::text('email', null, ['id'=>'email','class'=>'form-control', 'placeholder'=>'Ingrese correo']) !!}
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
+                            <div class="form-group">
+                                {!! Form::label('rol', 'Rol:',['class'=>'control-label']) !!}
+                                    {!! Form::select('rol', $rol , null, ['class'=>'form-control','style'=>'width:100%','id'=>'rol'])!!}
+                            </div>
                         </div>
                         <div class="col-xs-6">
                             <div class="modal-footer">

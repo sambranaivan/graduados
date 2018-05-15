@@ -21,12 +21,7 @@ var app = app || {};
               "dataType":"JSON"
           },
           "columns":[
-              {
-              "className":      'details-control',
-              "orderable":      false,
-              "data":           null,
-              "defaultContent": ''
-             },
+              
              {"data":'user_id',"title":"#"},
              {"data":'name',"title":"Nombre"},
              {"data":'email',"title":"Correo"},
@@ -41,37 +36,14 @@ var app = app || {};
     }
 
     function usarSelect2() {
-      $('#carrera').select2({
+      $('#rol').select2({
          dropdownParent: $("#myModal")
       });
     }
-
-    /* Formatting function for row details - modify as you need */
-    function format (d) {
-      // `d` is the original data object for the row
-      return "<div class='table-responsive'><table cellpadding='4' cellspacing='0' border='0' style='padding-left:50px;'>"+
-        "<tr>"+
-          "<td>Contenido:</td>"+
-          "<td><textarea rows='4' cols='100' readonly>"+d.body+"</textarea></td>"+
-        "</tr>"+
-        "<tr>"+
-          "<td>Fecha de publicación:</td>"+
-          "<td>"+d.publication_date+"</td>"+
-        "</tr>"+
-        "<tr>"+
-          "<td>Fecha fin publicación:</td>"+
-          "<td>"+d.end_publication+"</td>"+
-        "</tr>"+
-      "</table></div>";
-    }
-
     function ocultarBotones() {
       $('#alta').click(function() {
         $('#modif_new').hide();
         $('#_method').remove();
-        $('#great').hide();
-        $('#great_l').hide();
-        rangofechas();
         mostrarBotones();
         agregarContenidoModal();
       });
@@ -89,57 +61,48 @@ var app = app || {};
     function validarFormulario() {
       $("#form_new").validate({
         rules: {
-            title: {
+            name: {
                 required: true,
                 minlength: 5
             },
-            pompadour: {
+            password: {
                 required: true,
-                minlength: 5
+                minlength: 8
             },
-            body: {
+            phone: {
                 required: true,
-                minlength: 150
+                number: true,
+                minlength:10
             },
-            photo: {
+            email: {
+                required: true,
+                email:true
+            },
+            rol: {
                 required: true
-            },
-            publication_date: {
-                required: true,
-                argDate: true
 
-            },
-            end_publication: {
-                required: true,
-                argDate: true
             }
         },
         messages: {
-          title: {
-            required: "Por favor ingrese un título",
+          name: {
+            required: "Por favor ingrese username",
             minlength: "Debe contener como minimo 5 caracteres"
           },
-          pompadour: {
-            required: "Por favor ingrese un subtítulo",
-            minlength: "Debe contener como minimo 5 caracteres"
+          password: {
+            required: "Por favor ingrese una clave",
+            minlength: "Debe contener como minimo 8 caracteres"
           },
-          body: {
-            required: "Por favor ingrese una descripción para el contenido",
-            minlength: "Debe contener al menos 150 caracteres"
+          phone: {
+            required: "Por favor ingrese un número de teléfono",
+            minlength: "Debe contener al menos 10 caracteres",
+            number: "Debe ser un dato numérico"
           },
-          photo: {
-            required: "Debe cargar una imagen alusiva a la noticia"
+          email: {
+            required: "Dene ingresar el correo",
+            email: "No contiene el formato de un correo valido"
           },
-          carrera: {
-            required: "Debe seleccionar una carrera"
-          },
-          publication_date: {
-            required: "Seleccione una fecha",
-            argDate: "Seleccione una fecha valida"
-          },
-          end_publication: {
-            required: "Seleccione una fecha",
-            argDate: "Seleccione una fecha valida"
+          rol: {
+            required: "Debe seleccionar un rol"
           }
         },
         errorElement: "em",
@@ -196,147 +159,66 @@ var app = app || {};
         }
       });
     }
-    jQuery.validator.addMethod("argDate", function(value, element) {
-      return value.match(/^(0?[1-9]|[12][0-9]|3[0-1])[/., -](0?[1-9]|1[0-2])[/., -](19|20)?\d{2}$/);
-    },"Ingrese una fecha correcta");
+    
     function limpiarModals() {
       //Removing the error and success elements from the from-group
       $("#myModal").on('hidden.bs.modal', function () {
-        $(this).find("#title,#pompadour,#publication_date,#end_publication, textarea, :file").val('').end();
-        $('#desI').prop('checked', false);
-        $('#desN').prop('checked', true);
+        $(this).find("#name,#password,#phone,#email").val('').end();
         $('.form-group').removeClass('has-success has-feedback');
         $('i').removeClass('fa-check fa-exclamation');
         $('.form-group').removeClass('has-error has-feedback');
         $('em').remove();
-        $('#photo_mm').attr('src', '');
-        $('#long').html('Caracteres ingresados: <span>0</span>');
-      });
-    }
-    function mostrarImagen(input) {
-     if (input.files && input.files[0]) {
-      var reader = new FileReader();
-      reader.onload = function (e) {
-       $('#photo_mm').attr('src', e.target.result);
-      }
-      reader.readAsDataURL(input.files[0]);
-     }
-    }
-    function changebotton(){
-      $("#photo").change(function(){
-       mostrarImagen(this);
+        
       });
     }
     function clickBoton() {
       $("#agregar_new").click(function() {
           $('#_method').remove();
-          action = "noticias";
+          action = "usuarios";
       });
 
       $("#modif_new").click(function() {
-          $('[name="photo"]').each(function () {
+          $('[name="password"]').each(function () {
               $(this).rules('remove');
           });
           var value = $("#id").val();
-          action = "noticias"+'/'+value;
+          action = "usuarios"+'/'+value;
 
-      });
-
-      $('#body').keyup(function() {
-          var chars = $(this).val().length;
-          $('#long').html('Caracteres ingresados: <span>'+chars+'</span>');
       });
     }
 
     function load_news() {
-      $('#new').empty();
+      $('#usuario').empty();
       cargarTabla();
     }
 
     function eventosAttach() {
-       // Add event listener for opening and closing details
-        $('#new tbody').on('click', 'td.details-control', function() {
-            var tr = $(this).closest('tr');
-            var row = table.DataTable().row( tr );
-
-            if ( row.child.isShown() ) {
-                // This row is already open - close it
-                row.child.hide();
-                tr.removeClass('shown');
-            }
-            else {
-                // Open this row
-                row.child( format(row.data()) ).show();
-                tr.addClass('shown');
-            }
-        });
+       
 
         $("body").on("click","button.editar",function(){
-            rangofechas();
             $('#modif_new').show();
             $('#agregar_new').hide();
             $('.modal-title').html('Modificar usuario seleccionado');
             $('#form_new').append( "<input type='hidden' name='_method' id='_method' value='PUT'>" );
-            $('#great').show();
-            $('#great_l').show();
-
+            
             var id = $(this).parent("td").prev("td").prev("td").prev("td").prev("td").text();
-            var route = "noticias"+'/'+id+'/edit';
+            var route = "usuarios"+'/'+id+'/edit';
+            //console.log(route);
             $.get(route, function(res){
-                $("#id").val(res.new_id);
-                $("#title").val(res.title);
-                $("#pompadour").val(res.pompadour);
-                $("#body").val(res.body);
-                $("#photo_mm").attr('src', '../'+res.photo);
-                if (res.destacado===1) {
-                  $('#desI').prop('checked', true);
-                }else{
-                  $('#desN').prop('checked', true);
-                }
-                var p_d = res.publication_date.split("-");
-                var publication_date = p_d[2]+'/'+p_d[1]+'/'+p_d[0];
-                var p_f = res.end_publication.split("-");
-                var end_publication = p_f[2]+'/'+p_f[1]+'/'+p_f[0];
-                $("#publication_date").val(publication_date);
-                $("#end_publication").val(end_publication);
-                $('#long').html('Caracteres ingresados: <span>'+res.body.length+'</span>');
+                console.log(res);
+                $("#id").val(res.user_id);
+                $("#name").val(res.name);
+                $("#phone").val(res.phone);
+                $("#email").val(res.email);
+                
             });
         });
 
     }
-    function rangofechas(){
-      $(".startdatepicker,.expiredatepicker").datetimepicker({
-          locale: "es",
-          format: "L",
-          useCurrent: false,
-          showTodayButton: true,
-          showClear: true,
-          minDate: moment(),
-          ignoreReadonly: true,
-          icons: {
-              time: "fa fa-clock-o",
-              date: "fa fa-calendar",
-              up: "fa fa-arrow-up",
-              down: "fa fa-arrow-down",
-              previous: "fa fa-angle-left",
-              next: "fa fa-angle-right",
-              today: "fa fa-thumb-tack",
-              clear: "fa fa-trash"
-          }
-      });
-      $(".startdatepicker").on("dp.change", function (e) {
-          $(".expiredatepicker").data("DateTimePicker").minDate(e.date);
-      });
-      $(".expiredatepicker").on("dp.change", function (e) {
-          $(".startdatepicker").data("DateTimePicker").maxDate(e.date);
-      });
-
-    }
+    
     function init() {
-      $('#desN').prop('checked', true);
       load_news();
       usarSelect2();
-      changebotton();
       ocultarBotones();
       limpiarModals();
       clickBoton();

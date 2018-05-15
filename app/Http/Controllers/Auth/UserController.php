@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Models\User;
+use Bican\Roles\Models\Role;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -16,8 +17,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //$users  = User::all();
-        return view('auth.dashboard.usuarios.index');
+        $rol = Role::pluck('name','id');
+        return view('auth.dashboard.usuarios.index', compact('rol'));
     }
     public function usuarios_all()
     {
@@ -46,7 +47,19 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if ($request->ajax()) {
+            User::create([
+                    'name'=>$request['name'],
+                    'password'=>bcrypt($request['password']),
+                    'email'=>$request['email'],
+                    'phone'=>$request['phone'],
+               ]);
+            return response()->json([
+            "mensaje"=>"Registro Agregado"
+        ]);
+
+        }
+
     }
 
     /**
@@ -68,7 +81,10 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::findOrFail($id);
+        return response()->json(
+            $user->toArray()
+        );
     }
 
     /**
@@ -80,7 +96,28 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::findOrFail($id);
+
+        if ($request->ajax())
+        {           
+            if (empty($request['password'])) {
+                $user->fill([
+                    'name'=>$request['name'],
+                    'email'=>$request['email'],
+                    'phone'=>$request['phone'],
+                ]);
+                # code...
+            } else {
+                $user->fill([
+                    'name'=>$request['name'],
+                    'password'=>bcrypt($request['password']),
+                    'email'=>$request['email'],
+                    'phone'=>$request['phone'],
+                ]);
+            }
+            
+            $user->save();
+        }
     }
 
     /**
