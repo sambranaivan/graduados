@@ -45,8 +45,7 @@
       </span>
     </a>
     <ul class="treeview-menu">
-      <li><a href="#"><i class="fa fa-circle-o"></i> Roles</a></li>
-      <li><a href="#"><i class="fa fa-circle-o"></i> Usuarios</a></li>
+      <li><a href="{{ url('panel/usuarios') }}"><i class="fa fa-circle-o"></i> Usuarios</a></li>
     </ul>
   </li>
 </ul>

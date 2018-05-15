@@ -53,6 +53,8 @@ Route::group(['middleware' => ['web'], 'prefix' => 'panel'], function () {
         Route::resource('faqs', 'Auth\FaqController');
 		Route::get('preguntas_frecuentes', 'Auth\FaqController@all_faqs');
 
+		Route::resource('usuarios','Auth\UserController');
+		Route::get('usuarios_all', 'Auth\UserController@usuarios_all');
 
     });
 });

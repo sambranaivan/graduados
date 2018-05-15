@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Bican\Roles\Models;
+use App\Http\Requests;
+use App\Models\User;
+use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
@@ -17,9 +16,18 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        //$users  = User::all();
+        return view('auth.dashboard.usuarios.index');
     }
-
+    public function usuarios_all()
+    {
+        $users  = User::all();
+        $resources["data"] = [];
+        foreach ($users as $key => $value) {
+            $resources['data'][]=$value;
+        }
+        return response()->json($resources);
+    }
     /**
      * Show the form for creating a new resource.
      *
