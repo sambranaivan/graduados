@@ -3,7 +3,7 @@
 /public/storage
 Homestead.yaml
 Homestead.json
-.env
+# .env
 npm-debug.log
 public/assets/img
 public/assets/pdf

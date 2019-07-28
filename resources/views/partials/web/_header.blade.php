@@ -40,7 +40,7 @@
                                 <li><a href="{{url('/empresas')}}">Socios estratégicos</a></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="/ingreso">Ingreso</a></li>
+                                <li><a href="/panel">Ingreso</a></li>
                             </ul>
                         </div>
                     </div>

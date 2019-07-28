@@ -10,7 +10,7 @@
 </div>
 @endsection
 @section('script')
-    {!! Html::script('public/assets/js/personalizado/usuarios.js') !!}
+    {!! Html::script('assets/js/personalizado/usuarios.js') !!}
     <script type="text/javascript">
 		(function() {
 			app.usuarios.init();

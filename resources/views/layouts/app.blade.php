@@ -7,8 +7,10 @@
 
     <title>Graduados-UNNE</title>
     <!-- Fonts -->
-    {!! Html::style('public/assets/css/bootstrap.min.css') !!}
-    {!! Html::style('public/assets/css/font-awesome.min.css') !!}
+    {!! Html::style('assets/css/bootstrap.min.css') !!}
+    {!! Html::style('assets/css/font-awesome.min.css') !!}
+{{-- <link rel="stylesheet" href="{{asset('/css/bootstrap.min.css')}}"> --}}
+{{-- <link rel="stylesheet" href="{{asset('/css/font-awesome.min.css')}}"> --}}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 

@@ -17,7 +17,7 @@
                 <li>
                   <a href="#">
                     <div class="pull-left">
-                      {{ HTML::image('public/assets/img/user2-160x160.jpg', 'imagen usuario', array('class' => 'img-circle')) }}
+                      {{ HTML::image('assets/img/user2-160x160.jpg', 'imagen usuario', array('class' => 'img-circle')) }}
                     </div>
                     <h4>
                       Support Team
@@ -29,7 +29,7 @@
                 <li>
                   <a href="#">
                     <div class="pull-left">
-                      {{ HTML::image('public/assets/img/user3-128x128.jpg', 'imagen usuario', array('class' => 'img-circle')) }}
+                      {{ HTML::image('assets/img/user3-128x128.jpg', 'imagen usuario', array('class' => 'img-circle')) }}
                     </div>
                     <h4>
                       AdminLTE Design Team
@@ -41,7 +41,7 @@
                 <li>
                   <a href="#">
                     <div class="pull-left">
-                      {{ HTML::image('public/assets/img/user4-128x128.jpg', 'imagen usuario', array('class' => 'img-circle')) }}
+                      {{ HTML::image('assets/img/user4-128x128.jpg', 'imagen usuario', array('class' => 'img-circle')) }}
                     </div>
                     <h4>
                       Developers
@@ -53,7 +53,7 @@
                 <li>
                   <a href="#">
                     <div class="pull-left">
-                      {{ HTML::image('public/assets/img/user4-128x128.jpg', 'imagen usuario', array('class' => 'img-circle')) }}
+                      {{ HTML::image('assets/img/user4-128x128.jpg', 'imagen usuario', array('class' => 'img-circle')) }}
                     </div>
                     <h4>
                       Sales Department
@@ -65,7 +65,7 @@
                 <li>
                   <a href="#">
                     <div class="pull-left">
-                      {{ HTML::image('public/assets/img/user4-128x128.jpg', 'imagen usuario', array('class' => 'img-circle')) }}
+                      {{ HTML::image('assets/img/user4-128x128.jpg', 'imagen usuario', array('class' => 'img-circle')) }}
                     </div>
                     <h4>
                       Reviewers
@@ -81,7 +81,7 @@
         </li>
         <li class="dropdown user user-menu">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            {{ HTML::image('public/assets/img/user2-160x160.jpg', 'imagen usuario', array('class' => 'user-image')) }}
+            {{ HTML::image('assets/img/user2-160x160.jpg', 'imagen usuario', array('class' => 'user-image')) }}
 
             <span class="hidden-xs">{{Auth::user()->name}}</span>
           </a>
