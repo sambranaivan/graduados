@@ -20,7 +20,8 @@
                     @foreach($courses as $item)
                         <div class="col-md-4 course">
                             <div class="course-image">
-                                <img src="{{URL::asset("public/$item->photo") }}" alt="" class="img-responsive">
+                                <img src="{{asset("/assets/img/photo_news/".$item->photo) }}" alt="" class="img-responsive">
+                                {{-- //TODO  arreglar path de imagen en base de datos --}}
                             </div>
                             <div class="course-content">
                                 <a href="{{url('/curso')."/$item->new_id" }}" class="course-link">
@@ -28,9 +29,9 @@
                                         <p>{{ $item->title }}</p>
                                     </div>
                                 </a>
-                                <div class="course-button text-center">
+                                {{-- <div class="course-button text-center">
                                     <a href="/curso/{{ $item->new_id }}/inscripcion">Inscribirse</a>
-                                </div>
+                                </div> --}}
                             </div>
                     </div>
                     @endforeach

@@ -236,6 +236,7 @@
     clear: both; }
 
 #header .header-contact {
+  
   color: #b2b2b2;
   background-color: #454545;
   height: 40px;
@@ -247,8 +248,14 @@
       font-size: 2em;
       margin-right: 15px; }
 
-#header .header-logo {
-  width: 72px; }
+/* #header .header-logo {
+  width: 72px; } */
+  .bg-red{
+    background-color: #a30000;
+    font-weight: bolder;
+  }
+
+ 
 
 #header #header-menu ul.nav {
   margin-top: 15px; }
@@ -408,5 +415,10 @@ body {
       width: 35%; }
     .title-section h2:after {
       left: 65%; }
+
+
+       .text-white{
+    color:white;
+  }
 
 /*# sourceMappingURL=app.css.map */

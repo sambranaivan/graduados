@@ -22,21 +22,9 @@
         </div>
     </div>
 </section>
-<section class="welcome">
-    <div class="container welcome__container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-md-8 welcome__message">
-                <h3>Programa de Seguimiento al Graduado</span></h3>
-                <p class="text-justify">Este programa pretende recolectar datos e información, que permitan mejorar la información de contacto y ubicación de nuestros graduados, aspecto elemental para iniciar un proceso de vinculación institucional entre la FaCENA y sus profesionales.
-                El sistema SIU-Kolla es una herramienta que permite realizar encuestas on-line a graduados, con el objetivo de obtener información sobre su inserción profesional, su relación con la universidad, el interés por otros estudios y otros datos relevantes. Se trata de encuestas para analizar, diagnosticar y conocer los perfiles de los egresados, y constituye una parte de un proyecto integral que aspira a crear una base de conocimiento sobre la población estudiantil.</p>
-                <a href="#" class="welcome__view-more">Leer mas</a>
-            </div>
-            <div class="hidden-xs col-sm-4 col-md-4 welcome__image">
-                <img src="{{URL::asset('assets/img/bienvenida.png')}}" alt="">
-            </div>
-        </div>
-    </div>
-</section>
+
+
+
 <section class="news news-institutionals">
     <div class="container">
         <div class="row">
@@ -94,37 +82,9 @@
                         </div>
                     </div>
                 </div>
-                <!--div class="col-xs-12 col-md-4 new cursos">
-                    <div class="new-image">
-                        <img src="assets/img/O6ZK030.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="new-content">
-                        <div class="new-title">
-                            <h3 class="text-center">CURSOS</h3>
-                        </div>
-                        <div class="new-description text-center ">
-                            <p>SEGUI CAPACITANDOTE CON NUESTROS CURSOS</p>
-                        </div>
-                        <div class="new-button text-center">
-                            <a href="/cursos">Ver cursos</a>
-                        </div>
-                    </div>
-                </div-->
+               
                 <div class="col-xs-12 col-md-4 new ofertas-laborales">
-                    <!--div class="new-image">
-                        <img src="assets/img/OCIG380.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="new-content">
-                        <div class="new-title">
-                            <h3 class="text-center">OFERTAS LABORALES</h3>
-                        </div>
-                        <div class="new-description text-center">
-                            <p>ENCUENTRA OFERTAS LABORALES DE EMPRESAS CONECTADAS CON LA UNNE</p>
-                        </div>
-                        <div class="new-button text-center">
-                            <a href="">Buscar</a>
-                        </div>
-                    </div-->
+                 
                     <div class="thumbnail">
                         <img src="{{URL::asset('assets/img/OCIG380.jpg')}}" class="img-responsive">
                         <div class="caption caption-half-down">
@@ -163,24 +123,37 @@
                             <h3 class="text-center">EVENTOS</h3>
                         </div>
                     </div>
-                    <!--div class="new-image">
-                        <img src="assets/img/OAYTQA0.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="new-content">
-                        <div class="new-title">
-                            <h3 class="text-center">EVENTOS</h3>
-                        </div>
-                        <div class="new-description text-center">
-                            <p>Accede a la agenda de eventos institucionales</p>
-                        </div>
-                        <div class="new-button text-center">
-                            <a href="">Acceder</a>
-                        </div>
-                    </div-->
+                    
                 </div>
             </div>
         </div>
     </div>
 </section>
+<section class="news welcome">
+    <div class="container welcome__container">
+        <div class="row">
+             <div class="col-md-4 col-md-offset-4 title">
+                <h2 class="text-center">Sobre el programa</h2>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-8 welcome__message">
+                        <h4><strong>Programa de Seguimiento al Graduado</strong></h4>
+        <p class="text-justify">Este programa tiene como finalidad la implementación de una encuesta electrónica online que permita relevar información actualizada y periódica sobre aspectos de incumbencia profesional del graduado, su inserción laboral y relación con la universidad, a los fines de analizar y conformar un perfil del graduado.
 
+        El SIU-KOLLA es una encuesta online diseñado a estos efectos, favoreciendo el seguimiento a los graduados.</p>
+
+        {{-- Resolución del Consejo Directivo (Nº 3610/14) --}}
+
+        <h4><strong>Observatorio Laboral</strong></h4>
+        <p class="text-justify">La creación de un Observatorio Laboral constituye un espacio desde el cual se podrá abordar el análisis de los procesos de inserción laboral de los graduados y los factores que influyen en sus oportunidades, y a partir de ello, generar instrumentos que favorezcan el acceso a la demanda de profesionales en la región.</p>
+
+        <h4><strong>Programa de Capacitación Profesional</strong></h4>
+        <p class="text-justify">Este programa desarrolla acciones destinadas a la formación continua de los graduados, a la gestión y elaboración de actividades de capacitación que tiendan a la actualización, perfeccionamiento y especialización profesional, actuando como un componente de valor en el perfil curricular.</p>
+                        
+                    </div>
+                    <div class="hidden-xs col-sm-4 col-md-4 welcome__image">
+                        <img src="{{URL::asset('assets/img/bienvenida.png')}}" alt="">
+                    </div>
+                </div>
+            </div>
+</section>
 @endsection

@@ -133,7 +133,7 @@ class NewsController extends Controller
                 'title'=>$request['title'],
                 'pompadour'=>$request['pompadour'],
                 'body'=>$request['body'],
-                'photo'=>$path_image,
+                'photo'=>$photo,
                 'typenew_id'=>$type,
                 'career_id'=>$request['carrera'],
                 'great'=>'0',
