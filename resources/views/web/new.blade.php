@@ -11,7 +11,7 @@ Noticias
 			@foreach($new as $noticia)
 			<div class="col-md-6">
 				<div class="new-header">
-					<img src="{{URL::asset("public/$noticia->photo") }}" alt="" class="img-responsive">
+					<img src="{{URL::asset("assets/img/photo_news/$noticia->photo") }}" alt="" class="img-responsive">
 				</div>
 			</div>
 			<div class="col-md-6">
