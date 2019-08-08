@@ -17,7 +17,7 @@ Noticias
 			<div class="col-md-6">
 				<h4 class="new-title">{{$noticia->title}}</h4>
 				<h6 class="new-title"><small>{{$noticia->pompadour}}</small></h6>
-				<p class="text-justify">{{$noticia->body}}</p>
+				<p>{{$noticia->body}}</p>
 			</div>
 			@endforeach
 		</div>
