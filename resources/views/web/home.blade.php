@@ -33,21 +33,21 @@
             </div>
             <div class="col-md-12">
                 @foreach($news as $item)
-                    <a href="{{url('/noticia')."/$item->new_id" }}" class="new-link">
+                    <a href="{{url('/curso')."/$item->new_id" }}" class="new-link">
                         <div class="col-xs-12 col-sm-4 col-md-4 new thumbnail">
                             <div class="new-image">
-                                <img src="{{URL::asset("public/$item->photo") }}" alt="" class="img-responsive">
+                                <img src="{{URL::asset("/assets/img/photo_news/$item->photo") }}" alt="" class="img-responsive">
                             </div>
                             <div class="caption caption-half-down">
                                 <h4>{{ $item->title }}</h4>
                                 <p>{{$item->pompadour}}</p>
                                 <p class="label label-info"></p>
                             </div>
-                            <div class="caption caption-half-up">
+                            {{-- <div class="caption caption-half-up">
                                 <p>
-                                    <a class="btn btn-primary" href="{{url('/noticia')."/$item->new_id" }}">Ver más...</a>
+                                    <a class="btn btn-primary" href="{{url('/curso')."/$item->new_id" }}">Ver más...</a>
                                 </p>
-                            </div>
+                            </div> --}}
                         </div>
                     </a>
                 @endforeach
